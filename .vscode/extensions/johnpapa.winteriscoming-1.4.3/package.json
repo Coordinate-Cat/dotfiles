@@ -1,0 +1,73 @@
+{
+	"name": "winteriscoming",
+	"displayName": "Winter is Coming Theme",
+	"description": "Preferred dark/light themes by John Papa",
+	"icon": "images/winteriscoming-icon.png",
+	"license": "SEE LICENSE IN LICENSE.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/johnpapa/vscode-winteriscoming.git"
+	},
+	"galleryBanner": {
+		"color": "#373436",
+		"theme": "dark"
+	},
+	"version": "1.4.3",
+	"publisher": "johnpapa",
+	"keywords": [
+		"Theme",
+		"Dark Theme",
+		"Light Theme"
+	],
+	"scripts": {
+		"list": "npx vsce ls",
+		"package": "npx vsce package",
+		"publish": "npx vsce publish"
+	},
+	"engines": {
+		"vscode": "^1.17.0"
+	},
+	"categories": [
+		"Themes",
+		"Other"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Winter is Coming (Dark Blue)",
+				"uiTheme": "vs-dark",
+				"path": "./themes/WinterIsComing-dark-blue-color-theme.json"
+			},
+			{
+				"label": "Winter is Coming (Dark Blue - No Italics)",
+				"uiTheme": "vs-dark",
+				"path": "./themes/WinterIsComing-dark-blue-color-no-italics-theme.json"
+			},
+			{
+				"label": "Winter is Coming (Light)",
+				"uiTheme": "vs",
+				"path": "./themes/WinterIsComing-light-color-theme.json"
+			},
+			{
+				"label": "Winter is Coming (Light - No Italics)",
+				"uiTheme": "vs",
+				"path": "./themes/WinterIsComing-light-color-no-italics-theme.json"
+			},
+			{
+				"label": "Winter is Coming (Dark Black)",
+				"uiTheme": "vs-dark",
+				"path": "./themes/WinterIsComing-dark-color-theme.json"
+			},
+			{
+				"label": "Winter is Coming (Dark Black - No Italics)",
+				"uiTheme": "vs-dark",
+				"path": "./themes/WinterIsComing-dark-color-no-italics-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "fd6d3dc6-b307-4589-82a6-78e2afec3d77",
+		"publisherId": "4434843a-4ebf-4f44-84f5-4176380c492d",
+		"publisherDisplayName": "John Papa"
+	}
+}

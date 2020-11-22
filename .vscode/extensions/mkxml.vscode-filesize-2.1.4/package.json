@@ -1,0 +1,87 @@
+{
+	"name": "vscode-filesize",
+	"displayName": "filesize",
+	"description": "Show the current file size in the status bar",
+	"version": "2.1.4",
+	"icon": "icon.png",
+	"publisher": "mkxml",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mkxml/vscode-filesize"
+	},
+	"keywords": [
+		"file",
+		"size",
+		"filesize",
+		"status bar",
+		"info"
+	],
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.toggleFilesizeInfo",
+				"title": "Toggle filesize detailed information"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.toggleFilesizeInfo",
+				"key": "ctrl+shift+'",
+				"mac": "cmd+shift+'",
+				"when": "editorTextFocus"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "filesize configuration",
+			"properties": {
+				"filesize.useDecimal": {
+					"type": "boolean",
+					"default": false,
+					"description": "Defaults to false, using IEC's representation. Set to true to get SI representation."
+				},
+				"filesize.use24HourFormat": {
+					"type": "boolean",
+					"default": true,
+					"description": "Defaults to true, using 24-hour format. Set to false to get 12-hour format."
+				},
+				"filesize.showGzip": {
+					"type": "boolean",
+					"default": true,
+					"description": "Defaults to true, whether to show gzip size in detailed view or not."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.8.3",
+		"vscode": "^1.1.36",
+		"mocha": "^7.1.1",
+		"eslint": "^6.8.0",
+		"@types/node": "^13.11.0",
+		"@types/mocha": "^7.0.2"
+	},
+	"dependencies": {
+		"filesize-calculator": "^3.2.0"
+	},
+	"__metadata": {
+		"id": "21b3e09e-b3f7-4e20-9302-50039286650d",
+		"publisherId": "f85b6a05-e5f6-494b-8481-f912bdc1aa41",
+		"publisherDisplayName": "Matheus Kautzmann"
+	}
+}

@@ -1,0 +1,24 @@
+name: Node.js Package
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+        registry-url: 'https://npm.pkg.github.com'
+        scope: '@microsoft'
+    - run: yarn
+    - run: yarn compile
+    - run: yarn devcontainerjson-prepare
+    - run: |
+        echo "COMMITED_VERSION=$(jq -r '.version' < devcontainerjson/package.json)" | tee -a $GITHUB_ENV
+        echo "PUBLISHED_VERSION=$(npm view @microsoft/vscode-devcontainerjson-support version)" | tee -a $GITHUB_ENV
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.PUBLISHER_GITHUB_TOKEN }}
+    - run: yarn devcontainerjson-npm-publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.PUBLISHER_GITHUB_TOKEN }}
+      if: ${{ env.COMMITED_VERSION != env.PUBLISHED_VERSION }}

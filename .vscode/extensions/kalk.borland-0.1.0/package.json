@@ -1,0 +1,28 @@
+{
+	"name": "borland",
+	"displayName": "Borland-theme",
+	"description": "Borland theme for visual studio code.",
+	"version": "0.1.0",
+	"publisher": "Kalk",
+	"repository": "https://github.com/Kalk88/Borland-Theme",
+	"engines": {
+		"vscode": "^1.31.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Borland",
+				"uiTheme": "hc-black",
+				"path": "./themes/Borland.color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "7c9782b9-7632-443b-bf72-e112b4805806",
+		"publisherId": "eba598c7-742a-4923-bff0-6d39f62cbf2a",
+		"publisherDisplayName": "kalk"
+	}
+}

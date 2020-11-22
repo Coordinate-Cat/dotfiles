@@ -1,0 +1,82 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "description": "Autoprefixer options schema for es6-css-minify",
+    "type": "object",
+    "properties": {
+        "env": {
+            "type": "string",
+            "description": "Environment for Browserslist."
+        },
+        "cascade": {
+            "type": "boolean",
+            "description": "Should Autoprefixer use Visual Cascade, if CSS is uncompressed.",
+            "default": true
+        },
+        "add": {
+            "type": "boolean",
+            "description": "Should Autoprefixer add prefixes.",
+            "default": true
+        },
+        "remove": {
+            "type": "boolean",
+            "description": "Should Autoprefixer [remove outdated] prefixes.",
+            "default": true
+        },
+        "supports": {
+            "type": "boolean",
+            "description": "Should Autoprefixer add prefixes for @supports parameters.",
+            "default": true
+        },
+        "flexbox": {
+            "description": "Should Autoprefixer add prefixes for flexbox properties. With \"no-2009\" value Autoprefixer will add prefixes only for final and IE 10 versions of specification.",
+            "default": true,
+            "oneOf": [
+                {
+                    "type": "string",
+                    "enum": [
+                        "no-2009"
+                    ]
+                },
+                {
+                    "type": "boolean"
+                }
+            ]
+        },
+        "grid": {
+            "description": "Should Autoprefixer add IE 10-11 prefixes for Grid Layout properties?",
+            "default": false,
+            "oneOf": [
+                {
+                    "type": "boolean",
+                    "enum": [
+                        false
+                    ]
+                },
+                {
+                    "type": "string",
+                    "enum": [
+                        "autoplace",
+                        "no-autoplace"
+                    ]
+                }
+            ]
+        },
+        "stats": {
+            "type": "object",
+            "description": "Custom usage statistics for > 10% in my stats browsers query.",
+            "default": {}
+        },
+        "overrideBrowserslist": {
+            "type": "array",
+            "description": "See https://github.com/browserslist/browserslist#queries for available queries and default value.",
+            "default": [
+                "defaults"
+            ]
+        },
+        "ignoreUnknownVersions": {
+            "type": "boolean",
+            "description": "Do not raise error on unknown browser version in Browserslist config.",
+            "default": false
+        }
+    }
+}

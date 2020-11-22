@@ -1,0 +1,101 @@
+{
+	"name": "color-highlight",
+	"displayName": "Color Highlight",
+	"description": "Highlight web colors in your editor",
+	"version": "2.3.0",
+	"publisher": "naumovs",
+	"engines": {
+		"vscode": "^1.10.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"scripts": {
+		"vscode:prepublish": "webpack",
+		"dev": "webpack -w",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/naumovs/vscode-ext-color-highlight/issues"
+	},
+	"homepage": "https://github.com/naumovs/vscode-ext-color-highlight",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/naumovs/vscode-ext-color-highlight.git"
+	},
+	"main": "./dist/extension",
+	"icon": "images/preview.png",
+	"contributes": {
+		"configuration": {
+			"title": "Color Highlight",
+			"properties": {
+				"color-highlight.enable": {
+					"default": true,
+					"description": "Controls if plugin is enabled",
+					"type": "boolean"
+				},
+				"color-highlight.languages": {
+					"default": [
+						"*"
+					],
+					"description": "An array of language ids which should be higlighted by Color Highlight. \"*\" to trigger on any language; Prepend language id with \"!\" to exclude the language (i.e \"!typescript\", \"!javascript\")",
+					"type": "array"
+				},
+				"color-highlight.matchWords": {
+					"default": false,
+					"description": "Highlight color words in all files (grey, green, etc.)",
+					"type": "boolean"
+				},
+				"color-highlight.markerType": {
+					"default": "background",
+					"description": "Style of the highlight. Can be 'dot-before', 'dot-after', 'foreground', 'background', 'outline', 'underline'",
+					"type": "string"
+				},
+				"color-highlight.markRuler": {
+					"default": true,
+					"description": "Highlight colors on the ruler (scroll bar), true/false",
+					"type": "boolean"
+				},
+				"color-highlight.sass.includePaths": {
+					"default": [],
+					"description": "Array of absolute paths to search while perform file lookups.",
+					"type": "array"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "extension.colorHighlight",
+				"title": "Highlight colors in current file"
+			}
+		]
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.32",
+		"@types/node": "^6.0.40",
+		"babel-core": "^6.23.0",
+		"babel-eslint": "^7.2.1",
+		"babel-loader": "^7.0.0-beta.1",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-latest": "^6.23.0",
+		"eslint": "^3.18.0",
+		"mocha": "^2.3.3",
+		"vscode": "^1.0.0",
+		"webpack": "^2.3.2"
+	},
+	"dependencies": {
+		"color": "^1.0.3",
+		"color-name": "^1.1.2",
+		"file-importer": "^1.0.0"
+	},
+	"__metadata": {
+		"id": "121396ad-85a1-45ec-9fd1-d95028a847f5",
+		"publisherId": "e9a76d04-24d4-44eb-a202-964f71acf59e",
+		"publisherDisplayName": "Sergii Naumov"
+	}
+}

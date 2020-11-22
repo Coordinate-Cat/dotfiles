@@ -1,0 +1,85 @@
+{
+	"name": "polacode",
+	"displayName": "Polacode",
+	"description": "📸  Polaroid for your code",
+	"version": "0.3.4",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/octref/polacode.git"
+	},
+	"publisher": "pnp",
+	"keywords": [
+		"polacode",
+		"polaroid",
+		"screenshot",
+		"snippet",
+		"share"
+	],
+	"galleryBanner": {
+		"color": "#fbfbfb",
+		"theme": "light"
+	},
+	"icon": "icon.png",
+	"categories": [
+		"Other"
+	],
+	"engines": {
+		"vscode": "^1.32.0"
+	},
+	"activationEvents": [
+		"onCommand:polacode.activate",
+		"onWebviewPanel:polacode"
+	],
+	"main": "./src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "polacode.activate",
+				"title": "Polacode 📸"
+			}
+		],
+		"configuration": {
+			"title": "Polacode",
+			"properties": {
+				"polacode.shadow": {
+					"type": "string",
+					"description": "Shadow of the snippet node. Use any value for CSS `box-shadow`",
+					"default": "rgba(0, 0, 0, 0.55) 0px 20px 68px"
+				},
+				"polacode.transparentBackground": {
+					"type": "boolean",
+					"description": "Transparent background for containers",
+					"default": false
+				},
+				"polacode.backgroundColor": {
+					"type": "string",
+					"description": "Background color of snippet container. Use any value for CSS `background-color`",
+					"format": "color-hex",
+					"default": "#f2f2f2"
+				},
+				"polacode.target": {
+					"type": "string",
+					"description": "Shoot with or without container",
+					"default": "container",
+					"enum": [
+						"container",
+						"snippet"
+					],
+					"enumDescriptions": [
+						"Shoot with the container.",
+						"Shoot with the snippet alone. If you want transparent padding, use `container` with `\"polacode.transparentBackground\": true`"
+					]
+				}
+			}
+		}
+	},
+	"devDependencies": {
+		"@types/node": "^11.12.0",
+		"@types/vscode": "^1.32.0"
+	},
+	"__metadata": {
+		"id": "d80b9a94-f4a6-4e39-bc42-62212e365682",
+		"publisherId": "918585c9-12f2-4216-a4e4-5d0b6055cda2",
+		"publisherDisplayName": "P & P"
+	}
+}

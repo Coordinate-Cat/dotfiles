@@ -1,0 +1,20 @@
+{
+	"name": "svelte-intellisense",
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"repository": {
+		"url": "https://github.com/ArdenIvanov/svelte-intellisense.git"
+	},
+	"license": "MIT",
+	"scripts": {
+		"update-vscode": "yarn vscode-install",
+		"postinstall": "yarn vscode-install"
+	},
+	"devDependencies": {
+		"vscode": "^1.1.36"
+	},	
+	"dependencies": {
+		"vscode-languageclient": "^5.2.1"
+	}
+}

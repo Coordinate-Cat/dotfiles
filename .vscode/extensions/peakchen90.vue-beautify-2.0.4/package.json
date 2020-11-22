@@ -1,0 +1,90 @@
+{
+	"name": "vue-beautify",
+	"displayName": "vue-beautify",
+	"description": "Beautify Vue code in place for vscode",
+	"version": "2.0.4",
+	"publisher": "peakchen90",
+	"engines": {
+		"vscode": "^1.10.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"icon": "source/icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/peakchen90/vue-beautify"
+	},
+	"bugs": {
+		"url": "https://github.com/peakchen90/vue-beautify/issues"
+	},
+	"keywords": [
+		"vue",
+		"format",
+		"beautify",
+		"vue-format",
+		"vue-beautify"
+	],
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "node ./node_modules/vscode/bin/test",
+		"pub": "vsce publish patch"
+	},
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension",
+	"contributes": {
+		"keybindings": [
+			{
+				"command": "vueBeautify.format",
+				"key": "ctrl+shift+f",
+				"mac": "cmd+shift+f",
+				"linux": "ctrl+shift+f",
+				"when": "resourceLangId=='vue' && editorTextFocus && editorTextFocus && !editorReadonly"
+			}
+		],
+		"configuration": {
+			"title": "vueBeautify Options",
+			"properties": {
+				"vueBeautify.isRootIndent": {
+					"type": "boolean",
+					"default": true,
+					"description": "whether indent on tag of template or script or style"
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "vueBeautify.format",
+				"title": "Beautify Vue"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorLangId == vue",
+					"command": "vueBeautify.format",
+					"group": "1_modification"
+				}
+			]
+		}
+	},
+	"devDependencies": {
+		"@types/mocha": "^2.2.32",
+		"@types/node": "^6.0.40",
+		"eslint": "^3.6.0",
+		"mocha": "^2.3.3",
+		"typescript": "^2.0.3",
+		"vscode": "^1.0.0"
+	},
+	"dependencies": {
+		"js-beautify": "^1.6.11",
+		"pug-beautify": "^0.1.1"
+	},
+	"__metadata": {
+		"id": "33d009de-dadd-4e36-bd05-2622efd62499",
+		"publisherId": "8d0479cc-c5b2-4c0f-88c2-d38452c8b3df",
+		"publisherDisplayName": "peakchen90"
+	}
+}

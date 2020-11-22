@@ -1,0 +1,14 @@
+### OSX template
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+*.cache
+*.pyc
+
+.vscode
+
+/node_modules

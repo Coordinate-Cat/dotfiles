@@ -1,0 +1,199 @@
+{
+	"name": "svg-preview",
+	"displayName": "Svg Preview",
+	"description": "Preview for Svg files",
+	"version": "2.8.3",
+	"publisher": "SimonSiefke",
+	"extensionKind": [
+		"ui",
+		"workspace"
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/SimonSiefke/vscode-svg-preview",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SimonSiefke/vscode-svg-preview.git"
+	},
+	"bugs": {
+		"url": "https://github.com/SimonSiefke/vscode-svg-preview/issues"
+	},
+	"icon": "images/icon.png",
+	"galleryBanner": {
+		"color": "#242b2b",
+		"theme": "dark"
+	},
+	"engines": {
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"svg preview",
+		"svg",
+		"preview",
+		"live"
+	],
+	"activationEvents": [
+		"onLanguage:xml",
+		"onLanguage:svg",
+		"onWebviewPanel:svgPreview",
+		"onCommand:svgPreview.showPreview",
+		"onCommand:svgPreview.showPreviewToSide"
+	],
+	"contributes": {
+		"commands": [
+			{
+				"category": "Svg Preview",
+				"command": "svgPreview.showPreview",
+				"title": "Open Preview"
+			},
+			{
+				"category": "Svg Preview",
+				"command": "svgPreview.showPreviewToSide",
+				"title": "Open Preview to the Side",
+				"icon": {
+					"light": "images/bolt_original_darkgray_optimized.svg",
+					"dark": "images/bolt_original_lightgray_optimized.svg"
+				}
+			},
+			{
+				"category": "Svg Preview",
+				"command": "svgPreview.reloadPreview",
+				"title": "Reload Preview",
+				"icon": {
+					"light": "images/refresh_dark.svg",
+					"dark": "images/refresh_light.svg"
+				}
+			}
+		],
+		"keybindings": [
+			{
+				"command": "svgPreview.showPreviewToSide",
+				"key": "ctrl+alt+p",
+				"when": "resourceLangId == svg ||resourceLangId == xml"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "svgPreview.showPreview",
+					"when": "false",
+					"group": "navigation"
+				},
+				{
+					"command": "svgPreview.showPreviewToSide",
+					"group": "navigation"
+				},
+				{
+					"command": "svgPreview.reloadPreview",
+					"when": "svgPreviewIsOpen == true",
+					"group": "navigation"
+				}
+			],
+			"explorer/context": [
+				{
+					"command": "svgPreview.showPreview",
+					"group": "navigation",
+					"when": "resourceLangId == xml && resourceExtname == .svg"
+				}
+			],
+			"editor/title": [
+				{
+					"command": "svgPreview.showPreviewToSide",
+					"group": "navigation",
+					"when": "editorLangId == xml && resourceExtname == .svg && svgPreviewIsOpen == false"
+				},
+				{
+					"command": "svgPreview.reloadPreview",
+					"when": "svgPreviewIsFocused && !editorLangId",
+					"group": "navigation"
+				}
+			]
+		},
+		"configuration": {
+			"type": "object",
+			"title": "Svg Preview",
+			"properties": {
+				"svgPreview.autoOpen": {
+					"type": "boolean",
+					"default": true,
+					"description": "Automatically open the preview when an svg file is opened.",
+					"scope": "resource"
+				},
+				"svgPreview.scaleToFit": {
+					"type": "boolean",
+					"default": true,
+					"description": "Whether or not the svg should be scaled to fit the viewport or keep its original size",
+					"scope": "resource"
+				},
+				"svgPreview.style": {
+					"type": "object",
+					"description": "Custom style for the preview.",
+					"additionalProperties": false,
+					"default": {},
+					"properties": {
+						"html": {
+							"type": "object",
+							"description": "Custom style for the html element.",
+							"properties": {
+								"background": {
+									"type": "string"
+								},
+								"background-position": {
+									"type": "string"
+								},
+								"background-image": {
+									"type": "string"
+								},
+								"background-size": {
+									"type": "string"
+								},
+								"background-repeat": {
+									"type": "string",
+									"enum": [
+										"repeat",
+										"space",
+										"round",
+										"repeat-y",
+										"repeat-x",
+										"repeat no-repeat",
+										"no-repeat"
+									]
+								},
+								"margin": {
+									"type": "string"
+								},
+								"padding": {
+									"type": "string"
+								}
+							}
+						},
+						"img": {
+							"type": "object",
+							"description": "Custom style for the image.",
+							"properties": {
+								"border": {
+									"type": "string"
+								},
+								"margin": {
+									"type": "string"
+								},
+								"padding": {
+									"type": "string"
+								}
+							}
+						}
+					},
+					"scope": "resource"
+				}
+			}
+		}
+	},
+	"main": "./packages/extension/dist/extension.js",
+	"__metadata": {
+		"id": "51cd7dfb-14fa-4fcc-aa42-16add9281456",
+		"publisherId": "32e71950-4c8a-4269-b6b9-828664a73f1e",
+		"publisherDisplayName": "Simon Siefke"
+	}
+}

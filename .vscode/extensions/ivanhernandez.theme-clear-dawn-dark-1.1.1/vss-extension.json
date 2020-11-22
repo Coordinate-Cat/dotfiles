@@ -1,0 +1,37 @@
+{
+    "manifestVersion": 1,
+    "id": "theme-clear-dawn-dark",
+    "version": "1.1.1",
+    "name": "Clear Dawn Dark",
+    "publisher": "ivanhernandez",
+    "description": "Desaturated greenish and blueish, high contrast, dark themes (and three retro additional themes)",
+    "license": "SEE LICENSE IN License.md",
+    "engines": {
+        "vscode": "^1.13.0"
+    },
+    "targets": [{
+        "id": "Microsoft.VisualStudio.Services"
+    }],
+    "icons": {
+        "default": "logo.png"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "branding": {
+        "color": "rgb(254, 246, 240)",
+        "theme": "dark"
+    },
+    "content": {
+        "details": {
+            "path": "readme.md"
+        },
+        "license": {
+            "path": "LICENSE.txt"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/ivanhernandez/theme-clear-dawn-dark"
+    }
+}

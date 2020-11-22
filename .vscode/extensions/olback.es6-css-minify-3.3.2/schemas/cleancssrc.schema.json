@@ -1,0 +1,605 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "description": "Clean-CSS options schema for es6-css-minify",
+    "type": "object",
+    "properties": {
+        "compatibility": {
+            "description": "Controls compatibility mode used.",
+            "default": "ie10+",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "enum": [
+                        "*",
+                        "ie10+",
+                        "ie9",
+                        "ie8",
+                        "ie7"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "colors": {
+                            "type": "object",
+                            "properties": {
+                                "opacity": {
+                                    "description": "Controls `rgba()` / `hsla()` color support.",
+                                    "type": "boolean",
+                                    "default": true
+                                }
+                            }
+                        },
+                        "properties": {
+                            "type": "object",
+                            "properties": {
+                                "backgroundClipMerging": {
+                                    "description": "Controls background-clip merging into shorthand.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "backgroundOriginMerging": {
+                                    "description": "Controls background-origin merging into shorthand.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "backgroundSizeMerging": {
+                                    "description": "Controls background-size merging into shorthand.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "colors": {
+                                    "description": "Controls color optimizations.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "ieBangHack": {
+                                    "description": "Controls keeping IE bang hack.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "ieFilters": {
+                                    "description": "Controls keeping IE `filter` / `-ms-filter`.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "iePrefixHack": {
+                                    "description": "Controls keeping IE prefix hack.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "ieSuffixHack": {
+                                    "description": "Controls keeping IE suffix hack.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "merging": {
+                                    "description": "Controls property merging based on understandability.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "shorterLengthUnits": {
+                                    "description": "Controls shortening pixel units into `pc`, `pt`, or `in` units.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "spaceAfterClosingBrace": {
+                                    "description": "Controls keeping space after closing brace - `url() no-repeat` into `url()no-repeat`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "urlQuotes": {
+                                    "description": "Controls keeping quoting inside `url()`.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "zeroUnits": {
+                                    "description": "Controls removal of units `0` value.",
+                                    "type": "boolean",
+                                    "default": true
+                                }
+                            }
+                        },
+                        "selectors": {
+                            "type": "object",
+                            "properties": {
+                                "adjacentSpace": {
+                                    "description": "Controls extra space before `nav` element.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "ie7Hack": {
+                                    "description": "Controls removal of IE7 selector hacks, e.g. `*+html...`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "mergeablePseudoClasses": {
+                                    "description": "Controls a whitelist of mergeable pseudo classes.",
+                                    "type": "array",
+                                    "default": []
+                                },
+                                "mergeablePseudoElements": {
+                                    "description": "Controls a whitelist of mergeable pseudo elements.",
+                                    "type": "array",
+                                    "default": []
+                                },
+                                "mergeLimit": {
+                                    "description": "Controls maximum number of selectors in a single rule (since 4.1.0).",
+                                    "type": "number",
+                                    "default": 8192
+                                },
+                                "multiplePseudoMerging": {
+                                    "description": "Controls merging of rules with multiple pseudo classes / elements (since 4.1.0).",
+                                    "type": "boolean",
+                                    "default": true
+                                }
+                            }
+                        },
+                        "units": {
+                            "type": "object",
+                            "properties": {
+                                "ch": {
+                                    "description": "Controls treating `ch` as a supported unit.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "in": {
+                                    "description": "Controls treating `in` as a supported unit.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "pc": {
+                                    "description": "Controls treating `pc` as a supported unit.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "pt": {
+                                    "description": "Controls treating `pt` as a supported unit.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "rem": {
+                                    "description": "Controls treating `rem` as a supported unit.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "vh": {
+                                    "description": "Controls treating `vh` as a supported unit.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "vm": {
+                                    "description": "Controls treating `vm` as a supported unit.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "vmax": {
+                                    "description": "Controls treating `vmax` as a supported unit.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "vmin": {
+                                    "description": "Controls treating `vmin` as a supported unit.",
+                                    "type": "boolean",
+                                    "default": true
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "format": {
+            "description": "Controls output CSS formatting.",
+            "default": false,
+            "oneOf": [
+                {
+                    "type": "boolean",
+                    "enum": [
+                        false
+                    ]
+                },
+                {
+                    "type": "string",
+                    "enum": [
+                        "beautify",
+                        "keep-breaks"
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "breaks": {
+                            "description": "Controls where to insert breaks.",
+                            "type": "object",
+                            "properties": {
+                                "afterAtRule": {
+                                    "description": "Controls if a line break comes after an at-rule; e.g. `@charset`; defaults to `false`.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "afterBlockBegins": {
+                                    "description": "Controls if a line break comes after a block begins; e.g. `@media`; defaults to `false`.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "afterBlockEnds": {
+                                    "description": "Controls if a line break comes after a block ends, defaults to `false`.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "afterComment": {
+                                    "description": "Controls if a line break comes after a comment; defaults to `false`.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "afterProperty": {
+                                    "description": "Controls if a line break comes after a property; defaults to `false`.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "afterRuleBegins": {
+                                    "description": "Controls if a line break comes after a rule begins; defaults to `false`.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "afterRuleEnds": {
+                                    "description": "Controls if a line break comes after a rule ends; defaults to `false`.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "beforeBlockEnds": {
+                                    "description": "Controls if a line break comes before a block ends; defaults to `false`.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "betweenSelectors": {
+                                    "description": "Controls if a line break comes between selectors; defaults to `false`.",
+                                    "type": "boolean",
+                                    "default": false
+                                }
+                            }
+                        },
+                        "breakWith": {
+                            "description": "Controls the new line character, can be `'\\r\\n'` or `'\\n'` (aliased as `'windows'` and `'unix'` or `'crlf'` and `'lf'`); defaults to system one, so former on Windows and latter on Unix.",
+                            "type": "string",
+                            "enum": [
+                                "\n",
+                                "\r\n",
+                                "windows",
+                                "unix",
+                                "crlf",
+                                "lf"
+                            ]
+                        },
+                        "indentBy": {
+                            "description": "Controls number of characters to indent with.",
+                            "type": "number",
+                            "default": 0
+                        },
+                        "indentWith": {
+                            "description": "Controls a character to indent with.",
+                            "type": "string",
+                            "default": "space",
+                            "enum": [
+                                "space",
+                                "tab"
+                            ]
+                        },
+                        "spaces": {
+                            "description": "Controls where to insert spaces.",
+                            "type": "object",
+                            "properties": {
+                                "aroundSelectorRelation": {
+                                    "description": "Controls if spaces come around selector relations; e.g. `div > a`; defaults to `false`.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "beforeBlockBegins": {
+                                    "description": "Controls if a space comes before a block begins; e.g. `.block {`; defaults to `false`.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "beforeValue": {
+                                    "description": "Controls if a space comes before a value; e.g. `width: 1rem`; defaults to `false`.",
+                                    "type": "boolean",
+                                    "default": false
+                                }
+                            }
+                        },
+                        "wrapAt": {
+                            "description": "Controls maximum line length.",
+                            "default": false,
+                            "oneOf": [
+                                {
+                                    "type": "boolean",
+                                    "enum": [
+                                        false
+                                    ]
+                                },
+                                {
+                                    "type": "number"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        "inline": {
+            "description": "Controls @import inlining rules.",
+            "default": ["local"],
+            "oneOf": [
+                {
+                    "type": "boolean",
+                    "enum": [
+                        false
+                    ]
+                },
+                {
+                    "type": "array",
+                    "uniqueItems": true,
+                    "items": [
+                        {
+                            "type": "string",
+                            "enum": [
+                                "local",
+                                "remote",
+                                "all",
+                                "none"
+                            ]
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        "inlineRequest": {
+            "description": "Controls extra options for inlining remote @import rules, can be any of https://nodejs.org/api/http.html#http_http_request_options_callback.",
+            "type": "object"
+        },
+        "inlineTimeout": {
+            "description": "Controls number of milliseconds after which inlining a remote @import fails.",
+            "type": "number",
+            "default": 5000
+        },
+        "level": {
+            "description": "Controls optimization level used. See https://github.com/jakubpawlowicz/clean-css#optimization-levels for examples.",
+            "default": 1,
+            "oneOf": [
+                {
+                    "type": "number",
+                    "default": 1,
+                    "enum": [
+                        0,
+                        1,
+                        2
+                    ]
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "1": {
+                            "description": "Level 1 optimization settings.",
+                            "type": "object",
+                            "properties": {
+                                "cleanupCharsets": {
+                                    "description": "Controls `@charset` moving to the front of a stylesheet; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "normalizeUrls": {
+                                    "description": "Controls URL normalization; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "optimizeBackground": {
+                                    "description": "Controls `background` property optimizations; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "optimizeBorderRadius": {
+                                    "description": "Controls `border-radius` property optimizations; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "optimizeFilter": {
+                                    "description": "Controls `filter` property optimizations; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "optimizeFont": {
+                                    "description": "Controls `font` property optimizations; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "optimizeFontWeight": {
+                                    "description": "Controls `font-weight` property optimizations; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "optimizeOutline": {
+                                    "description": "Controls `outline` property optimizations; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "removeEmpty": {
+                                    "description": "Controls removing empty rules and nested blocks; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "removeNegativePaddings": {
+                                    "description": "Controls removing negative paddings; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "removeQuotes": {
+                                    "description": "Controls removing quotes when unnecessary; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "removeWhitespace": {
+                                    "description": "Controls removing unused whitespace; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "replaceMultipleZeros": {
+                                    "description": "Contols removing redundant zeros; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "replaceTimeUnits": {
+                                    "description": "Controls replacing time units with shorter values; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "replaceZeroUnits": {
+                                    "description": "Controls replacing zero values with units; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "roundingPrecision": {
+                                    "description": "Rounds pixel values to `N` decimal places; `false` disables rounding; defaults to `false`.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "selectorsSortingMethod": {
+                                    "description": "Denotes selector sorting method.",
+                                    "type": "string",
+                                    "default": "standard",
+                                    "enum": [
+                                        "natural",
+                                        "standard",
+                                        "none"
+                                    ]
+                                },
+                                "specialComments": {
+                                    "description": "Denotes a number of /*! ... */ comments preserved.",
+                                    "type": "string",
+                                    "default": "all"
+                                },
+                                "tidyAtRules": {
+                                    "description": "Controls at-rules (e.g. `@charset`, `@import`) optimizing; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "tidyBlockScopes": {
+                                    "description": "Controls block scopes (e.g. `@media`) optimizing; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "tidySelectors": {
+                                    "description": "Controls selectors optimizing; defaults to `true`,.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "semicolonAfterLastProperty": {
+                                    "description": "Controls removing trailing semicolons in rule; defaults to `false` - means remove.",
+                                    "type": "boolean",
+                                    "default": false
+                                }
+                            }
+                        },
+                        "2": {
+                            "description": "Level 2 optimization settings.",
+                            "type": "object",
+                            "properties": {
+                                "mergeAdjacentRules": {
+                                    "description": "Controls adjacent rules merging; defaults to true.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "mergeIntoShorthands": {
+                                    "description": "Controls merging properties into shorthands; defaults to true.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "mergeMedia": {
+                                    "description": "Controls `@media` merging; defaults to true.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "mergeNonAdjacentRules": {
+                                    "description": "Controls non-adjacent rule merging; defaults to true.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "mergeSemantically": {
+                                    "description": "Controls semantic merging; defaults to false.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "overrideProperties": {
+                                    "description": "Controls property overriding based on understandability; defaults to true.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "removeEmpty": {
+                                    "description": "Controls removing empty rules and nested blocks; defaults to `true`.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "reduceNonAdjacentRules": {
+                                    "description": "Controls non-adjacent rule reducing; defaults to true.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "removeDuplicateFontRules": {
+                                    "description": "Controls duplicate `@font-face` removing; defaults to true.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "removeDuplicateMediaBlocks": {
+                                    "description": "Controls duplicate `@media` removing; defaults to true.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "removeDuplicateRules": {
+                                    "description": "Controls duplicate rules removing; defaults to true.",
+                                    "type": "boolean",
+                                    "default": true
+                                },
+                                "removeUnusedAtRules": {
+                                    "description": "Controls unused at rule removing; defaults to false (available since 4.1.0).",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "restructureRules": {
+                                    "description": "Controls rule restructuring; defaults to false.",
+                                    "type": "boolean",
+                                    "default": false
+                                },
+                                "skipProperties": {
+                                    "description": "Controls which properties won't be optimized, defaults to `[]` which means all will be optimized (since 4.1.0).",
+                                    "type": "array",
+                                    "default": []
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "rebase": {
+            "description": "Controls URL rebasing.",
+            "type": "boolean",
+            "default": true
+        },
+        "rebaseTo": {
+            "description": "Controls a directory to which all URLs are rebased, most likely the directory under which the output file will live. Defaults to the current directory.",
+            "type": "string"
+        },
+        "sourceMapInlineSources": {
+            "description": "Controls embedding sources inside a source map's sourcesContent field.",
+            "type": "boolean",
+            "default": false
+        },
+        "sourceMap": {
+            "description": "Controls whether an output source map is built.",
+            "type": "boolean",
+            "default": false
+        }
+    }
+}

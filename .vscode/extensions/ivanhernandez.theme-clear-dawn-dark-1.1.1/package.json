@@ -1,0 +1,53 @@
+{
+	"name": "theme-clear-dawn-dark",
+	"displayName": "Clear Dawn Dark",
+	"description": "Desaturated greenish and blueish, high contrast, dark themes (and two retro monochromatic extras)",
+	"categories": [
+		"Themes"
+	],
+	"version": "1.1.1",
+	"publisher": "ivanhernandez",
+	"repository": " https://github.com/ivanhernandez/theme-clear-dawn-dark",
+	"engines": {
+		"vscode": "*"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"id": "Clear Dawn Dark",
+				"label": "Clear Dawn Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/clear_dawn_dark.json"
+			},
+			{
+				"id": "Clear Dawn Denim",
+				"label": "Clear Dawn Denim",
+				"uiTheme": "vs-dark",
+				"path": "./themes/clear_dawn_denim.json"
+			},
+			{
+				"id": "Clear Dawn Phosphor",
+				"label": "Clear Dawn Phosphor",
+				"uiTheme": "vs-dark",
+				"path": "./themes/clear_dawn_phosphor.json"
+			},
+			{
+				"id": "Clear Dawn RetrOrange",
+				"label": "Clear Dawn RetrOrange",
+				"uiTheme": "vs-dark",
+				"path": "./themes/clear_dawn_retrorange.json"
+			},
+			{
+				"id": "Clear Dawn Turbo",
+				"label": "Clear Dawn Turbo",
+				"uiTheme": "vs-dark",
+				"path": "./themes/clear_dawn_turbo.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "f756c4a5-c7bb-42a4-b53b-6e152f5d680e",
+		"publisherId": "0258f8d6-21b2-42de-b666-737c1c6cb390",
+		"publisherDisplayName": "Ivan Hernandez Valmisa"
+	}
+}

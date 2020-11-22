@@ -1,0 +1,1130 @@
+{
+	"name": "remote-containers",
+	"displayName": "Remote - Containers",
+	"description": "Open any folder or repository inside a Docker container and take advantage of Visual Studio Code's full feature set.",
+	"version": "0.148.1",
+	"preview": true,
+	"publisher": "ms-vscode-remote",
+	"icon": "resources/remote-containers.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Microsoft/vscode-remote-release.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Microsoft/vscode-remote-release/issues"
+	},
+	"license": "SEE LICENSE IN LICENSE.txt",
+	"engines": {
+		"vscode": "^1.51.0"
+	},
+	"extensionKind": [
+		"ui"
+	],
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"remote",
+		"docker",
+		"containers",
+		"remote development",
+		"dev container",
+		"development container"
+	],
+	"aiKey": "AIF-d9b70cd4-b9f9-4d70-929b-a071c400b217",
+	"activationEvents": [
+		"onStartupFinished",
+		"onCommand:remote-containers.reopenInContainer",
+		"onCommand:remote-containers.rebuildAndReopenInContainer",
+		"onCommand:remote-containers.reopenLocally",
+		"onCommand:remote-containers.openFolder",
+		"onCommand:remote-containers.openRepositoryInVolume",
+		"onCommand:remote-containers.inspectVolume",
+		"onCommand:remote-containers.inspectVolumeFromViewlet",
+		"onCommand:remote-containers.openWorkspace",
+		"onCommand:remote-containers.attachToRunningContainer",
+		"onCommand:remote-containers.attachToRunningContainerFromViewlet",
+		"onCommand:remote-containers.attachToK8sContainerFromViewlet",
+		"onCommand:remote-containers.checkoutPRInVolume",
+		"onCommand:remote-containers.rebuildContainer",
+		"onCommand:remote-containers.createDevContainerFile",
+		"onCommand:remote-containers.openDevContainerFile",
+		"onCommand:remote-containers.openAttachDevContainerFile",
+		"onCommand:remote-containers.settings",
+		"onCommand:remote-containers.getHelp",
+		"onCommand:remote-containers.getStarted",
+		"onCommand:remote-containers.trySample",
+		"onCommand:remote-containers.reportIssue",
+		"onCommand:remote-containers.provideFeedback",
+		"onCommand:remote-containers.revealLogTerminal",
+		"onCommand:remote-containers.openLogFile",
+		"onCommand:remote-containers.openLastLogFile",
+		"onCommand:remote-containers.addExtensionToConfig",
+		"onCommand:remote-containers.showReopenInContainerNotificationReset",
+		"onCommand:remote-containers.showRecoveryContainerNotificationReset",
+		"workspaceContains:.devcontainer/devcontainer.json",
+		"workspaceContains:.devcontainer.json",
+		"onResolveRemoteAuthority:dev-container",
+		"onResolveRemoteAuthority:attached-container",
+		"onResolveRemoteAuthority:exec",
+		"onResolveRemoteAuthority:k8s-container",
+		"onDebugResolve:extensionHost",
+		"onView:targetsContainers"
+	],
+	"main": "./dist/extension",
+	"enableProposedApi": true,
+	"contributes": {
+		"configuration": {
+			"title": "Remote - Containers",
+			"properties": {
+				"remote.containers.defaultExtensions": {
+					"type": "array",
+					"description": "Configures the list of extensions to always install while creating a container.",
+					"default": [],
+					"items": {
+						"type": "string",
+						"pattern": "([a-z0-9A-Z][a-z0-9\\-A-Z]*)\\.([a-z0-9A-Z][a-z0-9\\-A-Z]*)",
+						"errorMessage": "Expected format '${publisher}.${name}'. Example: 'vscode.csharp'."
+					}
+				},
+				"remote.containers.enableContainersExplorer": {
+					"type": "boolean",
+					"description": "Enables the Containers Explorer in the Remote Explorer.",
+					"default": true
+				},
+				"remote.containers.workspaceMountConsistency": {
+					"type": "string",
+					"enum": [
+						"consistent",
+						"cached",
+						"delegated"
+					],
+					"enumDescriptions": [
+						"Perfect consistency.",
+						"The host’s view is authoritative.",
+						"The container’s view is authoritative."
+					],
+					"description": "The consistency level used for the workspace mount (existing containers must be rebuilt to take effect).",
+					"default": "cached"
+				},
+				"remote.containers.copyGitConfig": {
+					"type": "boolean",
+					"description": "Controls whether the Git configuration (`~/.gitconfig`) should be copied into the container.",
+					"default": true
+				},
+				"remote.containers.gitCredentialHelperConfigLocation": {
+					"type": "string",
+					"enum": [
+						"system",
+						"global",
+						"none"
+					],
+					"enumDescriptions": [
+						"Write to system config (`/etc/gitconfig`, requires root access).",
+						"Write to user config (`~/.gitconfig`).",
+						"Do not set a credential helper."
+					],
+					"description": "Where to write the configuration for the Git credential helper.",
+					"default": "global"
+				},
+				"remote.containers.logLevel": {
+					"type": "string",
+					"description": "The log level for the extension.",
+					"default": "info",
+					"scope": "application",
+					"enum": [
+						"info",
+						"debug",
+						"trace"
+					]
+				},
+				"remote.containers.dockerPath": {
+					"type": "string",
+					"description": "Docker (or Podman) executable name or path.",
+					"default": "docker"
+				},
+				"dotfiles.repository": {
+					"type": "string",
+					"description": "URL of a dotfiles Git repository (e.g., https://github.com/owner/repository.git) or owner/repository of a GitHub repository."
+				},
+				"dotfiles.installCommand": {
+					"type": "string",
+					"description": "The command to run after cloning the dotfiles repository. Defaults to `~/dotfiles/install.sh`.",
+					"default": "~/dotfiles/install.sh"
+				},
+				"dotfiles.targetPath": {
+					"type": "string",
+					"description": "The path to clone the dotfiles repository to. Defaults to `~/dotfiles`.",
+					"default": "~/dotfiles"
+				},
+				"remote.containers.dotfiles.repository": {
+					"type": "string",
+					"description": "URL of a dotfiles Git repository (e.g., https://github.com/owner/repository.git) or owner/repository of a GitHub repository for DevContainers. This overrides the common setting for the dotfiles repository."
+				},
+				"remote.containers.dotfiles.installCommand": {
+					"type": "string",
+					"description": "The command to run after cloning the dotfiles repository for DevContainers. This overrides the common setting for the dotfiles install command."
+				},
+				"remote.containers.dotfiles.targetPath": {
+					"type": "string",
+					"description": "The path to clone the dotfiles repository to for DevContainers. This overrides the common setting for the dotfiles target path."
+				},
+				"remote.containers.repositoryConfigurationPaths": {
+					"type": "array",
+					"markdownDescription": "List of additional paths to search for [repository configurations](https://github.com/microsoft/vscode-dev-containers/tree/master/repository-containers).",
+					"default": [],
+					"items": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "remote-containers.reopenInContainer",
+				"title": "Reopen in Container",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.rebuildAndReopenInContainer",
+				"title": "Rebuild and Reopen in Container",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.reopenLocally",
+				"title": "Reopen Locally",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.reopenInWSL",
+				"title": "Reopen in WSL",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.openFolder",
+				"title": "Open Folder in Container...",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/reopen-folder.svg",
+					"dark": "resources/dark/reopen-folder.svg"
+				}
+			},
+			{
+				"command": "remote-containers.startAndOpenFolder",
+				"title": "Open Container",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/reopen-folder.svg",
+					"dark": "resources/dark/reopen-folder.svg"
+				}
+			},
+			{
+				"command": "remote-containers.openRepositoryInVolume",
+				"title": "Clone Repository in Container Volume...",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.inspectVolume",
+				"title": "Inspect a Volume in a Container...",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.openWorkspace",
+				"title": "Open Workspace in Container...",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.attachToRunningContainer",
+				"title": "Attach to Running Container...",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.attachToRunningContainerFromViewlet",
+				"title": "Attach Visual Studio Code",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.inspectVolumeFromViewlet",
+				"title": "Inspect in Visual Studio Code",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.attachToK8sContainerFromViewlet",
+				"title": "Attach Visual Studio Code",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.rebuildContainer",
+				"title": "Rebuild Container",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/tools.svg",
+					"dark": "resources/dark/tools.svg"
+				}
+			},
+			{
+				"command": "remote-containers.createDevContainerFile",
+				"title": "Add Development Container Configuration Files...",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.settings",
+				"title": "Settings",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.getHelp",
+				"title": "Help",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.getStarted",
+				"title": "Getting Started",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.trySample",
+				"title": "Try a Sample...",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.reportIssue",
+				"title": "Report Issue...",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.provideFeedback",
+				"title": "Provide Feedback",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.openDevContainerFile",
+				"title": "Open Container Configuration File",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/gear.svg",
+					"dark": "resources/dark/gear.svg"
+				}
+			},
+			{
+				"command": "remote-containers.openAttachConfigByNameFile",
+				"title": "Open Named Container Configuration File",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.openAttachDevContainerFile",
+				"title": "Open Attached Container Configuration File...",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.revealLogTerminal",
+				"title": "Show Log",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.openLogFile",
+				"title": "Show All Logs...",
+				"category": "Remote-Containers Developer"
+			},
+			{
+				"command": "remote-containers.openLastLogFile",
+				"title": "Show Previous Log",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.attachToContainer",
+				"title": "Attach to Container",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/empty-window.svg",
+					"dark": "resources/dark/empty-window.svg"
+				}
+			},
+			{
+				"command": "remote-containers.attachToContainerNewWindow",
+				"title": "Attach in New Window",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.stopContainer",
+				"title": "Stop Container",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.startContainer",
+				"title": "Start Container",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/vm-start.svg",
+					"dark": "resources/dark/vm-start.svg"
+				}
+			},
+			{
+				"command": "remote-containers.removeContainer",
+				"title": "Remove Container",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/remove.svg",
+					"dark": "resources/dark/remove.svg"
+				}
+			},
+			{
+				"command": "remote-containers.removeRecentFolder",
+				"title": "Remove Recent Folder",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/remove.svg",
+					"dark": "resources/dark/remove.svg"
+				}
+			},
+			{
+				"command": "remote-containers.openInBrowser",
+				"title": "Open in Browser",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/open-browser.svg",
+					"dark": "resources/dark/open-browser.svg"
+				}
+			},
+			{
+				"command": "remote-containers.showDetails",
+				"title": "Show Details",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.explorerTargetsRefresh",
+				"title": "Refresh",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/refresh.svg",
+					"dark": "resources/dark/refresh.svg"
+				}
+			},
+			{
+				"command": "remote-containers.explorerDetailsRefresh",
+				"title": "Refresh",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/refresh.svg",
+					"dark": "resources/dark/refresh.svg"
+				}
+			},
+			{
+				"command": "remote-containers.inspectDockerResource",
+				"title": "Inspect",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.newContainer",
+				"title": "New Container",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/plus.svg",
+					"dark": "resources/dark/plus.svg"
+				}
+			},
+			{
+				"command": "remote-containers.showContainerLog",
+				"title": "Show Container Log",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.forwardCandidatePort",
+				"title": "Forward Port",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/plus.svg",
+					"dark": "resources/dark/plus.svg"
+				}
+			},
+			{
+				"command": "remote-containers.stopForwardingPort",
+				"title": "Stop Forwarding Port",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/remove.svg",
+					"dark": "resources/dark/remove.svg"
+				}
+			},
+			{
+				"command": "remote-containers.refreshPorts",
+				"title": "Refresh Ports",
+				"category": "Remote-Containers",
+				"icon": {
+					"light": "resources/light/refresh.svg",
+					"dark": "resources/dark/refresh.svg"
+				}
+			},
+			{
+				"command": "remote-containers.addExtensionToConfig",
+				"title": "Add to devcontainer.json",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.checkoutPRInVolume",
+				"title": "Checkout Pull Request in Dev Container",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.showReopenInContainerNotificationReset",
+				"title": "Reset Don't Show Reopen Notification",
+				"category": "Remote-Containers"
+			},
+			{
+				"command": "remote-containers.showRecoveryContainerNotificationReset",
+				"title": "Reset Don't Show Recovery Container Notification",
+				"category": "Remote-Containers"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "remote-containers.reopenInContainer",
+					"when": "workspaceFolderCount != 0 && !remoteName"
+				},
+				{
+					"command": "remote-containers.reopenInContainer",
+					"when": "workspaceFolderCount != 0 && remoteName == wsl"
+				},
+				{
+					"command": "remote-containers.reopenInContainer",
+					"when": "workspaceFolderCount != 0 && remoteName == dev-container && isRecoveryContainer"
+				},
+				{
+					"command": "remote-containers.rebuildAndReopenInContainer",
+					"when": "workspaceFolderCount != 0 && !remoteName"
+				},
+				{
+					"command": "remote-containers.rebuildAndReopenInContainer",
+					"when": "workspaceFolderCount != 0 && remoteName == wsl"
+				},
+				{
+					"command": "remote-containers.reopenLocally",
+					"when": "remoteName =~ /^dev-container$/"
+				},
+				{
+					"command": "remote-containers.reopenInWSL",
+					"when": "canReopenInWSL"
+				},
+				{
+					"command": "remote-containers.openFolder",
+					"when": "remoteName =~ /^(dev-container|attached-container|exec|k8s-container)?$/"
+				},
+				{
+					"command": "remote-containers.openFolder",
+					"when": "remoteName == wsl"
+				},
+				{
+					"command": "remote-containers.openRepositoryInVolume",
+					"when": "remoteName =~ /^(dev-container|attached-container|exec|k8s-container)?$/"
+				},
+				{
+					"command": "remote-containers.openWorkspace",
+					"when": "remoteName =~ /^(dev-container|attached-container|exec|k8s-container)?$/"
+				},
+				{
+					"command": "remote-containers.openWorkspace",
+					"when": "remoteName == wsl"
+				},
+				{
+					"command": "remote-containers.attachToRunningContainer",
+					"when": "remoteName =~ /^(dev-container|attached-container|exec|k8s-container)?$/"
+				},
+				{
+					"command": "remote-containers.attachToRunningContainerFromViewlet",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.inspectVolumeFromViewlet",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.attachToK8sContainerFromViewlet",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.checkoutPRInVolume",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.rebuildContainer",
+					"when": "remoteName =~ /^dev-container$/"
+				},
+				{
+					"command": "remote-containers.createDevContainerFile",
+					"when": "!remoteName"
+				},
+				{
+					"command": "remote-containers.createDevContainerFile",
+					"when": "remoteName == wsl"
+				},
+				{
+					"command": "remote-containers.openDevContainerFile",
+					"when": "workspaceFolderCount != 0 && !remoteName"
+				},
+				{
+					"command": "remote-containers.openDevContainerFile",
+					"when": "workspaceFolderCount != 0 && remoteName == wsl"
+				},
+				{
+					"command": "remote-containers.openDevContainerFile",
+					"when": "remoteName =~ /^(dev|attached)-container$/"
+				},
+				{
+					"command": "remote-containers.openAttachConfigByNameFile",
+					"when": "remoteName == attached-container"
+				},
+				{
+					"command": "remote-containers.openAttachDevContainerFile",
+					"when": "remoteName =~ /^(dev-container|attached-container|exec|k8s-container)?$/"
+				},
+				{
+					"command": "remote-containers.getStarted",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.trySample",
+					"when": "!remoteName"
+				},
+				{
+					"command": "remote-containers.provideFeedback",
+					"when": "remoteName =~ /^(dev-container|attached-container|exec|k8s-container)$/"
+				},
+				{
+					"command": "remote-containers.attachToContainer",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.attachToContainerNewWindow",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.stopContainer",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.removeContainer",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.startContainer",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.removeRecentFolder",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.openInBrowser",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.showDetails",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.explorerTargetsRefresh",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.explorerDetailsRefresh",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.inspectDockerResource",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.startAndOpenFolder",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.newContainer",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.showContainerLog",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.forwardCandidatePort",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.stopForwardingPort",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.refreshPorts",
+					"when": "false"
+				},
+				{
+					"command": "remote-containers.addExtensionToConfig",
+					"when": "false"
+				}
+			],
+			"statusBar/windowIndicator": [
+				{
+					"command": "remote-containers.reopenInContainer",
+					"group": "2_local_containers_actions@1",
+					"when": "workspaceFolderCount != 0 && !remoteName"
+				},
+				{
+					"command": "remote-containers.reopenInContainer",
+					"group": "2_local_containers_actions@1",
+					"when": "workspaceFolderCount != 0 && remoteName == wsl"
+				},
+				{
+					"command": "remote-containers.openFolder",
+					"group": "2_local_containers_actions@2",
+					"when": "!remoteName"
+				},
+				{
+					"command": "remote-containers.openWorkspace",
+					"group": "2_local_containers_actions@3",
+					"when": "!remoteName"
+				},
+				{
+					"command": "remote-containers.openRepositoryInVolume",
+					"group": "2_local_containers_actions@4",
+					"when": "!remoteName"
+				},
+				{
+					"command": "remote-containers.attachToRunningContainer",
+					"group": "2_local_containers_actions@5",
+					"when": "!remoteName"
+				},
+				{
+					"command": "remote-containers.createDevContainerFile",
+					"group": "2_local_containers_actions@6",
+					"when": "!remoteName"
+				},
+				{
+					"command": "remote-containers.createDevContainerFile",
+					"group": "2_local_containers_actions@6",
+					"when": "remoteName == wsl"
+				},
+				{
+					"command": "remote-containers.trySample",
+					"group": "2_local_containers_actions@7",
+					"when": "!remoteName"
+				},
+				{
+					"command": "remote-containers.getStarted",
+					"group": "2_local_containers_actions@8",
+					"when": "!remoteName"
+				},
+				{
+					"command": "remote-containers.reopenInWSL",
+					"group": "1_remote_containers_actions@1",
+					"when": "canReopenInWSL"
+				},
+				{
+					"command": "remote-containers.reopenLocally",
+					"group": "1_remote_containers_actions@2",
+					"when": "remoteName =~ /^dev-container$/"
+				},
+				{
+					"command": "remote-containers.rebuildContainer",
+					"group": "1_remote_containers_actions@3",
+					"when": "remoteName =~ /^dev-container$/"
+				},
+				{
+					"command": "remote-containers.openDevContainerFile",
+					"group": "1_remote_containers_actions@4",
+					"when": "remoteName =~ /^(dev|attached)-container$/"
+				},
+				{
+					"command": "remote-containers.revealLogTerminal",
+					"group": "1_remote_containers_actions@5",
+					"when": "remoteName =~ /^(dev-container|attached-container|exec|k8s-container)$/"
+				},
+				{
+					"command": "remote-containers.openFolder",
+					"group": "1_remote_containers_actions@6",
+					"when": "remoteName =~ /^(dev-container|attached-container|exec|k8s-container)$/ && remoteConnectionState == connected"
+				},
+				{
+					"command": "remote-containers.openWorkspace",
+					"group": "1_remote_containers_actions@7",
+					"when": "remoteName =~ /^(dev-container|attached-container|exec|k8s-container)$/ && remoteConnectionState == connected"
+				},
+				{
+					"command": "remote-containers.openRepositoryInVolume",
+					"group": "1_remote_containers_actions@8",
+					"when": "remoteName =~ /^(dev-container|attached-container|exec|k8s-container)$/ && remoteConnectionState == connected"
+				},
+				{
+					"command": "remote-containers.attachToRunningContainer",
+					"group": "1_remote_containers_actions@9",
+					"when": "remoteName =~ /^(dev-container|attached-container|exec|k8s-container)$/"
+				},
+				{
+					"command": "remote-containers.settings",
+					"group": "9_remote_containers_help@1",
+					"when": "remoteName =~ /^(dev-container|attached-container|exec|k8s-container)$/"
+				},
+				{
+					"command": "remote-containers.reportIssue",
+					"group": "9_remote_containers_help@2",
+					"when": "remoteName =~ /^(dev-container|attached-container|exec|k8s-container)$/"
+				},
+				{
+					"command": "remote-containers.getHelp",
+					"group": "9_remote_containers_help@4",
+					"when": "remoteName =~ /^(dev-container|attached-container|exec|k8s-container)$/"
+				}
+			],
+			"view/title": [
+				{
+					"command": "remote-containers.explorerTargetsRefresh",
+					"when": "view == targetsContainers && !remote-containers:needsDockerStartOrInstall && !remote-containers:noContainersWithFolder && !remote-containers:noContainersWithoutFolder",
+					"group": "navigation"
+				},
+				{
+					"command": "remote-containers.newContainer",
+					"when": "view == targetsContainers && !remote-containers:needsDockerStartOrInstall && !remote-containers:noContainersWithFolder && !remote-containers:noContainersWithoutFolder",
+					"group": "navigation"
+				},
+				{
+					"command": "remote-containers.explorerDetailsRefresh",
+					"when": "view == detailsContainers",
+					"group": "navigation"
+				},
+				{
+					"command": "remote-containers.attachToContainer",
+					"when": "view == detailsContainers",
+					"group": "navigation"
+				},
+				{
+					"command": "remote-containers.rebuildContainer",
+					"when": "view == detailsContainers && remoteName == dev-container",
+					"group": "navigation"
+				},
+				{
+					"command": "remote-containers.openDevContainerFile",
+					"when": "view == detailsContainers && remoteName =~ /^(dev|attached)-container$/",
+					"group": "navigation"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "remote-containers.attachToRunningContainerFromViewlet",
+					"when": "view == dockerContainers && viewItem =~ /^runningContainer$/i && vscode-docker:aciContext != true",
+					"group": "containers_1_general@2"
+				},
+				{
+					"command": "remote-containers.inspectVolumeFromViewlet",
+					"when": "view == dockerVolumes && viewItem == volume && vscode-docker:aciContext != true",
+					"group": "volumes_1_general@2"
+				},
+				{
+					"command": "remote-containers.checkoutPRInVolume",
+					"when": "view =~ /pr:/ && viewItem =~ /pullrequest(:local)?:nonactive|description/"
+				},
+				{
+					"command": "remote-containers.attachToK8sContainerFromViewlet",
+					"group": "2@4",
+					"when": "view == extension.vsKubernetesExplorer && viewItem =~ /vsKubernetes\\.resource\\.pod/i"
+				},
+				{
+					"command": "remote-containers.startAndOpenFolder",
+					"when": "view == targetsContainers && viewItem =~ /^(dev|attached)Folder$/",
+					"group": "1_folder@1"
+				},
+				{
+					"command": "remote-containers.startAndOpenFolder",
+					"when": "view == targetsContainers && viewItem =~ /^(dev|attached)Folder$/",
+					"group": "inline@1"
+				},
+				{
+					"command": "remote-containers.removeRecentFolder",
+					"when": "view == targetsContainers && viewItem == attachedFolder",
+					"group": "2_folder@1"
+				},
+				{
+					"command": "remote-containers.removeRecentFolder",
+					"when": "view == targetsContainers && viewItem == attachedFolder",
+					"group": "inline@2"
+				},
+				{
+					"command": "workbench.action.closeFolder",
+					"when": "view == targetsContainers && viewItem == activeattachedFolder",
+					"group": "1_folder@1"
+				},
+				{
+					"command": "remote-containers.reopenLocally",
+					"when": "view == targetsContainers && viewItem == activedevFolder",
+					"group": "1_folder@1"
+				},
+				{
+					"command": "remote-containers.reopenInWSL",
+					"when": "canReopenInWSL && view == targetsContainers && viewItem == activedevFolder",
+					"group": "1_folder@1"
+				},
+				{
+					"command": "remote-containers.attachToContainer",
+					"when": "view == targetsContainers && viewItem =~ /^(active|running|exited)Container$/",
+					"group": "1_container@1"
+				},
+				{
+					"command": "remote-containers.attachToContainer",
+					"when": "view == targetsContainers && viewItem =~ /^(active|running|exited)Container$/",
+					"group": "inline@1"
+				},
+				{
+					"command": "remote-containers.attachToContainerNewWindow",
+					"when": "view == targetsContainers && viewItem =~ /^(active|running|exited)Container$/",
+					"group": "1_container@2"
+				},
+				{
+					"command": "remote-containers.stopContainer",
+					"when": "view == targetsContainers && viewItem =~ /^(active|running)(Dev|)Container$/",
+					"group": "2_container@2"
+				},
+				{
+					"command": "remote-containers.removeContainer",
+					"when": "view == targetsContainers && viewItem =~ /^(running|exited)(Dev|)Container$/",
+					"group": "2_container@3"
+				},
+				{
+					"command": "remote-containers.rebuildContainer",
+					"when": "view == targetsContainers && viewItem == activeDevContainer",
+					"group": "2_container@1"
+				},
+				{
+					"command": "remote-containers.removeContainer",
+					"when": "view == targetsContainers && viewItem =~ /^(running|exited)(Dev|)Container$/",
+					"group": "inline@2"
+				},
+				{
+					"command": "remote-containers.startContainer",
+					"when": "view == targetsContainers && viewItem =~ /^exited(Dev|)Container$/",
+					"group": "1_container@3"
+				},
+				{
+					"command": "remote-containers.showDetails",
+					"when": "view == targetsContainers && viewItem =~ /^(active|running|exited)(Dev|)Container$/",
+					"group": "1_container@4"
+				},
+				{
+					"command": "remote-containers.inspectDockerResource",
+					"when": "view == targetsContainers && viewItem =~ /^(active|running|exited)(Dev|)Container$/",
+					"group": "1_container@5"
+				},
+				{
+					"command": "remote-containers.showContainerLog",
+					"when": "view == targetsContainers && viewItem =~ /^(active|running|exited)(Dev|)Container$/",
+					"group": "1_container@6"
+				},
+				{
+					"command": "remote-containers.openDevContainerFile",
+					"when": "view == detailsContainers && viewItem == devContainer"
+				},
+				{
+					"command": "remote-containers.inspectDockerResource",
+					"when": "view == detailsContainers && viewItem =~ /^(image|volume)$/"
+				}
+			],
+			"extension/context": [
+				{
+					"command": "remote-containers.addExtensionToConfig",
+					"group": "2_configure",
+					"when": "!isBuiltinExtension && remoteName =~ /^(dev-container|attached-container|wsl)?$/"
+				}
+			]
+		},
+		"languages": [
+			{
+				"id": "jsonc",
+				"filenamePatterns": [
+					"**/.devcontainer/devcontainer.json",
+					"**/.devcontainer.json"
+				]
+			}
+		],
+		"resourceLabelFormatters": [
+			{
+				"scheme": "vscode-remote",
+				"authority": "dev-container+*",
+				"formatting": {
+					"label": "${path}",
+					"separator": "/",
+					"tildify": true,
+					"workspaceSuffix": "Dev Container"
+				}
+			},
+			{
+				"scheme": "vscode-remote",
+				"authority": "attached-container+*",
+				"formatting": {
+					"label": "${path}",
+					"separator": "/",
+					"tildify": true,
+					"workspaceSuffix": "Container"
+				}
+			},
+			{
+				"scheme": "vscode-remote",
+				"authority": "exec+*",
+				"formatting": {
+					"label": "${path}",
+					"separator": "/",
+					"tildify": true,
+					"workspaceSuffix": "Exec"
+				}
+			},
+			{
+				"scheme": "vscode-remote",
+				"authority": "k8s-container+*",
+				"formatting": {
+					"label": "${path}",
+					"separator": "/",
+					"tildify": true,
+					"workspaceSuffix": "Kubernetes"
+				}
+			}
+		],
+		"views": {
+			"remote": [
+				{
+					"id": "targetsContainers",
+					"name": "Containers",
+					"group": "targets@2",
+					"remoteName": [
+						"dev-container",
+						"attached-container",
+						"exec",
+						"k8s-container"
+					]
+				},
+				{
+					"id": "detailsContainers",
+					"name": "Details (Containers)",
+					"when": "remote-containers:showDetails",
+					"group": "details@1",
+					"remoteName": [
+						"dev-container",
+						"attached-container"
+					]
+				}
+			]
+		},
+		"viewsWelcome": [
+			{
+				"view": "targetsContainers",
+				"when": "remote-containers:needsDockerStartOrInstall",
+				"contents": "Get started with containers by installing and starting [Docker](https://code.visualstudio.com/docs/remote/containers) or by visiting the [help view](command:~remote.helpPanel.focus)."
+			},
+			{
+				"view": "targetsContainers",
+				"when": "remote-containers:noContainersWithFolder",
+				"contents": "Get started with containers by running one of the [Remote-Containers](command:remote-containers.newContainer) commands.\nYou can [reopen the current folder in a container](command:remote-containers.reopenInContainer), or open another folder in a container.\n[Open Folder in Container](command:remote-containers.openFolder)\nOr, if there's a repository you want to work with you can open that directly.\n[Clone Repository in Container Volume](command:remote-containers.openRepositoryInVolume)\nIf you're new to containers and want to [try a sample](command:remote-containers.trySample), there are several to choose from."
+			},
+			{
+				"view": "targetsContainers",
+				"when": "remote-containers:noContainersWithoutFolder",
+				"contents": "Get started with containers by running one of the [Remote-Containers](command:remote-containers.newContainer) commands.\nYou can open an existing folder in a container.\n[Open Folder in Container](command:remote-containers.openFolder)\nOr, if there's a repository you want to work with you can open that directly.\n[Clone Repository in Container Volume](command:remote-containers.openRepositoryInVolume)\nIf you're new to containers and want to [try a sample](command:remote-containers.trySample), there are several to choose from."
+			}
+		],
+		"remoteHelp": {
+			"getStarted": "https://aka.ms/vscode-remote/containers/tutorial-sandbox",
+			"feedback": "https://aka.ms/vscode-remote/containers/provide-feedback",
+			"documentation": "https://aka.ms/vscode-remote/containers",
+			"issues": "https://aka.ms/vscode-remote/containers/issues",
+			"remoteName": [
+				"dev-container",
+				"attached-container",
+				"exec",
+				"k8s-container"
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm-run-all clean definitions compile-prod",
+		"compile": "npm-run-all clean definitions compile-dev",
+		"watch": "npm-run-all clean definitions compile-watch",
+		"precommit": "node build/gulpfile.hygiene.js",
+		"package": "vsce package --yarn",
+		"definitions": "npm-run-all definitions-clean definitions-copy",
+		"lint": "eslint -c .eslintrc.js --rulesdir ./build/eslint --ext .ts ./src ./test",
+		"compile-prod": "webpack --mode production",
+		"compile-dev": "webpack --mode none --info-verbosity verbose",
+		"compile-watch": "webpack --mode none --watch --info-verbosity verbose",
+		"definitions-clean": "rimraf dist/node_modules/vscode-dev-containers",
+		"definitions-copy": "copyfiles --all \"node_modules/vscode-dev-containers/**/*\" dist",
+		"devcontainerjson-publish": "npm-run-all devcontainerjson-prepare devcontainerjson-npm-publish",
+		"devcontainerjson-package": "npm-run-all devcontainerjson-prepare devcontainerjson-npm-pack",
+		"devcontainerjson-prepare": "npm-run-all clean devcontainerjson-compile devcontainerjson-copy-module devcontainerjson-copy-definitions",
+		"devcontainerjson-compile": "tsc -b",
+		"devcontainerjson-copy-module": "copyfiles --up 1 --all --exclude \"**/*.tsbuildinfo\" \"built/src/utils/**/*\" \"built/src/configuration/**/*\" \"built/src/configurationUI/**/*\" devcontainerjson/dist",
+		"devcontainerjson-copy-definitions": "copyfiles --all \"node_modules/vscode-dev-containers/**/*\" devcontainerjson/dist",
+		"devcontainerjson-npm-publish": "cd devcontainerjson && npm publish",
+		"devcontainerjson-npm-pack": "cd devcontainerjson && npm pack",
+		"clean": "rimraf dist built devcontainerjson/dist",
+		"test": "env TS_NODE_PROJECT=test/core/tsconfig.json mocha -r ts-node/register --exit test/core/**/*.test.ts",
+		"test-dev-containers": "env TS_NODE_PROJECT=test/dev-containers/tsconfig.json mocha -r ts-node/register --exit test/dev-containers/**/*.test.ts",
+		"copytestconfigsforalpine": "/bin/bash -c 'cd test/configs && for f in *; do if [[ -d $f ]] && [[ $f != *alpine* ]]; then cp -r -T $f $f-alpine ; fi ; done'"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.2.12",
+		"@types/follow-redirects": "^1.13.0",
+		"@types/js-yaml": "^3.12.5",
+		"@types/markdown-it": "^10.0.2",
+		"@types/mkdirp": "^1.0.1",
+		"@types/mocha": "^8.0.3",
+		"@types/node": "^14.6.2",
+		"@types/pull-stream": "^3.6.2",
+		"@types/vscode": "^1.48.0",
+		"@types/webpack": "^4.41.21",
+		"@typescript-eslint/eslint-plugin": "^3.10.1",
+		"@typescript-eslint/parser": "^3.10.1",
+		"ajv": "^6.12.4",
+		"chai": "4.2.0",
+		"copyfiles": "^2.3.0",
+		"eslint": "^7.7.0",
+		"event-stream": "^4.0.1",
+		"gulp": "^4.0.2",
+		"gulp-eslint": "^6.0.0",
+		"gulp-filter": "^6.0.0",
+		"husky": "^4.2.5",
+		"jsonc": "^2.0.0",
+		"mocha": "^8.1.3",
+		"mocha-junit-reporter": "^2.0.0",
+		"node-pty": "^0.9.0",
+		"npm-run-all": "^4.1.5",
+		"p-all": "^3.0.0",
+		"ts-loader": "^8.0.3",
+		"ts-node": "^9.0.0",
+		"typescript": "^4.0.2",
+		"typescript-formatter": "^7.2.2",
+		"vinyl": "^2.2.0",
+		"vinyl-fs": "^3.0.3",
+		"vsce": "^1.79.5",
+		"vscode-nls-dev": "^3.3.2",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12"
+	},
+	"dependencies": {
+		"@types/tar": "^4.0.3",
+		"follow-redirects": "^1.13.0",
+		"js-yaml": "^3.14.0",
+		"jsonc-parser": "^2.3.0",
+		"markdown-it": "^11.0.0",
+		"mkdirp": "^1.0.4",
+		"muxrpc": "^6.5.0",
+		"pull-stream": "^3.6.14",
+		"pull-stream-to-stream": "^2.0.0",
+		"stream-to-pull-stream": "^1.7.3",
+		"tar": "^6.0.5",
+		"vscode-dev-containers": "https://github.com/microsoft/vscode-dev-containers/releases/download/v0.148.1/vscode-dev-containers-0.148.1.tgz",
+		"vscode-extension-telemetry": "^0.1.6",
+		"vscode-tas-client": "^0.1.4",
+		"vscode-uri": "^2.1.2"
+	},
+	"__metadata": {
+		"id": "93ce222b-5f6f-49b7-9ab1-a0463c6238df",
+		"publisherId": "ac9410a2-0d75-40ec-90de-b59bb705801d",
+		"publisherDisplayName": "Microsoft"
+	}
+}

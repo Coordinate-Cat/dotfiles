@@ -1,0 +1,98 @@
+{
+	"name": "path-intellisense",
+	"private": true,
+	"displayName": "Path Intellisense",
+	"description": "Visual Studio Code plugin that autocompletes filenames",
+	"version": "2.3.0",
+	"publisher": "christian-kohler",
+	"engines": {
+		"vscode": "^1.43.0"
+	},
+	"homepage": "https://github.com/ChristianKohler/PathIntellisense",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ChristianKohler/PathIntellisense.git"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "path-intellisense",
+			"properties": {
+				"path-intellisense.extensionOnImport": {
+					"type": "boolean",
+					"default": false,
+					"description": "Adds the file extension to a import statements"
+				},
+				"path-intellisense.mappings": {
+					"type": "object",
+					"default": {},
+					"description": "Mappings for paths"
+				},
+				"path-intellisense.showHiddenFiles": {
+					"type": "boolean",
+					"default": false,
+					"description": "Show hidden files"
+				},
+				"path-intellisense.autoSlashAfterDirectory": {
+					"type": "boolean",
+					"default": false,
+					"description": "Automatically adds slash after directory"
+				},
+				"path-intellisense.absolutePathToWorkspace": {
+					"type": "boolean",
+					"default": true,
+					"description": "Sets an absolute path to the current workspace"
+				}
+			}
+		}
+	},
+	"main": "./out/extension.js",
+	"icon": "icon/path-intellisense.png",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js",
+		"package": "vsce package",
+		"deploy": "vsce publish",
+		"prepack": "npm run package"
+	},
+	"devDependencies": {
+		"@semantic-release/changelog": "^5.0.1",
+		"@semantic-release/git": "^9.0.0",
+		"@semantic-release/npm": "^7.0.5",
+		"@types/benchmark": "^1.0.31",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^7.0.1",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.43.0",
+		"@typescript-eslint/eslint-plugin": "^2.18.0",
+		"@typescript-eslint/parser": "^2.18.0",
+		"eslint": "^6.8.0",
+		"glob": "^7.1.6",
+		"mocha": "^7.0.1",
+		"typescript": "^3.7.5",
+		"vsce": "^1.76.0",
+		"vscode-test": "^1.3.0"
+	},
+	"dependencies": {
+		"@types/json5": "0.0.30",
+		"benchmark": "^2.1.4",
+		"json5": "^2.1.2",
+		"lodash": "^4.17.19",
+		"minimatch": "^3.0.4"
+	},
+	"__metadata": {
+		"id": "a41c1549-4053-44d4-bf30-60fc809b4a86",
+		"publisherId": "a892fb38-060b-475f-9e73-2e06a8a17a68",
+		"publisherDisplayName": "Christian Kohler"
+	}
+}

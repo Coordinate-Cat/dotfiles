@@ -1,0 +1,97 @@
+{
+	"name": "vscode-postcss-sorting",
+	"displayName": "PostCSS Sorting",
+	"description": "VS Code plugin to sort CSS rules content with specified order.",
+	"version": "3.0.1",
+	"publisher": "mrmlnc",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.16.0"
+	},
+	"icon": "icon.png",
+	"homepage": "https://github.com/mrmlnc/vscode-postcss-sorting/blob/master/README.md",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mrmlnc/vscode-postcss-sorting"
+	},
+	"keywords": [
+		"postcss",
+		"css",
+		"postcss-plugin",
+		"sorting",
+		"order"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:postcssSorting.execute",
+		"onLanguage:css",
+		"onLanguage:postcss",
+		"onLanguage:less",
+		"onLanguage:scss"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "postcssSorting.execute",
+				"title": "PostCSS Sorting: Run"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Post​CSS Sorting configuration",
+			"properties": {
+				"postcssSorting.config": {
+					"type": [
+						"object",
+						"string"
+					],
+					"default": {},
+					"description": "Config object for PostCSS Sorting or path to config file.",
+					"scope": "resource"
+				},
+				"postcssSorting.showErrorMessages": {
+					"type": "boolean",
+					"default": true,
+					"description": "Show error messages or not. Will be automatically set to false if 'editor.formatOnSave' is enabled.",
+					"scope": "resource"
+				}
+			}
+		}
+	},
+	"devDependencies": {
+		"@types/micromatch": "^2.3.29",
+		"@types/mocha": "^2.2.43",
+		"@types/node": "^8.0.32",
+		"@types/proxyquire": "^1.3.28",
+		"mocha": "^4.0.0",
+		"proxyquire": "^1.8.0",
+		"tslint": "^5.7.0",
+		"tslint-config-xo": "^1.3.0",
+		"typescript": "^2.5.3",
+		"vscode": "^1.1.5"
+	},
+	"dependencies": {
+		"config-profiler": "^2.0.3",
+		"postcss": "6.0.13",
+		"postcss-less": "1.1.1",
+		"postcss-scss": "1.0.2",
+		"postcss-sorting": "3.0.2"
+	},
+	"scripts": {
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"clean": "rimraf out",
+		"lint": "tslint src/**/*.ts -p .",
+		"compile": "tsc",
+		"test": "mocha out/**/*.spec.js -s 0",
+		"build": "npm run clean && npm run lint && npm run compile && npm t",
+		"watch": "npm run clean && npm run lint && npm run compile -- --sourceMap --watch"
+	},
+	"__metadata": {
+		"id": "23a5e256-b1ad-4429-9935-de94650ada56",
+		"publisherId": "c958976e-9702-4f1a-8bdf-26b7bc012d65",
+		"publisherDisplayName": "mrmlnc"
+	}
+}

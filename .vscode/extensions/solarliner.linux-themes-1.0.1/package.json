@@ -1,0 +1,48 @@
+{
+	"name": "linux-themes",
+	"displayName": "Linux Themes for VS Code",
+	"description": "Color themes designed to match the popular Ubuntu themes.",
+	"version": "1.0.1",
+	"publisher": "SolarLiner",
+	"icon": "icon.png",
+	"license": "MIT",
+	"repository": {
+		"type": "GitHub",
+		"url": "https://github.com/SolarLiner/vscode-arc-theme"
+	},
+	"engines": {
+		"vscode": "^1.12.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Arc Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/arc-dark.json"
+			},
+			{
+				"label": "Adapta Nokto",
+				"uiTheme": "vs-dark",
+				"path": "./themes/adapta-nokto.json"
+			},
+			{
+				"label": "United Ubuntu",
+				"uiTheme": "vs-dark",
+				"path": "./themes/united-gnome.json"
+			},
+			{
+				"label": "Ambiance [beta]",
+				"uiTheme": "vs-dark",
+				"path": "./themes/ambiance.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "ff7b0247-07d3-4102-8b68-0175a12a51aa",
+		"publisherId": "2bd479ce-6e68-4291-a283-5ad617948f94",
+		"publisherDisplayName": "SolarLiner"
+	}
+}

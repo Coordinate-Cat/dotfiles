@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+  cursor: -webkit-grab;
+  cursor: grab;
+  display: grid;
+  background: var(--vscode-editor-background);
+}
+
+html:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  /* don't need to be able to select image because that doesn't work well with panning */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  width: 100%;
+  background: transparent;
+}
+
+img {
+  box-sizing: border-box;
+  display: block; /* center the image */
+  margin: 0 auto; /* center the image */
+  /* max-height: none; */
+  /* width: 100vmin; */
+}

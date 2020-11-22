@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="vscode-language-pack-ja" Version="1.51.2" Publisher="MS-CEINTL"/>
+    <DisplayName>Japanese Language Pack for Visual Studio Code</DisplayName>
+    <Description xml:space="preserve">Language pack extension for Japanese</Description>
+    <Tags>lp-ja,__lp_vscode,__lp-ja_vscode,__lp_vscode.bat,__lp-ja_vscode.bat,__lp_vscode.clojure,__lp-ja_vscode.clojure,__lp_vscode.coffeescript,__lp-ja_vscode.coffeescript,__lp_vscode.configuration-editing,__lp-ja_vscode.configuration-editing,__lp_vscode.cpp,__lp-ja_vscode.cpp,__lp_vscode.csharp,__lp-ja_vscode.csharp,__lp_vscode.css-language-features,__lp-ja_vscode.css-language-features,__lp_vscode.css,__lp-ja_vscode.css,__lp_vscode.debug-auto-launch,__lp-ja_vscode.debug-auto-launch,__lp_vscode.debug-server-ready,__lp-ja_vscode.debug-server-ready,__lp_vscode.docker,__lp-ja_vscode.docker,__lp_vscode.emmet,__lp-ja_vscode.emmet,__lp_vscode.extension-editing,__lp-ja_vscode.extension-editing,__lp_vscode.fsharp,__lp-ja_vscode.fsharp,__lp_vscode.git-ui,__lp-ja_vscode.git-ui,__lp_vscode.git,__lp-ja_vscode.git,__lp_vscode.github-authentication,__lp-ja_vscode.github-authentication,__lp_vscode.github-browser,__lp-ja_vscode.github-browser,__lp_vscode.github,__lp-ja_vscode.github,__lp_vscode.go,__lp-ja_vscode.go,__lp_vscode.groovy,__lp-ja_vscode.groovy,__lp_vscode.grunt,__lp-ja_vscode.grunt,__lp_vscode.gulp,__lp-ja_vscode.gulp,__lp_vscode.handlebars,__lp-ja_vscode.handlebars,__lp_vscode.hlsl,__lp-ja_vscode.hlsl,__lp_vscode.html-language-features,__lp-ja_vscode.html-language-features,__lp_vscode.html,__lp-ja_vscode.html,__lp_vscode.image-preview,__lp-ja_vscode.image-preview,__lp_vscode.ini,__lp-ja_vscode.ini,__lp_vscode.jake,__lp-ja_vscode.jake,__lp_vscode.java,__lp-ja_vscode.java,__lp_vscode.javascript,__lp-ja_vscode.javascript,__lp_vscode.json-language-features,__lp-ja_vscode.json-language-features,__lp_vscode.json,__lp-ja_vscode.json,__lp_vscode.less,__lp-ja_vscode.less,__lp_vscode.log,__lp-ja_vscode.log,__lp_vscode.lua,__lp-ja_vscode.lua,__lp_vscode.make,__lp-ja_vscode.make,__lp_vscode.markdown-basics,__lp-ja_vscode.markdown-basics,__lp_vscode.markdown-language-features,__lp-ja_vscode.markdown-language-features,__lp_vscode.merge-conflict,__lp-ja_vscode.merge-conflict,__lp_vscode.microsoft-authentication,__lp-ja_vscode.microsoft-authentication,__lp_vscode.ms-vscode.github-browser,__lp-ja_vscode.ms-vscode.github-browser,__lp_vscode.ms-vscode.js-debug,__lp-ja_vscode.ms-vscode.js-debug,__lp_vscode.ms-vscode.node-debug,__lp-ja_vscode.ms-vscode.node-debug,__lp_vscode.ms-vscode.node-debug2,__lp-ja_vscode.ms-vscode.node-debug2,__lp_vscode.npm,__lp-ja_vscode.npm,__lp_vscode.objective-c,__lp-ja_vscode.objective-c,__lp_vscode.perl,__lp-ja_vscode.perl,__lp_vscode.php-language-features,__lp-ja_vscode.php-language-features,__lp_vscode.php,__lp-ja_vscode.php,__lp_vscode.powershell,__lp-ja_vscode.powershell,__lp_vscode.pug,__lp-ja_vscode.pug,__lp_vscode.python,__lp-ja_vscode.python,__lp_vscode.r,__lp-ja_vscode.r,__lp_vscode.razor,__lp-ja_vscode.razor,__lp_vscode.ruby,__lp-ja_vscode.ruby,__lp_vscode.rust,__lp-ja_vscode.rust,__lp_vscode.scss,__lp-ja_vscode.scss,__lp_vscode.search-result,__lp-ja_vscode.search-result,__lp_vscode.shaderlab,__lp-ja_vscode.shaderlab,__lp_vscode.shellscript,__lp-ja_vscode.shellscript,__lp_vscode.sql,__lp-ja_vscode.sql,__lp_vscode.swift,__lp-ja_vscode.swift,__lp_vscode.theme-abyss,__lp-ja_vscode.theme-abyss,__lp_vscode.theme-defaults,__lp-ja_vscode.theme-defaults,__lp_vscode.theme-kimbie-dark,__lp-ja_vscode.theme-kimbie-dark,__lp_vscode.theme-monokai-dimmed,__lp-ja_vscode.theme-monokai-dimmed,__lp_vscode.theme-monokai,__lp-ja_vscode.theme-monokai,__lp_vscode.theme-quietlight,__lp-ja_vscode.theme-quietlight,__lp_vscode.theme-red,__lp-ja_vscode.theme-red,__lp_vscode.theme-seti,__lp-ja_vscode.theme-seti,__lp_vscode.theme-solarized-dark,__lp-ja_vscode.theme-solarized-dark,__lp_vscode.theme-solarized-light,__lp-ja_vscode.theme-solarized-light,__lp_vscode.theme-tomorrow-night-blue,__lp-ja_vscode.theme-tomorrow-night-blue,__lp_vscode.typescript-basics,__lp-ja_vscode.typescript-basics,__lp_vscode.typescript-language-features,__lp-ja_vscode.typescript-language-features,__lp_vscode.vb,__lp-ja_vscode.vb,__lp_vscode.vscode-chrome-debug-core,__lp-ja_vscode.vscode-chrome-debug-core,__lp_ms-vscode.node-debug,__lp-ja_ms-vscode.node-debug,__lp_ms-vscode.node-debug2,__lp-ja_ms-vscode.node-debug2,__lp_vscode.xml,__lp-ja_vscode.xml,__lp_vscode.yaml,__lp-ja_vscode.yaml</Tags>
+    <Categories>Language Packs</Categories>
+    <GalleryFlags>Public</GalleryFlags>
+    <Badges></Badges>
+    <Properties>
+      <Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.51.0" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="ui,workspace,web" />
+      <Property Id="Microsoft.VisualStudio.Code.LocalizedLanguages" Value="日本語" />
+      
+        <Property Id="Microsoft.VisualStudio.Services.Links.Source" Value="https://github.com/Microsoft/vscode-loc" />
+        <Property Id="Microsoft.VisualStudio.Services.Links.Getstarted" Value="https://github.com/Microsoft/vscode-loc" />
+        
+          <Property Id="Microsoft.VisualStudio.Services.Links.GitHub" Value="https://github.com/Microsoft/vscode-loc" />
+        
+      
+      
+      
+      
+      
+      <Property Id="Microsoft.VisualStudio.Services.GitHubFlavoredMarkdown" Value="true" />
+      
+      
+      
+    </Properties>
+    
+    <Icon>extension/languagepack.png</Icon>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Content.Changelog" Path="extension/CHANGELOG.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/languagepack.png" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Code.Translation.JA" Path="extension/translations/main.i18n.json" Addressable="true" />
+  </Assets>
+</PackageManifest>
