@@ -9,37 +9,34 @@ import Music from './lib/components/Music.jsx'
 import BrowserTrack from './lib/components/BrowserTrack.jsx'
 import Error from './lib/components/Error.jsx'
 
-import { parseJson, getTheme, getActiveWidgets } from './lib/utils.js'
+import { parseJson, getActiveWidgets } from './lib/utils.js'
 import { getSettings } from './lib/settings.js'
 
-import { styles } from './lib/styles/Styles.js'
-import CustomStyles from './lib/styles/CustomStyles.js'
+import * as CustomStyles from './lib/styles/CustomStyles.js'
 
 const refreshFrequency = 10000
 
 const settings = getSettings()
 
-const theme = getTheme(settings)
-const Styles = styles[theme]
 
 const className = `
-  ${Styles.BaseStyles}
-  ${Styles.DateStyles}
-  ${Styles.TimeStyles}
-  ${Styles.BatteryStyles}
-  ${Styles.WifiStyles}
-  ${Styles.MicStyles}
-  ${Styles.SoundStyles}
-  ${Styles.SpotifyStyles}
-  ${Styles.MusicStyles}
-  ${Styles.BrowserTrackStyles}
-  ${Styles.SpecterStyles}
+  ${CustomStyles.BaseStyles}
+  ${CustomStyles.DateStyles}
+  ${CustomStyles.TimeStyles}
+  ${CustomStyles.BatteryStyles}
+  ${CustomStyles.WifiStyles}
+  ${CustomStyles.MicStyles}
+  ${CustomStyles.SoundStyles}
+  ${CustomStyles.SpotifyStyles}
+  ${CustomStyles.MusicStyles}
+  ${CustomStyles.BrowserTrackStyles}
+  ${CustomStyles.SpecterStyles}
 
-  ${settings.global.floatingBar ? Styles.FloatingBarOverride : ''}
-  ${settings.global.noColorInData ? Styles.NoColorInDataOverride : ''}
-  ${settings.global.noBarBg ? Styles.NoBarBgOverride : ''}
-  ${settings.global.bottomBar ? Styles.BottomBarOverride : ''}
-  ${settings.global.floatingBar && settings.global.bottomBar ? Styles.FloatinBottomBarOverride : ''}
+  ${settings.global.floatingBar ? CustomStyles.FloatingBarOverride : ''}
+  ${settings.global.noColorInData ? CustomStyles.NoColorInDataOverride : ''}
+  ${settings.global.noBarBg ? CustomStyles.NoBarBgOverride : ''}
+  ${settings.global.bottomBar ? CustomStyles.BottomBarOverride : ''}
+  ${settings.global.floatingBar && settings.global.bottomBar ? CustomStyles.FloatinBottomBarOverride : ''}
 
   ${CustomStyles}
 `

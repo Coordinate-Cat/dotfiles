@@ -1,29 +1,23 @@
 import Spaces from './lib/components/Spaces.jsx'
 import Error from './lib/components/Error.jsx'
 
-import { parseJson, getTheme } from './lib/utils.js'
+import { parseJson } from './lib/utils.js'
 import { getSettings } from './lib/settings.js'
 
-import { styles } from './lib/styles/Styles.js'
-import CustomStyles from './lib/styles/CustomStyles.js'
+import * as CustomStyles from './lib/styles/CustomStyles.js'
 
 const refreshFrequency = false
 
 const settings = getSettings()
 
-const theme = getTheme(settings)
-const Styles = styles[theme]
-
 const className = `
-  ${Styles.BaseStyles}
-  ${Styles.SpacesStyles}
+  ${CustomStyles.BaseStyles}
+  ${CustomStyles.SpacesStyles}
 
-  ${settings.global.floatingBar ? Styles.FloatingBarOverride : ''}
-  ${settings.global.noBarBg ? Styles.NoBarBgOverride : ''}
-  ${settings.global.bottomBar ? Styles.BottomBarOverride : ''}
+  ${settings.global.floatingBar ? CustomStyles.FloatingBarOverride : ''}
+  ${settings.global.noBarBg ? CustomStyles.NoBarBgOverride : ''}
+  ${settings.global.bottomBar ? CustomStyles.BottomBarOverride : ''}
   ${settings.global.floatingBar && settings.global.bottomBar ? Styles.FloatinBottomBarOverride : ''}
-
-  ${CustomStyles}
 `
 
 const { shell } = settings.global
