@@ -9,7 +9,7 @@
 
 ---
 
-![screenshot001](.assets/screeshot001.png)
+![screenshot001](.assets/screenshot001.png)
 
 ---
 
