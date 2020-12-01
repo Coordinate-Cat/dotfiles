@@ -2,6 +2,13 @@
 
 ∠( ᐛ 」∠)_ --- dotfiles --- ᕕ( ᐛ )ᕗ
 
+### plz help🙇‍♂️
+| help number | title                                                                                 |
+|:------------|:--------------------------------------------------------------------------------------|
+| #3          | [PS1で＄前のprompt名を変更できない](https://github.com/Coordinate-Cat/dotfiles/issues/3)  |
+
+---
+
 ![screenshot001](.assets/screeshot001.png)
 
 ---
