@@ -28,9 +28,14 @@
   # Zsh >= 5.1 is required.
   autoload -Uz is-at-least && is-at-least 5.1 || return
 
+  prompt_oka() {
+    p10k segment -f 208 -i '⭐' -t '∠( ᐛ 」∠)_ '
+  }
+
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # os_icon               # os identifier
+    oka                     # WTF
     dir                     # current directory
     vcs                     # git status
     # prompt_char           # prompt symbol
