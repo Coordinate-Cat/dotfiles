@@ -25,4 +25,11 @@
 
 ---
 
+## 🐋 Contributors
+<a href="https://github.com/Coordinate-Cat/dotfiles/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=Coordinate-Cat/dotfiles" />
+</a>
+
+Made with [contributors-img](https://contributors-img.web.app).
+
 ## 🚧 Under development...

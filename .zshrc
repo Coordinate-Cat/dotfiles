@@ -1,11 +1,12 @@
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
 ### prompt
-### >>> The code below should be written at the top of ~/.zshrc
+### The code below should be written at the top of ~/.zshrc
 ### ----------------------------------------------
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+PROMPT='%c %# '
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
 ### alias
 ### ----------------------------------------------
@@ -26,7 +27,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 export ZSH="/Users/ocat/dotfiles/.oh-my-zsh"
 
 source $ZSH/oh-my-zsh.sh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source powerlevel10k/powerlevel10k.zsh-theme
+source ~ZSH_CUSTOM/plugins/fzf-tab
 
 
 plugins=(git)
