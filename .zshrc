@@ -24,6 +24,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 ### brew aliases
+alias bl='brew list'
 alias bi='brew install'
 alias bu='brew uninstall'
 
