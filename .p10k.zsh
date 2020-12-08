@@ -29,7 +29,7 @@
   autoload -Uz is-at-least && is-at-least 5.1 || return
 
   prompt_oka() {
-    p10k segment -f 208 -i '⛺️' -t '∠( ᐛ 」∠)_START'
+    p10k segment -f 208 -i '⛺️' -t '∠( ᐛ 」∠)_START!!'
   }
 
   # The list of segments shown on the left. Fill it with the most important segments.
@@ -189,7 +189,7 @@
   # Red prompt symbol if the last command failed.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=196
   # Default prompt symbol.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='❯'
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='⛺️'
   # Prompt symbol in command vi mode.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VICMD_CONTENT_EXPANSION='❮'
   # Prompt symbol in visual vi mode.

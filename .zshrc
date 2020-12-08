@@ -28,6 +28,9 @@ alias bl='brew list'
 alias bi='brew install'
 alias bu='brew uninstall'
 
+### links aliases(仮のすがた)
+alias ml='cat .links/media.txt'
+
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
 ### neofetch
 ### ----------------------------------------------
