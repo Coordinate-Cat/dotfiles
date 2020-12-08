@@ -3,9 +3,9 @@
 ∠( ᐛ 」∠)_ --- dotfiles --- ᕕ( ᐛ )ᕗ
 
 ### plz help🙇‍♂️
-| issue number | issue title                                                                           |
-|:-------------|:--------------------------------------------------------------------------------------|
-| #3           | [PS1で＄前のprompt名を変更できない](https://github.com/Coordinate-Cat/dotfiles/issues/3)  |
+| issue number | issue title                                                                               | Contributors                       |
+|:-------------|:------------------------------------------------------------------------------------------|:-----------------------------------|
+| ~~#3~~       | ~~[PS1で＄前のprompt名を変更できない](https://github.com/Coordinate-Cat/dotfiles/issues/3)~~  | [@ulwlu](https://github.com/ulwlu) |
 
 
 ---
