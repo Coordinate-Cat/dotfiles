@@ -1,5 +1,5 @@
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
-### prompt
+###  prompt
 ### ----------------------------------------------
 ### The code below should be written at the top of ~/.zshrc
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -15,7 +15,7 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
 fi
 
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
-### alias
+###  aliases
 ### ----------------------------------------------
 ### list segments aliases
 alias ll='ls -lF'
@@ -28,23 +28,35 @@ alias bl='brew list'
 alias bi='brew install'
 alias bu='brew uninstall'
 
-### links aliases(仮のすがた)
-alias ml='cat .links/media.txt'
+# ### links aliases(仮のすがた)
+# alias lsn='column .links/news.txt'
+
+### Whether
+alias wt='curl wttr.in/Tokyo'
+alias wt2='curl v2d.wttr.in/Tokyo'
+alias wt3='curl v3.wttr.in/Tokyo.sxl'
+alias wtf='curl wttr.in/Tokyo?format=3'
+
+### neofetch
+alias neo="neofetch --iterm2 /Users/ocat/dotfiles/.config/neofetch/neofetch_iterm2.png"
+alias neo2="neofetch --jp2a /Users/ocat/dotfiles/.config/neofetch/neofetch_jp2a.jpeg"
+alias neo3="neofetch --caca /Users/ocat/dotfiles/.config/neofetch/neofetch_iterm2.png"
 
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
-### neofetch
+###  neofetch
 ### ----------------------------------------------
-alias neo="neofetch --jp2a /Users/ocat/dotfiles/.config/neofetch/neofetch_jp2a.jpeg"
-alias neo2="neofetch --iterm2 /Users/ocat/dotfiles/.config/neofetch/neofetch_iterm2.png"
+
 neofetch --jp2a /Users/ocat/dotfiles/.config/neofetch/neofetch_jp2a.jpeg
 
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
-### other
+###  others
 ### ----------------------------------------------
 ZSH_THEME="powerlevel10k/powerlevel10k"
 export ZSH="/Users/ocat/dotfiles/.oh-my-zsh"
+export ZDOTDIR=$HOME
 
 source $ZSH/oh-my-zsh.sh
+source $ZDOTDIR/dotfiles/.aliases/links.zsh
 source ~ZSH_CUSTOM/plugins/fzf-tab
 
 plugins=(git)

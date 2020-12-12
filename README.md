@@ -3,10 +3,15 @@
 ∠( ᐛ 」∠)_ --- dotfiles --- ᕕ( ᐛ )ᕗ
 
 ### plz help🙇‍♂️
-| issue number | issue title                                                                               | Contributors                       |
+| Issue number | issue title                                                                               | Contributors                       |
 |:-------------|:------------------------------------------------------------------------------------------|:-----------------------------------|
 | ~~#3~~       | ~~[PS1で＄前のprompt名を変更できない](https://github.com/Coordinate-Cat/dotfiles/issues/3)~~  | [@ulwlu](https://github.com/ulwlu) |
 
+### TODO
+| TODO number | TODO title | done     |
+|:------------|:-----------|:---------|
+| #1          | bat        | - [x]    |
+| #2          | fzf        | - []    |
 
 ---
 

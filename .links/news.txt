@@ -1,0 +1,20 @@
+  ----- News -----
+
+YAHOO: (https://www.yahoo.co.jp/)
+GOOGLE: (https://news.google.com/)
+NHK: (https://www3.nhk.or.jp/news/)
+TBS: (https://news.tbs.co.jp/)
+NIKKEI: (https://www.nikkei.com/)
+LIVEDOOR: (http://www.livedoor.com/)
+5CH: (https://5ch.net/)
+CNET: (https://japan.cnet.com/)
+BLOOMBERG: (https://www.bloomberg.co.jp/)
+REUTERS: (https://jp.reuters.com/)
+HUFFPOST: (https://www.huffingtonpost.jp/)
+ASCII: (https://ascii.jp/)
+PRTIMES: (https://prtimes.jp/)
+WIRED: (https://wired.jp/)
+BI: (https://www.businessinsider.jp/)
+GOO: (https://www.goo.ne.jp/)
+MI: (https://media-innovation.jp/)
+
