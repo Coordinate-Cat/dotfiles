@@ -6,12 +6,14 @@
 | Issue number | Issue title                                                                               | Contributors                       |
 |:-------------|:------------------------------------------------------------------------------------------|:-----------------------------------|
 | ~~#3~~       | ~~[PS1で＄前のprompt名を変更できない](https://github.com/Coordinate-Cat/dotfiles/issues/3)~~  | [@ulwlu](https://github.com/ulwlu) |
+| #8           | [Cannot alias bat command](https://github.com/Coordinate-Cat/dotfiles/issues/8)           |                                    |
 
 ### TODO
-| TODO number | TODO title | Done                                                         |
-|:------------|:-----------|:-------------------------------------------------------------|
-| #1          | bat        | <input type="checkbox" checked>                              |
-| #2          | fzf        | <input type="checkbox">                                      |
+| TODO number     | TODO title       |
+|:----------------|:-----------------|
+| ~~#1~~          | ~~bat~~          |
+|   #2            |   fzf            |
+| ~~#3~~          | ~~spotify-tui~~  |
 
 ---
 
@@ -22,11 +24,12 @@
 | System     | Details                        |
 |:-----------|:-------------------------------|
 | OS         | macOS Catalina                 |
-| Terminal   | iTerm2                         |
-| Shell      | zsh                            |
+| DE         | Aqua                           |
 | WM         | Rectangle(yabai)               |
+| Font       | HackNerdFontComplete-Regular 13|
+| Shell      | zsh                            |
 | MenuBar    | Übersicht                      |
-| Font       | MesloLGLForPowerline-Regular 12|
+| Terminal   | iTerm2                         |
 
 ---
 

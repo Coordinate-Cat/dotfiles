@@ -28,9 +28,6 @@ alias bl='brew list'
 alias bi='brew install'
 alias bu='brew uninstall'
 
-# ### links aliases(仮のすがた)
-# alias lsn='column .links/news.txt'
-
 ### Whether
 alias wt='curl wttr.in/Tokyo'
 alias wt2='curl v2d.wttr.in/Tokyo'
@@ -42,26 +39,33 @@ alias neo="neofetch --iterm2 /Users/ocat/dotfiles/.config/neofetch/neofetch_iter
 alias neo2="neofetch --jp2a /Users/ocat/dotfiles/.config/neofetch/neofetch_jp2a.jpeg"
 alias neo3="neofetch --caca /Users/ocat/dotfiles/.config/neofetch/neofetch_iterm2.png"
 
+### christmas
+alias merry="cat .links/ascii/tree_ascii.txt"
+
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
-###  neofetch
+###  neofetch when term is opened
 ### ----------------------------------------------
+# neofetch --jp2a /Users/ocat/dotfiles/.config/neofetch/neofetch_jp2a.jpeg
 
-neofetch --jp2a /Users/ocat/dotfiles/.config/neofetch/neofetch_jp2a.jpeg
-
+### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
+###  fzf
+### ----------------------------------------------
+export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_OPTS='--reverse --preview "bat --color=always --style=header,grid --line-range :100 {}"'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
 ###  others
 ### ----------------------------------------------
 ZSH_THEME="powerlevel10k/powerlevel10k"
 export ZSH="/Users/ocat/dotfiles/.oh-my-zsh"
-export ZDOTDIR=$HOME
+export BAT_CONFIG_PATH="/Users/ocat/dotfiles/.config/bat/bat.conf"
+export MY_ALIASES="/Users/ocat/dotfiles/.aliases"
+export MY_CONFIG="/Users/ocat/dotfiles/.config"
 
 source $ZSH/oh-my-zsh.sh
-source $ZDOTDIR/dotfiles/.aliases/links.zsh
+source $MY_ALIASES/links.zsh
 source ~ZSH_CUSTOM/plugins/fzf-tab
 
 plugins=(git)
 
 [[ ! -f .p10k.zsh ]] || source .p10k.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
