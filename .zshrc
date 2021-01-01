@@ -22,6 +22,7 @@ alias ll='ls -lF'
 alias lla='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias vscode='open -a "Visual Studio Code"'
 
 ### brew aliases
 alias bl='brew list'

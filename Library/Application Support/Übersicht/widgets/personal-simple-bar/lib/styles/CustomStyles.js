@@ -9,7 +9,7 @@ export const BaseStyles = /* css */ `
   padding: 4px 5px;
   box-sizing: border-box;
   color: white;
-  font-size: 11px;
+  font-size: 10px;
   font-family: ${Theme.font};
 }
 .simple-bar--process {
@@ -256,7 +256,7 @@ export const SpacesStyles = /* css */ `
   margin-right: 5px;
   padding: 5px 10px;
   background-color: ${Theme.main};
-  color: orange;
+  color: ${Theme.string};
   border-radius: 20px;
   box-shadow: ${Theme.lightShadow};
   cursor: pointer;
@@ -282,7 +282,7 @@ export const SpacesStyles = /* css */ `
   background-color: ${Theme.yellow};
 }
 .space--focused .space__inner {
-  color: orange;
+  color: ${Theme.string};
   background-color: ${Theme.main};
   border-radius: 20px;
   padding: 5px 10px;
@@ -417,7 +417,7 @@ export const ProcessStyles = /* css */ `
   top: 15px;
   left: 38.4%;
   background-color: ${Theme.main};
-  color: orange;
+  color: ${Theme.string};
   padding: 4px 7px;
   min-width: 60px;
   min-height: 12px;
@@ -600,7 +600,7 @@ export const BatteryStyles = /* css */ `
   justify-content: center;
   padding: 3px 7px;
   background-color: ${Theme.magenta};
-  color: orange;
+  color: ${Theme.string};
   border-radius: 20px;
   border: 1px solid ${Theme.main};
   box-shadow: ${Theme.lightShadow};
@@ -657,7 +657,7 @@ export const BatteryStyles = /* css */ `
   height: 9px;
   margin-right: 8px;
   border-radius: 2px;
-  border: 1px solid orange;
+  border: 1px solid ${Theme.string};
 }
 .battery__icon::after {
   content: '';
@@ -667,7 +667,7 @@ export const BatteryStyles = /* css */ `
   width: 3px;
   height: 80%;
   border-radius: 0 2px 2px 0;
-  background-color: orange;
+  background-color: ${Theme.string};
 }
 .battery__icon-filler {
   position: absolute;
@@ -675,7 +675,7 @@ export const BatteryStyles = /* css */ `
   left: 1px;
   width: calc(100% - 2px);
   height: calc(100% - 2px);
-  background-color: orange;
+  background-color: ${Theme.string};
   border-radius: 1px;
   transform: scaleX(0);
   transform-origin: left center;
@@ -683,7 +683,7 @@ export const BatteryStyles = /* css */ `
   z-index: 1;
 }
 .battery--low .battery__icon-filler {
-  background-color: orange;
+  background-color: ${Theme.string};
 }
 .battery__caffeinate-icon {
   position: absolute;
@@ -692,7 +692,7 @@ export const BatteryStyles = /* css */ `
   width: 20px;
   height: 20px;
   box-sizing: border-box;
-  fill: orange;
+  fill: ${Theme.string};
   opacity: 0.3;
 }
 `
@@ -700,7 +700,7 @@ export const BatteryStyles = /* css */ `
 export const MicStyles = /* css */ `
   .mic {
     background-color: ${Theme.orange};
-    color: orange;
+    color: ${Theme.string};
     display: flex;
     align-items: center;
     padding: 3px 7px;
@@ -722,7 +722,7 @@ export const MicStyles = /* css */ `
     width: 14px;
     height: 14px;
     margin-right: 4px;
-    fill: orange;
+    fill: ${Theme.string};
     transform: translateZ(0);
   }
 `
@@ -733,7 +733,7 @@ export const SoundStyles = /* css */ `
     align-items: center;
     padding: 3px 7px;
     background-color: ${Theme.blue};
-    color: orange;
+    color: ${Theme.string};
     border-radius: 20px;
     border: 1px solid ${Theme.minor};
     box-shadow: ${Theme.lightShadow};
@@ -742,7 +742,7 @@ export const SoundStyles = /* css */ `
     width: 14px;
     height: 14px;
     margin-right: 4px;
-    fill: orange;
+    fill: ${Theme.string};
   }
 `
 
@@ -752,7 +752,7 @@ export const WifiStyles = /* css */ `
     align-items: center;
     padding: 3px 7px;
     background-color: ${Theme.red};
-    color: orange;
+    color: ${Theme.string};
     border-radius: 20px;
     border: 1px solid ${Theme.minor};
     box-shadow: ${Theme.lightShadow};
@@ -771,7 +771,7 @@ export const WifiStyles = /* css */ `
     width: 14px;
     height: 14px;
     margin-right: 7px;
-    fill: orange;
+    fill: ${Theme.string};
     transform: translateZ(0);
   }
 `
@@ -782,7 +782,7 @@ export const DateStyles = /* css */ `
   align-items: center;
   padding: 3px 7px;
   background-color: ${Theme.cyan};
-  color: orange;
+  color: ${Theme.string};
   border-radius: 20px;
   border: 1px solid ${Theme.minor};
   box-shadow: ${Theme.lightShadow};
@@ -791,7 +791,7 @@ export const DateStyles = /* css */ `
   width: 14px;
   height: 14px;
   margin-right: 7px;
-  fill: orange;
+  fill: ${Theme.string};
 }
 `
 
@@ -802,7 +802,7 @@ export const TimeStyles = /* css */ `
   align-items: center;
   padding: 3px 7px;
   background-color: ${Theme.yellow};
-  color: orange;
+  color: ${Theme.string};
   border-radius: 20px;
   border: 1px solid ${Theme.minor};
   box-shadow: ${Theme.lightShadow};
@@ -811,7 +811,7 @@ export const TimeStyles = /* css */ `
   width: 14px;
   height: 14px;
   margin-right: 7px;
-  fill: orange;
+  fill: ${Theme.string};
 }
 .time__filler {
   position: absolute;
@@ -834,7 +834,7 @@ export const SpotifyStyles = /* css */ `
   align-items: center;
   padding: 2px 7px 4px 7px;
   background-color: ${Theme.green};
-  color: orange;
+  color: ${Theme.string};
   border-radius: 20px;
   border: 1px solid ${Theme.minor};
   box-shadow: ${Theme.lightShadow};
@@ -854,7 +854,7 @@ export const SpotifyStyles = /* css */ `
   height: 10px;
   margin-right: 7px;
   margin-top: 3px;
-  fill: orange;
+  fill: ${Theme.string};
 }
 .spotify__inner {
   max-width: 200px;
@@ -876,7 +876,7 @@ export const MusicStyles = /* css */ `
   align-items: center;
   padding: 3px 7px;
   background-color: ${Theme.green};
-  color: orange;
+  color: ${Theme.string};
   border-radius: 20px;
   border: 1px solid ${Theme.minor};
   box-shadow: ${Theme.lightShadow};

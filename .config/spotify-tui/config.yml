@@ -9,9 +9,9 @@ theme:
   inactive: Gray # borders of inactive panes
   playbar_background: Black # background of progress bar
   playbar_progress: Yellow # filled-in part of the progress bar
-  playbar_text: White # artist name in player pane
+  playbar_text: "255, 228, 196" # artist name in player pane
   selected: Yellow # a) selected pane border, b) hovered item in list, & c) track title in player
-  text: "255, 255, 255" # text in panes
+  text: "255, 228, 196" # text in panes
   header: White # header text in panes (e.g. 'Title', 'Artist', etc.)
 
 behavior:
@@ -54,6 +54,6 @@ keybindings:
   repeat: "r" # リピート
   search: "/" # 検索
   audio_analysis: "v" # 曲解析表示
-  jump_to_context: "o" # ?
+  jump_to_context: "o" #
   basic_view: "B" # 再生バー表示
   add_item_to_queue: "z" # ?
