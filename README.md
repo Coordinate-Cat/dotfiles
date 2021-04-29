@@ -6,14 +6,16 @@
 | Issue number | Issue title                                                                               | Contributors                       |
 |:-------------|:------------------------------------------------------------------------------------------|:-----------------------------------|
 | ~~#3~~       | ~~[PS1で＄前のprompt名を変更できない](https://github.com/Coordinate-Cat/dotfiles/issues/3)~~  | [@ulwlu](https://github.com/ulwlu) |
-| #8           | [Cannot alias bat command](https://github.com/Coordinate-Cat/dotfiles/issues/8)           |                                    |
+| ~~#8~~       | ~~[Cannot alias bat command](https://github.com/Coordinate-Cat/dotfiles/issues/8)~~       | myself                             |
 
 ### TODO
 | TODO number     | TODO title       |
 |:----------------|:-----------------|
 | ~~#1~~          | ~~bat~~          |
-|   #2            |   fzf            |
+| ~~#2~~          | ~~fzf~~          |
 | ~~#3~~          | ~~spotify-tui~~  |
+| ~~#4~~          | ~~spotify-tui~~  |
+| ~~#5~~          | ~~spotify-tui~~  |
 
 ---
 

@@ -14,4 +14,3 @@ PRTIMES:   (https://prtimes.jp/)
 REUTERS:   (https://jp.reuters.com/)
 TBS:       (https://news.tbs.co.jp/)
 WIRED:     (https://wired.jp/)
-open https://www.yahoo.co.jp/

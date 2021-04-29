@@ -17,6 +17,9 @@ fi
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
 ###  aliases
 ### ----------------------------------------------
+### cd aliases
+alias d='cd ./dotfiles'
+
 ### list segments aliases
 alias ll='ls -lF'
 alias lla='ls -alF'
@@ -24,10 +27,17 @@ alias la='ls -A'
 alias l='ls -CF'
 alias vscode='open -a "Visual Studio Code"'
 
+alias flxsns='zsh /Users/ocat/Flexxx/sns.sh'
+alias flxapp='zsh /Users/ocat/Flexxx/app.sh'
+
 ### brew aliases
 alias bl='brew list'
 alias bi='brew install'
 alias bu='brew uninstall'
+
+### nodebrew aliases
+alias nb lr='nodebrew ls-remote'
+
 
 ### Whether
 alias wt='curl wttr.in/Tokyo'
@@ -46,7 +56,7 @@ alias merry="cat .links/ascii/tree_ascii.txt"
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
 ###  neofetch when term is opened
 ### ----------------------------------------------
-# neofetch --jp2a /Users/ocat/dotfiles/.config/neofetch/neofetch_jp2a.jpeg
+neofetch --jp2a /Users/ocat/dotfiles/.config/neofetch/neofetch_jp2a.jpeg
 
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
 ###  fzf
@@ -54,6 +64,7 @@ alias merry="cat .links/ascii/tree_ascii.txt"
 export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_DEFAULT_OPTS='--reverse --preview "bat --color=always --style=header,grid --line-range :100 {}"'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
 ###  others
 ### ----------------------------------------------
@@ -61,7 +72,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 export ZSH="/Users/ocat/dotfiles/.oh-my-zsh"
 export BAT_CONFIG_PATH="/Users/ocat/dotfiles/.config/bat/bat.conf"
 export MY_ALIASES="/Users/ocat/dotfiles/.aliases"
-export MY_CONFIG="/Users/ocat/dotfiles/.config"
+
+### llvm & dosfstools
+export PATH=/usr/local/Cellar/llvm/11.1.0/bin:$PATH
+export PATH=/usr/local/Cellar/dosfstools/4.2/sbin:$PATH
+
+### nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 source $MY_ALIASES/links.zsh

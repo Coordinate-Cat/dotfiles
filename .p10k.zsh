@@ -29,7 +29,8 @@
   autoload -Uz is-at-least && is-at-least 5.1 || return
 
   prompt_oka() {
-    p10k segment -f 208 -i '⛺️' -t '∠( ᐛ 」∠)_'
+    p10k segment -f 208 -i '⛺️'
+    # p10k segment -f 208 -i '⛺️' -t '∠( ᐛ 」∠)_'
   }
 
   # The list of segments shown on the left. Fill it with the most important segments.
