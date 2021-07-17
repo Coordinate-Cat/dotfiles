@@ -38,7 +38,6 @@ alias bu='brew uninstall'
 ### nodebrew aliases
 alias nb lr='nodebrew ls-remote'
 
-
 ### Whether
 alias wt='curl wttr.in/Tokyo'
 alias wt2='curl v2d.wttr.in/Tokyo'
