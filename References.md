@@ -8,6 +8,7 @@
 - [シェルスクリプト: echo で出力する文字の色を変える | まくまくLinux/Shellノート](https://maku77.github.io/linux/io/echo-color.html)
 - [Quine・難解プログラミングについて](https://www.notion.so/hangs/Quine-d9df8d2bdb9c4d4e97f80379a41cc172)
 - [Rice](https://notes.neeasade.net/rice.html)
+- [Pimp my terminal | DяA](https://drasite.com/blog/Pimp%20my%20terminal)
 
 ## Github
 - [webpro/awesome-dotfiles: A curated list of dotfiles resources.](https://github.com/webpro/awesome-dotfiles)
@@ -18,11 +19,8 @@
 - [ryanoasis/nerd-fonts: Iconic font aggregator, collection, & patcher. 3,600+ icons, 50+ patched fonts: Hack, Source Code Pro, more. Glyph collections: Font Awesome, Material Design Icons, Octicons, & more](https://github.com/ryanoasis/nerd-fonts)
 - [junegunn/fzf: A command-line fuzzy finder](https://github.com/junegunn/fzf)
 - [chubin/wttr.in: The right way to check the weather](https://github.com/chubin/wttr.in)
-
-
-## Tools
-- [Pimp my terminal | DяA](https://drasite.com/blog/Pimp%20my%20terminal)
-
+- [denisidoro/navi: An interactive cheatsheet tool for the command-line](https://github.com/denisidoro/navi)
+- [pnpm/pnpm: Fast, disk space efficient package manager](https://github.com/pnpm/pnpm)
 
 ## Reddit
 - [r/unixporn - the home for *NIX customization!](https://www.reddit.com/r/unixporn/)
