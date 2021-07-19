@@ -6,13 +6,14 @@
 - [dotfilesの管理を楽にする話](https://zenn.dev/tkomatsu/articles/d7d089acd29cfa4d57b4)
 - [Custom Neofetch ASCII Art -- λ ryan. himmelwright. net](https://ryan.himmelwright.net/post/custom-neofetch-ascii-art/)
 - [シェルスクリプト: echo で出力する文字の色を変える | まくまくLinux/Shellノート](https://maku77.github.io/linux/io/echo-color.html)
-- [Quine・難解プログラミングについて](https://www.notion.so/hangs/Quine-d9df8d2bdb9c4d4e97f80379a41cc172)
+- [Quine・難解プログラミングについて](https://www.slideshare.net/mametter/quine-10290517)
 - [Rice](https://notes.neeasade.net/rice.html)
 - [Pimp my terminal | DяA](https://drasite.com/blog/Pimp%20my%20terminal)
 
 ## Github
 - [webpro/awesome-dotfiles: A curated list of dotfiles resources.](https://github.com/webpro/awesome-dotfiles)
 - [gnachman/iTerm2: iTerm2 is a terminal emulator for Mac OS X that does amazing things.](https://github.com/gnachman/iTerm2)
+- [ohmyzsh/ohmyzsh: 🙃 A delightful community-driven (with 1800+ contributors) framework for managing your zsh configuration. Includes 300+ optional plugins (rails, git, OSX, hub, docker, homebrew, node, php, python, etc), 140+ themes to spice up your morning, and an auto-update tool so that makes it easy to keep up with the latest updates from the community.](https://github.com/ohmyzsh/ohmyzsh/)
 - [romkatv/powerlevel10k: A Zsh theme](https://github.com/romkatv/powerlevel10k)
 - [dylanaraps/neofetch: 🖼️ A command-line system information tool written in bash 3.2+](https://github.com/dylanaraps/neofetch)
 - [Rigellute/spotify-tui: Spotify for the terminal written in Rust 🚀](https://github.com/Rigellute/spotify-tui)
@@ -21,6 +22,10 @@
 - [chubin/wttr.in: The right way to check the weather](https://github.com/chubin/wttr.in)
 - [denisidoro/navi: An interactive cheatsheet tool for the command-line](https://github.com/denisidoro/navi)
 - [pnpm/pnpm: Fast, disk space efficient package manager](https://github.com/pnpm/pnpm)
+- [felixhageloh/uebersicht: ˈyːbɐˌzɪçt](https://github.com/felixhageloh/uebersicht)
+- [koekeishiya/yabai: A tiling window manager for macOS based on binary space partitioning](https://github.com/koekeishiya/yabai)
+- [rcmdnk/sentaku: Utility to make sentaku (selection, 選択(sentaku)) window with shell command.](https://github.com/rcmdnk/sentaku)
+- [Jean-Tinland/simple-bar: A yabai status bar widget for Übersicht](https://github.com/Jean-Tinland/simple-bar)
 
 ## Reddit
 - [r/unixporn - the home for *NIX customization!](https://www.reddit.com/r/unixporn/)
