@@ -12,7 +12,7 @@ if contains $ACTIVE_WIDGETS "batteryWidget"
   then
     BATTERY_PERCENTAGE=$(pmset -g batt | egrep '([0-9]+\%).*' -o --colour=auto | cut -f1 -d'%')
     BATTERY_STATUS=$(pmset -g batt | grep "'.*'" | sed "s/'//g" | cut -c 18-19)
-    
+
     CAFFEINATE=caffeinate
     CAFFEINATE_PID=""
   if pgrep $CAFFEINATE 2>&1 >/dev/null; then
@@ -39,7 +39,7 @@ if contains $ACTIVE_WIDGETS "soundWidget"
     MUTED=$(osascript -e 'set ovol to output muted of (get volume settings)')
 fi
 
-if contains $ACTIVE_WIDGETS "micWidget" 
+if contains $ACTIVE_WIDGETS "micWidget"
   then
     MIC=$(osascript -e 'set ovol to input volume of (get volume settings)')
 fi
