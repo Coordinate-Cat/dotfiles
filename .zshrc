@@ -27,6 +27,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias vscode='open -a "Visual Studio Code"'
 
+alias flx='zsh /Users/ocat/Flexxx/sns.sh'
 alias flxsns='zsh /Users/ocat/Flexxx/sns.sh'
 alias flxapp='zsh /Users/ocat/Flexxx/app.sh'
 
