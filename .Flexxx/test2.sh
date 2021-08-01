@@ -7,10 +7,10 @@ _SENTAKU_NONUMBER=1
 # main menu
 menu="
   1: SNS
-  2: test
-  3: test
-  4: test
-  5: test
+  2: test1
+  3: test2
+  4: test3
+  5: test4
 "
 
 _sf_initialize_user () {
