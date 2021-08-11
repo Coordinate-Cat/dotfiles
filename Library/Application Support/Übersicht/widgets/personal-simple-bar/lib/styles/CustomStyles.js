@@ -11,6 +11,7 @@ export const BaseStyles = /* css */ `
   color: white;
   font-size: 10px;
   font-family: ${Theme.font};
+  margin-right: 28px;
 }
 .simple-bar--process {
   left: 0;
