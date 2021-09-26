@@ -12,3 +12,6 @@
 *.pem
 *.env
 *tags
+
+#flexxx
+.Flexxx

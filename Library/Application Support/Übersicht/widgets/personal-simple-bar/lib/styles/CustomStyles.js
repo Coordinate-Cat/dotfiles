@@ -67,6 +67,21 @@ export const BaseStyles = /* css */ `
 .simple-bar--empty.simple-bar--loading > span::before {
   background-color: ${Theme.green};
 }
+.github {
+  display: flex;
+  align-items: center;
+  padding: 3px 7px;
+  background-color: ${Theme.cyan};
+  color: ${Theme.string};
+  border-radius: 20px;
+  margin-left: 5px;
+  text-decoration: none;
+  border: 1px solid ${Theme.minor};
+  box-shadow: ${Theme.lightShadow};
+}
+.github-icon {
+  margin-right: 7px;
+}
 `
 
 export const FloatingBarOverride = /* css */ `

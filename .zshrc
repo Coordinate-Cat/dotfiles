@@ -53,6 +53,9 @@ alias neo3="neofetch --caca /Users/ocat/dotfiles/.config/neofetch/neofetch_iterm
 ### christmas
 alias merry="cat .links/ascii/tree_ascii.txt"
 
+## links
+alias figma="open https://www.figma.com/file/5jOfkehBg8VJEITcPdMYKG/subwayUI-Project"
+
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
 ###  neofetch when term is opened
 ### ----------------------------------------------
@@ -80,6 +83,7 @@ export PATH=/usr/local/Cellar/dosfstools/4.2/sbin:$PATH
 ### nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+ZSH_DISABLE_COMPFIX="true"
 source $ZSH/oh-my-zsh.sh
 source $MY_ALIASES/links.zsh
 source ~ZSH_CUSTOM/plugins/fzf-tab
@@ -87,3 +91,4 @@ source ~ZSH_CUSTOM/plugins/fzf-tab
 plugins=(git)
 
 [[ ! -f .p10k.zsh ]] || source .p10k.zsh
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true

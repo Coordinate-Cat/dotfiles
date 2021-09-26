@@ -1,0 +1,4 @@
+==== Emojis ====
+🐛 :fix
+👍 :general
+✨ :update
