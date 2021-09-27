@@ -33,6 +33,12 @@ function streaming() {
     column .links/streaming.txt
 }
 
+function live() {
+    dot_border
+    #column表示
+    column .links/live.txt
+}
+
 function all() {
     dot_border
     column .links/sns.txt
@@ -40,9 +46,12 @@ function all() {
     column .links/news.txt
     dot_border
     column .links/streaming.txt
+    dot_border
+    column .links/live.txt
 }
 
 alias sns=sns
 alias news=news
 alias streaming=streaming
+alias live=live
 alias all=all
