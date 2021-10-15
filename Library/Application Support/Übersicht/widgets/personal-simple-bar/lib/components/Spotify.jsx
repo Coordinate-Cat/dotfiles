@@ -61,7 +61,7 @@ const Spotify = ({ output }) => {
       {showSpecter && isPlaying && <Specter />}
       <div className="spotify__inner">
         <div className="spotify__slider">
-          {trackName} - {artistName}
+          ♪ {trackName} - {artistName}
         </div>
       </div>
     </div>

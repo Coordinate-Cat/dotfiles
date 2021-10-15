@@ -67,20 +67,36 @@ export const BaseStyles = /* css */ `
 .simple-bar--empty.simple-bar--loading > span::before {
   background-color: ${Theme.green};
 }
-.github {
+.icon-svg {
+  width: fit-content;
+  height: 15px;
+  text-align:center;
   display: flex;
   align-items: center;
-  padding: 3px 7px;
+  padding: 3px 5px;
   background-color: ${Theme.cyan};
   color: ${Theme.string};
-  border-radius: 20px;
-  margin-left: 5px;
+  border-radius: 100%;
+  margin-right: 5px;
   text-decoration: none;
   border: 1px solid ${Theme.minor};
   box-shadow: ${Theme.lightShadow};
 }
-.github-icon {
-  margin-right: 7px;
+.icon-svg-vscode {
+  width: 13px;
+  height: 15px;
+  text-align:center;
+  font-weight:bold;
+  display: flex;
+  align-items: center;
+  padding: 3px 5px;
+  background-color: ${Theme.cyan};
+  color: ${Theme.string};
+  border-radius: 20px;
+  margin-right: 5px;
+  text-decoration: none;
+  border: 1px solid ${Theme.minor};
+  box-shadow: ${Theme.lightShadow};
 }
 `
 
@@ -858,12 +874,11 @@ export const SpotifyStyles = /* css */ `
   user-select: none;
   opacity: 1;
   transition: opacity 160ms ${Theme.easing}, transform 160ms ${Theme.easing};
+  pointer-events: none;
+
 }
 .spotify:hover {
   opacity: 1;
-}
-.spotify:active {
-  transform: scale(0.9);
 }
 .spotify__icon {
   width: 10px;
@@ -871,19 +886,31 @@ export const SpotifyStyles = /* css */ `
   margin-right: 7px;
   margin-top: 3px;
   fill: ${Theme.string};
+  pointer-events: auto;
 }
 .spotify__inner {
-  max-width: 200px;
-  max-height: 13px;
+  max-height: 15px;
   display: flex;
   flew-wrap: nowrap;
-  overflow: hidden;
+  width : 300px;
+  overflow : hidden;
+  pointer-events: none;
 }
 .spotify__slider {
   white-space: nowrap;
-  transition: transform 160ms ${Theme.easing};
+  margin:0;
+  line-height: 18px;
+  display : inline-block;
+  padding-left: 100%;
+  animation : scrollSample01 10s linear infinite;
+  pointer-events: none;
+}
+@keyframes scrollSample01{
+  0% { transform: translateX(0%)}
+  100% { transform: translateX(-150%)}
 }
 `
+// transition: transform 160ms ${Theme.easing};
 
 export const MusicStyles = /* css */ `
 .music {

@@ -49,6 +49,8 @@ alias wtf='curl wttr.in/Tokyo?format=3'
 alias neo="neofetch --iterm2 /Users/ocat/dotfiles/.config/neofetch/neofetch_iterm2.png"
 alias neo2="neofetch --jp2a /Users/ocat/dotfiles/.config/neofetch/neofetch_jp2a.jpeg"
 alias neo3="neofetch --caca /Users/ocat/dotfiles/.config/neofetch/neofetch_iterm2.png"
+alias neo4="neofetch --iterm2 /Users/ocat/dotfiles/.config/neofetch/jeff.png"
+
 
 ### christmas
 alias merry="cat .links/ascii/tree_ascii.txt"
@@ -59,7 +61,7 @@ alias figma="open https://www.figma.com/file/5jOfkehBg8VJEITcPdMYKG/subwayUI-Pro
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
 ###  neofetch when term is opened
 ### ----------------------------------------------
-neofetch --jp2a /Users/ocat/dotfiles/.config/neofetch/neofetch_jp2a.jpeg
+neofetch --iterm2 /Users/ocat/dotfiles/.config/neofetch/jeff.png
 
 ### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
 ###  fzf
