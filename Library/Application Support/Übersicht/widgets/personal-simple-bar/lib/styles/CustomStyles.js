@@ -902,7 +902,7 @@ export const SpotifyStyles = /* css */ `
   line-height: 18px;
   display : inline-block;
   padding-left: 100%;
-  animation : scrollSample01 10s linear infinite;
+  animation : scrollSample01 14s linear infinite;
   pointer-events: none;
 }
 @keyframes scrollSample01{

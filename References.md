@@ -26,6 +26,7 @@
 - [koekeishiya/yabai: A tiling window manager for macOS based on binary space partitioning](https://github.com/koekeishiya/yabai)
 - [rcmdnk/sentaku: Utility to make sentaku (selection, 選択(sentaku)) window with shell command.](https://github.com/rcmdnk/sentaku)
 - [Jean-Tinland/simple-bar: A yabai status bar widget for Übersicht](https://github.com/Jean-Tinland/simple-bar)
+- [ascii-boxes/boxes: Command line ASCII boxes unlimited!](https://github.com/ascii-boxes/boxes/)
 
 ## Reddit
 - [r/unixporn - the home for *NIX customization!](https://www.reddit.com/r/unixporn/)

@@ -2,3 +2,5 @@
 🐛 :fix
 👍 :general
 ✨ :update
+🧩 :add
+⛺️ :chore
