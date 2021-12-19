@@ -27,6 +27,7 @@
 - [rcmdnk/sentaku: Utility to make sentaku (selection, 選択(sentaku)) window with shell command.](https://github.com/rcmdnk/sentaku)
 - [Jean-Tinland/simple-bar: A yabai status bar widget for Übersicht](https://github.com/Jean-Tinland/simple-bar)
 - [ascii-boxes/boxes: Command line ASCII boxes unlimited!](https://github.com/ascii-boxes/boxes/)
+- [gotop: graphical activity monitor](https://github.com/xxxserxxx/gotop)
 
 ## Reddit
 - [r/unixporn - the home for *NIX customization!](https://www.reddit.com/r/unixporn/)

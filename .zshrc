@@ -45,6 +45,7 @@ source $MY_ALIASES/git.zsh
 source $MY_ALIASES/ls.zsh
 source $MY_ALIASES/links.zsh
 source $MY_ALIASES/neo.zsh
+source $MY_ALIASES/osint.zsh
 source $MY_ALIASES/others.zsh
 source $MY_ALIASES/wttr.zsh
 
