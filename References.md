@@ -9,6 +9,7 @@
 - [Quine・難解プログラミングについて](https://www.slideshare.net/mametter/quine-10290517)
 - [Rice](https://notes.neeasade.net/rice.html)
 - [Pimp my terminal | DяA](https://drasite.com/blog/Pimp%20my%20terminal)
+- [dotfilesを作ってMacを簡単セットアップ](https://www.takameron.info/post/dotfiles/)
 
 ## Github
 - [webpro/awesome-dotfiles: A curated list of dotfiles resources.](https://github.com/webpro/awesome-dotfiles)
@@ -28,6 +29,7 @@
 - [Jean-Tinland/simple-bar: A yabai status bar widget for Übersicht](https://github.com/Jean-Tinland/simple-bar)
 - [ascii-boxes/boxes: Command line ASCII boxes unlimited!](https://github.com/ascii-boxes/boxes/)
 - [gotop: graphical activity monitor](https://github.com/xxxserxxx/gotop)
+- [mas: Mac App Store command line interface](https://www.nowhere.co.jp/blog/archives/20180620-25705.html)
 
 ## Reddit
 - [r/unixporn - the home for *NIX customization!](https://www.reddit.com/r/unixporn/)

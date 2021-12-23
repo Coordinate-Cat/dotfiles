@@ -1,16 +1,18 @@
+const sub = 'rgba(0, 0, 0)'
+
 export const Theme = {
-  main: 'rgba(27, 38, 42)',
-  minor: 'rgba(27, 38, 42)', //background-color
-  accent: 'rgba(27, 38, 42)',
-  red: 'rgba(27, 38, 42)',
-  green: 'rgba(27, 38, 42)',
-  yellow: 'rgba(27, 38, 42)',
-  orange: 'rgba(27, 38, 42)',
-  blue: 'rgba(27, 38, 42)',
-  magenta: 'rgba(27, 38, 42)',
-  cyan: 'rgba(27, 38, 42)',
-  string: 'rgba(232, 155, 84)',
-  background: 'rgba(0, 0, 0, 0)',
+  main: sub,
+  minor: sub, //background-color
+  accent: sub,
+  red: sub,
+  green: sub,
+  yellow: sub,
+  orange: sub,
+  blue: sub,
+  magenta: sub,
+  cyan: sub,
+  string: 'rgba(256, 256, 256)',
+  background: sub,
   lightGrey: 'rgba(0, 0, 0, 0.05)',
   // font: 'JetBrains Mono, monospace',
   font: 'MesloLGLForPowerline-Regular',

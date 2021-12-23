@@ -26,8 +26,9 @@ export const BaseStyles = /* css */ `
   z-index: 1;
 }
 .simple-bar--data {
-  right: 0;
-  margin-left: auto;
+  width:100%;
+  right: -54px;
+  margin-left: 26px;
   color: ${Theme.main};
   z-index: 1;
 }
@@ -66,6 +67,13 @@ export const BaseStyles = /* css */ `
 }
 .simple-bar--empty.simple-bar--loading > span::before {
   background-color: ${Theme.green};
+}
+.group {
+  display: flex;
+}
+.data-group {
+  display: flex;
+  width: 100%;
 }
 .icon-svg {
   width: fit-content;
@@ -810,6 +818,7 @@ export const WifiStyles = /* css */ `
 
 export const DateStyles = /* css */ `
 .date {
+  min-width: 100px !important;
   display: flex;
   align-items: center;
   padding: 3px 7px;

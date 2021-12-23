@@ -19,7 +19,7 @@ menu="
 "
 
 # SNS URL PUSH
-_sf_1 ()  { open https://github.com        }
+_sf_1 ()  { open https://github.com && exit }
 _sf_2 ()  { open https://twitter.com/      }
 _sf_3 ()  { open https://www.instagram.com }
 _sf_4 ()  { open https://www.reddit.com    }
