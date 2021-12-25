@@ -1,6 +1,8 @@
 # dotfiles
 
 ![screenshot001](.assets/screenshot001.png)
+![screenshot003](.assets/screenshot003.png)
+![screenshot002](.assets/screenshot002.png)
 
 | System   | Details                         |
 |:---------|:--------------------------------|
