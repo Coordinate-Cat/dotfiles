@@ -1,3 +1,5 @@
+#!/bin/sh
+
 . sentaku -n
 
 _SENTAKU_SEPARATOR=$'\n'
@@ -6,7 +8,6 @@ _SENTAKU_NONUMBER=1
 shopt -s expand_aliases
 
 alias resource='zsh /Users/ocat/dotfiles/.osint/OSINT-TOOLS-CLI/osint-resource.sh'
-alias ch='cd /Users/ocat/dotfiles/.osint/OSINT-TOOLS-CLI/theHarvester'
 
 # Name of the function to be executed
 menu="
@@ -19,7 +20,7 @@ menu="
 # List of functions to assign to the list
 _sf_0 () { resource }
 _sf_1 () { hashcat }
-_sf_2 () { ch }
+_sf_2 () { theHarvester -h }
 _sf_3 () { exit }
 
 # Search for a selected number of lines

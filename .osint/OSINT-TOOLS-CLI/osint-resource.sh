@@ -1,3 +1,5 @@
+#!/bin/sh
+
 . sentaku -n
 
 _SENTAKU_SEPARATOR=$'\n'
