@@ -5,7 +5,7 @@
   "color-case": "lower",
   "color-shorthand": true,
   "element-case": "lower",
-  "eof-newline": false,
+  "eof-newline": true,
   "leading-zero": false,
   "quotes": "single",
   "space-after-colon": " ",
