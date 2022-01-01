@@ -10,6 +10,7 @@
 - [Rice](https://notes.neeasade.net/rice.html)
 - [Pimp my terminal | DяA](https://drasite.com/blog/Pimp%20my%20terminal)
 - [dotfilesを作ってMacを簡単セットアップ](https://www.takameron.info/post/dotfiles/)
+- [fzfを使いMacのアプリを簡単に起動する](https://qiita.com/thesaitama/items/fb00a89588a58c0de92f)
 
 ## Github
 - [webpro/awesome-dotfiles: A curated list of dotfiles resources.](https://github.com/webpro/awesome-dotfiles)
