@@ -1,9 +1,6 @@
 # dotfiles
 
-<!-- ![screenshot001](.assets/dotfiles.gif =100%x100%) -->
-![screenshot003](.assets/dotfiles.png =100%x100%)
-<!-- ![screenshot001](.assets/screenshot001.png)
-![screenshot002](.assets/screenshot002.png) -->
+![screenshot001](.assets/dotfiles.png)
 
 | System   | Details                         |
 |:---------|:--------------------------------|
