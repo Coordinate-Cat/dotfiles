@@ -29,7 +29,7 @@ export PATH=/usr/local/Cellar/llvm/11.1.0/bin:$PATH
 export PATH=/usr/local/Cellar/dosfstools/4.2/sbin:$PATH
 
 ###[ fzf ]######################################################################
-export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore -l ""'
 export FZF_DEFAULT_OPTS='--reverse --preview "bat --color=always --style=header,grid --line-range :100 {}"'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -124,3 +124,18 @@ zinit ice depth=1
 zinit light romkatv/powerlevel10k
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
+
+###[ cd & lsd ]#################################################################
+
+cd() {
+    builtin cd "$@"
+    echo "success"
+}
+
+cdls ()
+{
+    \cd "$@" && clear &&  lsd -la
+    echo "success!!"
+}
+
+alias cd="cdls"

@@ -13,7 +13,11 @@
 *.env
 *tags
 
-#flexxx
+# flexxx
 .Flexxx
 
-.osint/OSINT-TOOLS-CLI/hashcat/rockyou.txt
+# osint
+.osint/OSINT-TOOLS-CLI/hashcat
+.osint/OSINT-TOOLS-CLI/kali
+.osint/OSINT-TOOLS-CLI/osintgram
+.osint/OSINT-TOOLS-CLI/theHarvester
