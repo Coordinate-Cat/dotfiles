@@ -1,7 +1,4 @@
-### ------ ∠( ᐛ 」∠)_ ------ ᕕ( ᐛ )ᕗ ------------
-###  ~/.zshrc
-### ----------------------------------------------
-### The code below should be written at the top of ~/.zshrc
+###[ ~/.zshrc ]#################################################################
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -16,23 +13,22 @@ fi
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 DOT="/Users/ocat/dotfiles"
-export ZSH="/Users/ocat/dotfiles/.oh-my-zsh"
 export BAT_CONFIG_PATH="$DOT/.config/bat/bat.conf"
 export MY_ALIASES="$DOT/.aliases"
 
-### nodebrew
+###[ nodebrew ]#################################################################
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
-### nvm
+###[ nvm ]######################################################################
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-### llvm & dosfstools
+###[ llvm & dosfstools ]########################################################
 export PATH=/usr/local/Cellar/llvm/11.1.0/bin:$PATH
 export PATH=/usr/local/Cellar/dosfstools/4.2/sbin:$PATH
 
-### fzf
+###[ fzf ]######################################################################
 export FZF_DEFAULT_COMMAND='rg --files'
 export FZF_DEFAULT_OPTS='--reverse --preview "bat --color=always --style=header,grid --line-range :100 {}"'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -71,12 +67,12 @@ app() {
   fi
 }
 
-### pyenv(python ver.3)
+###[ pyenv(py3) ]###############################################################
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 
-### alias source
+###[ alias source ]#############################################################
 source $MY_ALIASES/app.zsh
 source $MY_ALIASES/brew.zsh
 source $MY_ALIASES/cabal.zsh
@@ -88,9 +84,9 @@ source $MY_ALIASES/osint.zsh
 source $MY_ALIASES/others.zsh
 source $MY_ALIASES/wttr.zsh
 
-### others
-source $ZSH/oh-my-zsh.sh
-source ~ZSH_CUSTOM/plugins/fzf-tab
+###[ others ]###################################################################
+# source $ZSH/oh-my-zsh.sh
+# source ~ZSH_CUSTOM/plugins/fzf-tab
 source ~/.nvm/nvm.sh
 [[ ! -f .p10k.zsh ]] || source .p10k.zsh
 
@@ -98,8 +94,7 @@ plugins=(git)
 ZSH_DISABLE_COMPFIX="true"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
+###[ conda initialize ]#########################################################
 __conda_setup="$('/Users/ocat/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
@@ -111,5 +106,21 @@ else
     fi
 fi
 unset __conda_setup
-# <<< conda initialize <<<
 
+###[ Added by Zinit's installer ]###############################################
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
+
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+zinit ice depth=1
+zinit light romkatv/powerlevel10k
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
