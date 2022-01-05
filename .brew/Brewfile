@@ -13,23 +13,16 @@ tap "rcmdnk/rcmdnkpac"
 tap "rigellute/tap"
 
 brew "webp"
-brew "asciinema"
 brew "bat"
 brew "boxes"
 brew "cask"
 brew "catimg"
-brew "cmake"
-brew "dosfstools"
 brew "fzf"
 brew "gcc"
 brew "gh"
 brew "git", link: false
 brew "glib"
 brew "gnu-sed"
-brew "hashcat"
-brew "htop"
-brew "libheif"
-brew "python@3.8"
 brew "imagemagick"
 brew "imagesnap"
 brew "jp2a"
@@ -67,7 +60,4 @@ brew "koekeishiya/formulae/yabai"
 brew "rcmdnk/rcmdnkpac/sentaku"
 cask "font-hack-nerd-font"
 cask "rectangle"
-
-mas "Hidden Bar", id: 1452453066
-mas "RunCat", id: 1429033973
 mas "Xcode", id: 497799835

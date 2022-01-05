@@ -124,17 +124,17 @@ zinit ice depth=1
 zinit light romkatv/powerlevel10k
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
+# zinit light b4b4r07/enhancd
 
 ###[ cd & lsd ]#################################################################
 
-cd() {
+function cd() {
     builtin cd "$@"
-    echo "success"
+    echo "success!!"
 }
 
-cdls ()
-{
-    \cd "$@" && clear &&  lsd -la
+function cdls() {
+    \cd "$@" && clear && lsd -la
     echo "success!!"
 }
 
