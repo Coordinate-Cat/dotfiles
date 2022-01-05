@@ -12,13 +12,13 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
 fi
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
-DOT="/Users/ocat/dotfiles"
+DOT="${HOME}/dotfiles"
 export BAT_CONFIG_PATH="$DOT/.config/bat/bat.conf"
 export MY_ALIASES="$DOT/.aliases"
 
 ###[ nodebrew ]#################################################################
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-
+eval "$(nodenv init -)"
 ###[ nvm ]######################################################################
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -68,9 +68,9 @@ app() {
 }
 
 ###[ pyenv(py3) ]###############################################################
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
 
 ###[ alias source ]#############################################################
 source $MY_ALIASES/app.zsh
@@ -87,7 +87,7 @@ source $MY_ALIASES/wttr.zsh
 ###[ others ]###################################################################
 # source $ZSH/oh-my-zsh.sh
 # source ~ZSH_CUSTOM/plugins/fzf-tab
-source ~/.nvm/nvm.sh
+# source ~/.nvm/nvm.sh
 [[ ! -f .p10k.zsh ]] || source .p10k.zsh
 
 plugins=(git)
@@ -139,3 +139,6 @@ cdls ()
 }
 
 alias cd="cdls"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

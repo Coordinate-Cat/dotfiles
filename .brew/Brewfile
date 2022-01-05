@@ -11,31 +11,24 @@ tap "khanhas/tap"
 tap "koekeishiya/formulae"
 tap "rcmdnk/rcmdnkpac"
 tap "rigellute/tap"
+
 brew "webp"
-brew "python@3.10"
 brew "asciinema"
 brew "bat"
 brew "boxes"
 brew "cask"
 brew "catimg"
 brew "cmake"
-brew "cointop"
-brew "composer"
-brew "deno"
 brew "dosfstools"
-brew "elasticsearch", restart_service: true
 brew "fzf"
 brew "gcc"
 brew "gh"
-brew "ghostscript"
 brew "git", link: false
-brew "python@3.9"
 brew "glib"
 brew "gnu-sed"
 brew "hashcat"
 brew "htop"
 brew "libheif"
-brew "tcl-tk"
 brew "python@3.8"
 brew "imagemagick"
 brew "imagesnap"
@@ -66,25 +59,15 @@ brew "spotifyd", restart_service: true
 brew "theharvester"
 brew "tree"
 brew "wget"
-brew "wireshark"
 brew "zplug"
 brew "zsh-syntax-highlighting"
 brew "cloudflare/cloudflare/cloudflared"
-brew "heroku/brew/heroku"
 brew "khanhas/tap/spicetify-cli"
 brew "koekeishiya/formulae/yabai"
 brew "rcmdnk/rcmdnkpac/sentaku"
 cask "font-hack-nerd-font"
 cask "rectangle"
-cask "sequel-pro-nightly"
-cask "virtualbox"
-cask "xquartz"
+
 mas "Hidden Bar", id: 1452453066
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "LINE", id: 539883307
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "PixelFinder", id: 1512540355
 mas "RunCat", id: 1429033973
 mas "Xcode", id: 497799835
