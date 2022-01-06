@@ -91,7 +91,6 @@ source $MY_ALIASES/wttr.zsh
 # source $ZSH/oh-my-zsh.sh
 # source ~ZSH_CUSTOM/plugins/fzf-tab
 # source ~/.nvm/nvm.sh
-[[ ! -f .p10k.zsh ]] || source .p10k.zsh
 
 plugins=(git)
 ZSH_DISABLE_COMPFIX="true"
@@ -124,9 +123,10 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 zinit ice depth=1
-zinit light romkatv/powerlevel10k
-zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-syntax-highlighting
+# zinit light zdharma-continuum/fast-syntax-highlighting
 
 ###[ cd & lsd ]#################################################################
 
@@ -141,3 +141,8 @@ function cdls() {
 }
 
 alias cd="cdls"
+
+###[ p10k ]#####################################################################
+
+zinit light romkatv/powerlevel10k
+[[ ! -f .p10k.zsh ]] || source ~/.p10k.zsh
