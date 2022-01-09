@@ -12,12 +12,3 @@
 *.pem
 *.env
 *tags
-
-# flexxx
-.Flexxx
-
-# osint
-.osint/OSINT-TOOLS-CLI/hashcat
-.osint/OSINT-TOOLS-CLI/kali
-.osint/OSINT-TOOLS-CLI/osintgram
-.osint/OSINT-TOOLS-CLI/theHarvester

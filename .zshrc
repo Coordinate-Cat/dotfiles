@@ -11,16 +11,29 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
   PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-DOT="${HOME}/dotfiles"
-export BAT_CONFIG_PATH="$DOT/.config/bat/bat.conf"
+###[ global variable ]##########################################################
+export DOT="$HOME/dotfiles"
 export MY_ALIASES="$DOT/.aliases"
+export BAT_CONFIG_PATH="$DOT/.config/bat/bat.conf"
+export RESOURCE="$DOT/.osint/OSINT-TOOLS-CLI/osint-resource.sh"
+
+###[ alias source ]#############################################################
+source $MY_ALIASES/app.zsh
+source $MY_ALIASES/brew.zsh
+source $MY_ALIASES/cabal.zsh
+source $MY_ALIASES/git.zsh
+source $MY_ALIASES/ls.zsh
+source $MY_ALIASES/links.zsh
+source $MY_ALIASES/neo.zsh
+source $MY_ALIASES/osint.zsh
+source $MY_ALIASES/others.zsh
+source $MY_ALIASES/wttr.zsh
 
 ###[ nodebrew ]#################################################################
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+# export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 ###[ nodenv ]###################################################################
-eval "$(nodenv init -)"
+# eval "$(nodenv init -)"
 
 ###[ nvm ]######################################################################
 export NVM_DIR="$HOME/.nvm"
@@ -74,18 +87,6 @@ app() {
 # export PYENV_ROOT="$HOME/.pyenv"
 # export PATH="$PYENV_ROOT/bin:$PATH"
 # eval "$(pyenv init --path)"
-
-###[ alias source ]#############################################################
-source $MY_ALIASES/app.zsh
-source $MY_ALIASES/brew.zsh
-source $MY_ALIASES/cabal.zsh
-source $MY_ALIASES/git.zsh
-source $MY_ALIASES/ls.zsh
-source $MY_ALIASES/links.zsh
-source $MY_ALIASES/neo.zsh
-source $MY_ALIASES/osint.zsh
-source $MY_ALIASES/others.zsh
-source $MY_ALIASES/wttr.zsh
 
 ###[ others ]###################################################################
 # source $ZSH/oh-my-zsh.sh
@@ -144,5 +145,6 @@ alias cd="cdls"
 
 ###[ p10k ]#####################################################################
 
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 zinit light romkatv/powerlevel10k
 [[ ! -f .p10k.zsh ]] || source ~/.p10k.zsh

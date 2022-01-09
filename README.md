@@ -1,13 +1,12 @@
 # dotfiles
 
-
 ![screenshot001](.assets/dotfiles2.png)
 ![screenshot001](.assets/dotfiles1.png)
 ![iterm](.assets/iterm.png)
 
 | System   | Details                |                                                |
 |:---------|:-----------------------|:----------------------------------------------:|
-| OS       | macOS Catalina 10.15.7 |                                                |
+| OS       | macOS                  |                                                |
 | DE       | Aqua                   |                                                |
 | WM       | Rectangle(yabai)       | [URL](https://github.com/rxhanson/Rectangle)   |
 | Font     | Hack Nerd Font         | [URL](https://github.com/ryanoasis/nerd-fonts) |
@@ -15,6 +14,10 @@
 | MenuBar  | Übersicht(simeple-bar) |                                                |
 | Terminal | iTerm2                 |                                                |
 
+## TODO
+
+- [ ] install navi
+- [ ] move to wiki
 
 ## Contributors
 
@@ -28,5 +31,6 @@ Made with [contributors-img](https://contributors-img.web.app).
 
 [LICENSE-WTFPL](https://github.com/Coordinate-Cat/dotfiles/blob/master/LICENSE-WTFPL)
 
-## TODO: install navi
-## TODO: move to wiki
+## CODE OF CONDUCT
+
+[Contributor Covenant Code of Conduct](https://github.com/Coordinate-Cat/dotfiles/blob/master/CODE_OF_CONDUCT.md)
