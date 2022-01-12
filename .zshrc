@@ -15,9 +15,12 @@ fi
 export DOT="$HOME/dotfiles"
 export MY_ALIASES="$DOT/.aliases"
 export BAT_CONFIG_PATH="$DOT/.config/bat/bat.conf"
-export RESOURCE="$DOT/.osint/OSINT-TOOLS-CLI/osint-resource.sh"
+export OSINTDIR="$DOT/.osint/OSINT-TOOLS-CLI"
 
 ###[ alias source ]#############################################################
+source $OSINTDIR/devenv.zsh
+# source $OSINTDIR/env.zsh
+
 source $MY_ALIASES/app.zsh
 source $MY_ALIASES/brew.zsh
 source $MY_ALIASES/cabal.zsh
