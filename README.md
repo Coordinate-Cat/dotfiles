@@ -1,8 +1,15 @@
-# dotfiles
+# DOTFILES
 
-![screenshot001](.assets/dotfiles2.png)
+<!-- ![screenshot001](.assets/dotfiles2.png) -->
 ![screenshot001](.assets/dotfiles1.png)
 ![iterm](.assets/iterm.png)
+
+## INSTALL
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/master/install.sh)"
+
+```
 
 | System   | Details                |                                                |
 |:---------|:-----------------------|:----------------------------------------------:|
@@ -19,7 +26,7 @@
 - [ ] install navi
 - [ ] move to wiki
 
-## Contributors
+## CONTRIBUTORS
 
 <a href="https://github.com/Coordinate-Cat/dotfiles/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=Coordinate-Cat/dotfiles" />
@@ -27,7 +34,7 @@
 
 Made with [contributors-img](https://contributors-img.web.app).
 
-## License
+## LICENSE
 
 [LICENSE-WTFPL](https://github.com/Coordinate-Cat/dotfiles/blob/master/LICENSE-WTFPL)
 
