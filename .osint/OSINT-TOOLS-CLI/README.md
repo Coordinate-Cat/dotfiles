@@ -1,5 +1,9 @@
 # OSINT-TOOLS-CLI
 
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Coordinate-Cat/osint-tools-cli?style=flat-square)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/Coordinate-Cat/osint-tools-cli?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/Coordinate-Cat/osint-tools-cli?style=flat-square)
+
 ## ⚠️ SORRY IT'S NOT WORKING YET, BUT WE'RE DOING OUR BEST.
 
 ![top](./assets/top.png)
@@ -15,9 +19,9 @@ IT CAN BE NAVIGATED WITHOUT USING COMMANDS OR THE CURSOR.
 [LIST INSERTION #4](https://github.com/Coordinate-Cat/OSINT-TOOLS-CLI/issues/4)  
 [COMMON FUNC #5](https://github.com/Coordinate-Cat/OSINT-TOOLS-CLI/issues/5)
 
-<details>
-<summary>Progress</summary>
-- [ ] Maps, Geolocation and Transport
+### Progress
+
+- [x] Maps, Geolocation and Transport
 - [ ] Social Media
 - [ ] Domain/IP/Links
 - [ ] Image Search and Identification
@@ -44,9 +48,6 @@ IT CAN BE NAVIGATED WITHOUT USING COMMANDS OR THE CURSOR.
 - [ ] TV/Radio
 - [ ] VirtualMachines/Linux distributions
 - [ ] My Projects
-</details>
-<br>
-
 ## RESOURCE
 - CIPHER387/OSINT_STUFF_TOOL_COLLECTION
   (HTTPS://GITHUB.COM/CIPHER387/OSINT_STUFF_TOOL_COLLECTION)
@@ -131,10 +132,9 @@ export TWITTER="$HOME/OSINT-TOOLS-CLI/bin/SOCIAL_MEDIA/twitter.sh"
 export YOUTUBE="$HOME/OSINT-TOOLS-CLI/bin/SOCIAL_MEDIA/youtube.sh"
 ```
 </details>
-<br>
 
 #### 3-1.EXPORT & SOURCE
-`.zshrc` or `.bashrc`
+DESCRIBE IT ON `.zshrc` OR `.bashrc`
 ```
 export OSINTDIR="$HOME/OSINT-TOOLS-CLI"
 source $OSINTDIR/env.zsh

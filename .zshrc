@@ -32,6 +32,9 @@ source $MY_ALIASES/osint.zsh
 source $MY_ALIASES/others.zsh
 source $MY_ALIASES/wttr.zsh
 
+###[ fnm ]######################################################################
+eval "$(fnm env --use-on-cd)"
+
 ###[ nodebrew ]#################################################################
 # export PATH=$HOME/.nodebrew/current/bin:$PATH
 

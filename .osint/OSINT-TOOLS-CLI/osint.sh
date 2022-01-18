@@ -8,6 +8,8 @@ _SENTAKU_NOHEADER=1
 _SENTAKU_NONUMBER=1
 shopt -s expand_aliases
 
+. ./test.txt
+
 TITLE_ASCII='\e[31m
 ◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥◤◢◣◥◤◢◣◥◤ ◢◣◆◢◣◥
 
@@ -100,7 +102,7 @@ menu="
 ### [ LIST OF FUNCTIONS TO ASSIGN TO THE LIST ] ################################
 _sf_0 ()  { MAPS_GEOLOCATION_AND_TRANSPORT_CMD }
 _sf_1 ()  { SOCIAL_MEDIA_CMD }
-_sf_2 ()  { ERROR_CMD }
+_sf_2 ()  { echo $TEST }
 _sf_3 ()  { ERROR_CMD }
 _sf_4 ()  { ERROR_CMD }
 _sf_5 ()  { ERROR_CMD }
