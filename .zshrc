@@ -1,3 +1,7 @@
+###[ FIG ENV VARIABLES ]########################################################
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+###[ END FIG ENV VARIABLES ]####################################################
+
 ###[ ~/.zshrc ]#################################################################
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -90,9 +94,9 @@ app() {
 }
 
 ###[ pyenv(py3) ]###############################################################
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
 
 ###[ others ]###################################################################
 # source $ZSH/oh-my-zsh.sh
@@ -138,19 +142,21 @@ zinit light zsh-users/zsh-syntax-highlighting
 ###[ cd & lsd ]#################################################################
 
 function cd() {
-    builtin cd "$@"
-    echo "success!!"
+    builtin cd "$@" && clear && lsd -la
 }
 
 function cdls() {
     \cd "$@" && clear && lsd -la
-    echo "success!!"
 }
 
-alias cd="cdls"
+# alias cd="cdls"
 
 ###[ p10k ]#####################################################################
 
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 zinit light romkatv/powerlevel10k
 [[ ! -f .p10k.zsh ]] || source ~/.p10k.zsh
+
+###[ FIG ENV VARIABLES ]########################################################
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+###[ END FIG ENV VARIABLES ]####################################################
