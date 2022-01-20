@@ -35,76 +35,44 @@ EXIT_ASCII='\e[32;5;7m
 clear && source $HOME/dotfiles/.zshrc
 
 ### [ Aliases ] ################################################################
-alias MAPS_GEOLOCATION_AND_TRANSPORT_CMD='zsh $MAPS_GEOLOCATION_AND_TRANSPORT && bash $MAPS_GEOLOCATION_AND_TRANSPORT'
 alias SOCIAL_MEDIA_CMD='zsh $SOCIAL_MEDIA && bash $SOCIAL_MEDIA'
-alias CODE_CMD='zsh $CODE && bash $CODE'
 
 alias ERROR_CMD='clear && echo $ERROR_ASCII && sleep 3m;clear && echo "$menu" | _sf_main "$@"'
 alias EXIT_CMD='clear && echo $EXIT_ASCII && sleep 3m;kill $! wait $! 2>/dev/null sleep 1'
 
 ### [ Name of the function to be executed ] ####################################
 menu="
-   Maps, Geolocation and Transport
-   Social Media
-   Domain/IP/Links
-   Image Search and Identification
-   Cryptocurrencies
-   Messengers
-   Code
-   Search engines
-   Tools for Google
-   IOT
-   Archives
-   Archives of documents
-   Datasets
-   Passwords, emails, phone numbers
-   People search
-  ﴣ Sock Puppets
-   NOOSINT tools
-   Tools collections
-   Files
-   IMEI and serial numbers
-  ﳊ Keywords, trends, news analytics
-   Apps and programs
-   Brands, companies, items
-  ﳜ Movies
-   TV/Radio
-   VirtualMachines/Linux distributions
-   My Projects
-  ﴚ [ EXIT ]
+   Star History — simple tool that shows how the number of stars a repository on #Github has changed over the past three months.
+   Commits.top — Current list of the most active @Github users by country
+   Gitstar Ranking — Unofficial GitHub star ranking for users, organizations and repositories
+   Github Rater — rates GitHub profile upon data received from GitHub API
+   Github Trending Archives — Github trending archive for a specific date.
+   GitHub Repository Size — simple google chrome extension to view Github repo size
+   Gitcolombo — simple and fast tool that collects information (edit statistics and contacts) about repository contributors on Github
+   Coderstats — enter Github username and get detailed statistics of profile: languages, issues, forks, stars and much more
+   GitHub-Chart — it shows a visual representation of the temporal distribution of user changes in the repositories. You can visually see "productivity peaks" and see which days of the week a person is most active
+   Zen — Tool for gathering emails of #Github users
+   GithubCompare — When searching for OSINT tools on #Github, you will often come across several repositories with the same name. This service will help to visually compare them, determine which one was created earlier, which one has more forks and stars.
+   DownGit — Create GitHub Resource Download Link
+  ← [ BACK TO SOCIAL MEDIA ]
 "
 
-### [ LIST OF FUNCTIONS TO ASSIGN TO THE LIST ] ################################
-_sf_0 ()  { MAPS_GEOLOCATION_AND_TRANSPORT_CMD }
-_sf_1 ()  { SOCIAL_MEDIA_CMD }
-_sf_2 ()  { ERROR_CMD }
-_sf_3 ()  { ERROR_CMD }
-_sf_4 ()  { ERROR_CMD }
-_sf_5 ()  { ERROR_CMD }
-_sf_6 ()  { CODE_CMD }
-_sf_7 ()  { ERROR_CMD }
-_sf_8 ()  { ERROR_CMD }
-_sf_9 ()  { ERROR_CMD }
-_sf_10 () { ERROR_CMD }
-_sf_11 () { ERROR_CMD }
-_sf_12 () { ERROR_CMD }
-_sf_13 () { ERROR_CMD }
-_sf_14 () { ERROR_CMD }
-_sf_15 () { ERROR_CMD }
-_sf_16 () { ERROR_CMD }
-_sf_17 () { ERROR_CMD }
-_sf_18 () { ERROR_CMD }
-_sf_19 () { ERROR_CMD }
-_sf_20 () { ERROR_CMD }
-_sf_21 () { ERROR_CMD }
-_sf_22 () { ERROR_CMD }
-_sf_23 () { ERROR_CMD }
-_sf_24 () { ERROR_CMD }
-_sf_25 () { ERROR_CMD }
-_sf_26 () { ERROR_CMD }
-_sf_27 () { EXIT_CMD }
+# SNS URL PUSH
+_sf_0 ()   { ERROR_CMD }
+_sf_1 ()   {  }
+_sf_2 ()   {  }
+_sf_3 ()   {  }
+_sf_4 ()   {  }
+_sf_5 ()   {  }
+_sf_6 ()   {  }
+_sf_7 ()   {  }
+_sf_8 ()   {  }
+_sf_9 ()   {  }
+_sf_10 ()  {  }
+_sf_11 ()  {  }
+_sf_12 ()  { SOCIAL_MEDIA_CMD }
 
-### [ SEARCH FOR A SELECTED NUMBER OF LINES ] ##################################
+# Search for a selected number of lines
 func (){
   for i in `seq 0 99`
     do
@@ -115,8 +83,9 @@ func (){
     done
 }
 
-### [ RUN THE SELECTED FUNCTION. ] #############################################
+# Run the selected function.
 _sf_select () {
+  # The number of functions
   for i in `seq 0 99`
     do
       if   [ $_s_current_n -eq $i ];then

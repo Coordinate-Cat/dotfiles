@@ -16,31 +16,8 @@ export DOT="$HOME/dotfiles"
 export MY_ALIASES="$DOT/.aliases"
 export BAT_CONFIG_PATH="$DOT/.config/bat/bat.conf"
 
-# OSINT(TOC)
-export TOC="$DOT/.osint/OSINT-TOOLS-CLI/toc.sh" #TABLE OF CONTENTS
-export MAPS_GEOLOCATION_AND_TRANSPORT="$DOT/.osint/OSINT-TOOLS-CLI/bin/maps-geolocation-and-transport.sh"
-export SOCIAL_MEDIA="$DOT/.osint/OSINT-TOOLS-CLI/bin/social-media.sh"
-
-# OSINT/MAPS_GEOLOCATION_AND_TRANSPORT
-export SOCIAL_MEDIA_AND_PHOTOS_MAPS="$DOT/.osint/OSINT-TOOLS-CLI/bin/MAPS_GEOLOCATION_AND_TRANSPORT/social-media-and-photos-maps.sh"
-export NATURE_AVIATION="$DOT/.osint/OSINT-TOOLS-CLI/bin/MAPS_GEOLOCATION_AND_TRANSPORT/nature-aviation.sh"
-export MARITIME="$DOT/.osint/OSINT-TOOLS-CLI/bin/MAPS_GEOLOCATION_AND_TRANSPORT/maritime.sh"
-export RAILWAY="$DOT/.osint/OSINT-TOOLS-CLI/bin/MAPS_GEOLOCATION_AND_TRANSPORT/railway.sh"
-export ROUTES="$DOT/.osint/OSINT-TOOLS-CLI/bin/MAPS_GEOLOCATION_AND_TRANSPORT/routes.sh"
-export POLITICS_CONFLICTS_AND_CRISIS="$DOT/.osint/OSINT-TOOLS-CLI/bin/MAPS_GEOLOCATION_AND_TRANSPORT/politics-conflicts-and-crisis.sh"
-export URBAN_AND_INDUSTRIAL_INFRASTRUCTURE="$DOT/.osint/OSINT-TOOLS-CLI/bin/MAPS_GEOLOCATION_AND_TRANSPORT/urban-and-industrial-infrastructure.sh"
-export TRANSPORT="$DOT/.osint/OSINT-TOOLS-CLI/bin/MAPS_GEOLOCATION_AND_TRANSPORT/transport.sh"
-export COMMUNICATIONS_INTERNET_TECHNOLOGIES="$DOT/.osint/OSINT-TOOLS-CLI/bin/MAPS_GEOLOCATION_AND_TRANSPORT/communications-Internet-technologies.sh"
-export TOOLS="$DOT/.osint/OSINT-TOOLS-CLI/bin/MAPS_GEOLOCATION_AND_TRANSPORT/tools.sh"
-export STREET_VIEW="$DOT/.osint/OSINT-TOOLS-CLI/bin/MAPS_GEOLOCATION_AND_TRANSPORT/street-view.sh"
-export OTHER="$DOT/.osint/OSINT-TOOLS-CLI/bin/MAPS_GEOLOCATION_AND_TRANSPORT/other.sh"
-
-# OSINT/SOCIAL_MEDIA
-export TWITTER="$DOT/.osint/OSINT-TOOLS-CLI/bin/SOCIAL_MEDIA/twitter.sh"
-export YOUTUBE="$DOT/.osint/OSINT-TOOLS-CLI/bin/SOCIAL_MEDIA/youtube.sh"
-
-
-
+export OSINTDIR="$DOT/.osint/OSINT-TOOLS-CLI"
+source $OSINTDIR/devenv.zsh
 
 ###[ alias source ]#############################################################
 source $MY_ALIASES/app.zsh
