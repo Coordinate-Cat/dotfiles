@@ -16,6 +16,7 @@ brew "webp"
 brew "bat"
 brew "boxes"
 brew "catimg"
+brew "fig"
 brew "fzf"
 brew "git", link: false
 brew "jp2a"
