@@ -1,3 +1,7 @@
+###[ FIG ENV VARIABLES ]########################################################
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+###[ END FIG ENV VARIABLES ]####################################################
+
 ###[ ~/.zshrc ]#################################################################
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -11,15 +15,20 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
   PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
+# setopt auto_cd
+# setopt auto_pushd # cd -[tab]で過去のディレクトリにひとっ飛びできるようにする
+setopt HIST_IGNORE_SPACE
+
 ###[ global variable ]##########################################################
 export DOT="$HOME/dotfiles"
 export MY_ALIASES="$DOT/.aliases"
 export BAT_CONFIG_PATH="$DOT/.config/bat/bat.conf"
-
 export OSINTDIR="$DOT/.osint/OSINT-TOOLS-CLI"
-source $OSINTDIR/devenv.zsh
 
 ###[ alias source ]#############################################################
+source $OSINTDIR/devenv.zsh
+# source $OSINTDIR/env.zsh
+
 source $MY_ALIASES/app.zsh
 source $MY_ALIASES/brew.zsh
 source $MY_ALIASES/cabal.zsh
@@ -30,6 +39,9 @@ source $MY_ALIASES/neo.zsh
 source $MY_ALIASES/osint.zsh
 source $MY_ALIASES/others.zsh
 source $MY_ALIASES/wttr.zsh
+
+###[ fnm ]######################################################################
+# eval "$(fnm env --use-on-cd)"
 
 ###[ nodebrew ]#################################################################
 # export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -86,9 +98,9 @@ app() {
 }
 
 ###[ pyenv(py3) ]###############################################################
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
 
 ###[ others ]###################################################################
 # source $ZSH/oh-my-zsh.sh
@@ -126,27 +138,28 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 zinit ice depth=1
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-syntax-highlighting
+# zinit light zsh-users/zsh-completions
+# zinit light zsh-users/zsh-autosuggestions
+# zinit light zsh-users/zsh-syntax-highlighting
 # zinit light zdharma-continuum/fast-syntax-highlighting
 
 ###[ cd & lsd ]#################################################################
 
 function cd() {
-    builtin cd "$@"
-    echo "success!!"
+    builtin cd "$@" && clear && lsd -la
 }
-
 function cdls() {
     \cd "$@" && clear && lsd -la
-    echo "success!!"
 }
 
-alias cd="cdls"
+# alias cd="cdls"
 
 ###[ p10k ]#####################################################################
 
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 zinit light romkatv/powerlevel10k
 [[ ! -f .p10k.zsh ]] || source ~/.p10k.zsh
+
+###[ FIG ENV VARIABLES ]########################################################
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+###[ END FIG ENV VARIABLES ]####################################################
