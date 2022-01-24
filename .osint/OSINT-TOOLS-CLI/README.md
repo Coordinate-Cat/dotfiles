@@ -14,19 +14,106 @@ THIS IS A CLI VERSION OF THE CHEAT SHEET FOR EASY ACCESS.
 TABLE OF CONTENTS IS BASED ON [CIPHER387/OSINT_STUFF_TOOL_COLLECTION](HTTPS://GITHUB.COM/CIPHER387/OSINT_STUFF_TOOL_COLLECTION).  
 IT CAN BE NAVIGATED WITHOUT USING COMMANDS OR THE CURSOR.
 
+## VERSION
+WRITTING
+https://qiita.com/tommy_aka_jps/items/5b39e4b27364c759aa53
 ## ISSUES
 ⚠️IT WON'T WORK UNTIL THESE TWO ISUUES ARE COMPLETED.⚠️  
-[LIST INSERTION #4](https://github.com/Coordinate-Cat/OSINT-TOOLS-CLI/issues/4)  
-[COMMON FUNC #5](https://github.com/Coordinate-Cat/OSINT-TOOLS-CLI/issues/5)
-
 ### Progress
-
+### [LIST INSERTION #4](https://github.com/Coordinate-Cat/OSINT-TOOLS-CLI/issues/4)
 - [x] Maps, Geolocation and Transport
 - [x] Social Media
+- [x] Downloaders
 - [ ] Domain/IP/Links
 - [ ] Image Search and Identification
+- [x] Cryptocurrencies
+- [ ] Messengers
+- [x] Code
+- [x] Search engines
+- [x] Tools for DuckDuckGo
+- [x] Tools for Google
+- [x] IOT
+- [x] Archives
+- [x] Archives of documents
+- [x] Datasets
+- [x] Passwords, emails, phone numbers
+- [x] People search
+- [x] Sock Puppets
+- [x] NOOSINT tools
+- [x] Tools collections
+- [x] Files
+- [x] IMEI and serial numbers
+- [x] NFT
+- [x] Keywords, trends, news analytics
+- [x] Apps and programs
+- [x] Brands, companies, items
+- [x] Movies
+- [x] TV/Radio
+- [x] VirtualMachines/Linux distributions
+- [x] My Projects
+
+### [ADD COMMAND TO JUMP TO LINK #7](https://github.com/Coordinate-Cat/OSINT-TOOLS-CLI/issues/7)
+- [ ] Maps, Geolocation and Transport
+- [ ] Social Media
+  - [ ] Twitter
+  - [ ] YouTube
+  - [ ] TikTok
+  - [ ] Facebook
+  - [ ] Clubhouse
+  - [ ] Linkedin
+  - [ ] Xing
+  - [ ] Reddit
+  - [ ] Onlyfans
+  - [ ] Twitch
+  - [ ] Fidonet
+  - [ ] Usenet
+  - [ ] Tumblr
+  - [ ] Flickr
+  - [ ] Spotify
+  - [ ] Discord
+  - [ ] Yandex
+  - [ ] Instagram
+  - [ ] Google
+  - [ ] Patreon
+  - [ ] Github
+  - [ ] Parler
+  - [ ] Pornhub
+  - [ ] Steam
+  - [ ] Xbox
+  - [ ] VK
+  - [ ] Office365
+  - [ ] OneDrive
+  - [ ] Universal
+- [ ] Downloaders
+- [ ] Domain/IP/Links
+  - [ ] Dorks/Pentest/Vulnerabilities
+  - [ ] Searchers, scrapers, extractors, parsers
+  - [ ] Backlinks analyze
+  - [ ] Redirect lookup
+  - [ ] Cookies analyze
+  - [ ] Website's files metadata analyze and files downloads
+  - [ ] Website analyze
+  - [ ] Domain/IP investigation
+  - [ ] Subdomains scan/brute
+  - [ ] Cloudfare
+  - [ ] Databases of domains
+  - [ ] Website traffic look up
+  - [ ] Website technology look up
+  - [ ] Source Code Analyzes URL unshorteners
+- [ ] Image Search and Identification
+  - [ ] Reverse Image Search Engines
+  - [ ] Other Image Search Engines
+  - [ ] Image Analyze
+  - [ ] Exif Analyze and Editing
+  - [ ] Face recognition and search
+  - [ ] Font Indenfication 
 - [ ] Cryptocurrencies
 - [ ] Messengers
+  - [ ] Telegram
+  - [ ] WhatsApp
+  - [ ] Kik
+  - [ ] Skype
+  - [ ] Others
 - [ ] Code
 - [ ] Search engines
 - [ ] Tools for Google
@@ -48,9 +135,6 @@ IT CAN BE NAVIGATED WITHOUT USING COMMANDS OR THE CURSOR.
 - [ ] TV/Radio
 - [ ] VirtualMachines/Linux distributions
 - [ ] My Projects
-## RESOURCE
-- CIPHER387/OSINT_STUFF_TOOL_COLLECTION
-  (HTTPS://GITHUB.COM/CIPHER387/OSINT_STUFF_TOOL_COLLECTION)
 
 ## USAGE
 
