@@ -1,16 +1,17 @@
 # DOTFILES
 
-<!-- ![screenshot001](.assets/dotfiles2.png) -->
 ![screenshot001](.assets/dotfiles1.png)
+![screenshot002](.assets/dotfiles2.png)
+![screenshot003](.assets/dotfiles3.png)
+![screenshot004](.assets/dotfiles4.png)
+
 ![iterm](.assets/iterm.png)
 
 ## INSTALL
 
-```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/master/install.sh)"
+`bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/master/install.sh)"`
 
-```
-
+## SYSTEM
 | System   | Details                |                           link                            |
 |:---------|:-----------------------|:---------------------------------------------------------:|
 | OS       | macOS                  |                             /                             |
@@ -22,7 +23,6 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/
 | MenuBar  | Übersicht(simeple-bar) |          [URL](http://tracesof.net/uebersicht/)           |
 | Terminal | iTerm2                 |                [URL](https://iterm2.com/)                 |
 
-
 ## DEPENDENCIES
 |           |                     |                         |
 |:---------:|:-------------------:|:-----------------------:|
@@ -33,10 +33,26 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/
 |   yabai   |         Zsh         | zsh-syntax-highlighting |
 |  sentaku  | font-hack-nerd-font |       font-inter        |
 | rectangle |      ubersicht      |          Xcode          |
-## TODO
 
+<hr>
+
+## TODO
 - [ ] install navi
 - [ ] move to wiki
+
+<hr>
+
+## LICENSE
+
+[LICENSE-WTFPL](https://github.com/Coordinate-Cat/dotfiles/blob/master/LICENSE-WTFPL)
+
+<hr>
+
+## CODE OF CONDUCT
+
+[Contributor Covenant Code of Conduct](https://github.com/Coordinate-Cat/dotfiles/blob/master/CODE_OF_CONDUCT.md)
+
+<hr>
 
 ## CONTRIBUTORS
 
@@ -45,11 +61,3 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/
 </a>
 
 Made with [contributors-img](https://contributors-img.web.app).
-
-## LICENSE
-
-[LICENSE-WTFPL](https://github.com/Coordinate-Cat/dotfiles/blob/master/LICENSE-WTFPL)
-
-## CODE OF CONDUCT
-
-[Contributor Covenant Code of Conduct](https://github.com/Coordinate-Cat/dotfiles/blob/master/CODE_OF_CONDUCT.md)
