@@ -1,9 +1,11 @@
 # DOTFILES
 
-![screenshot001](.assets/dotfiles1.png)
+<!-- ![screenshot001](.assets/dotfiles1.png)
 ![screenshot002](.assets/dotfiles2.png)
 ![screenshot003](.assets/dotfiles3.png)
-![screenshot004](.assets/dotfiles4.png)
+![screenshot004](.assets/dotfiles4.png) -->
+
+![dotfiles](.assets/dotfiles.png)
 
 ![iterm](.assets/iterm.png)
 
