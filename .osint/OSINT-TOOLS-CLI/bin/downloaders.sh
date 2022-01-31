@@ -35,104 +35,48 @@ EXIT_ASCII='\e[32;5;7m
 clear && source $HOME/dotfiles/.zshrc
 
 ### [ Aliases ] ################################################################
-alias TWITTER_CMD='zsh $TWITTER && bash $TWITTER'
-alias YOUTUBE_CMD='zsh $YOUTUBE && bash $YOUTUBE'
-alias TIKTOK_CMD='zsh $TIKTOK && bash $TIKTOK'
-alias FACEBOOK_CMD='zsh $FACEBOOK && bash $FACEBOOK'
-alias CLUBHOUSE_CMD='zsh $CLUBHOUSE && bash $CLUBHOUSE'
-alias LINKEDIN_CMD='zsh $LINKEDIN && bash $LINKEDIN'
-alias XING_CMD='zsh $XING && bash $XING'
-alias REDDIT_CMD='zsh $REDDIT && bash $REDDIT'
-alias ONLYFANS_CMD='zsh $ONLYFANS && bash $ONLYFANS'
-alias TWITCH_CMD='zsh $TWITCH && bash $TWITCH'
-alias FIDONET_CMD='zsh $FIDONET && bash $FIDONET'
-alias USENET_CMD='zsh $USENET && bash $USENET'
-alias TUMBLR_CMD='zsh $TUMBLR && bash $TUMBLR'
-alias FLICKR_CMD='zsh $FLICKR && bash $FLICKR'
-alias SPOTIFY_CMD='zsh $SPOTIFY && bash $SPOTIFY'
-alias DISCORD_CMD='zsh $DISCORD && bash $DISCORD'
-alias YANDEX_CMD='zsh $YANDEX && bash $YANDEX'
-alias INSTAGRAM_CMD='zsh $INSTAGRAM && bash $INSTAGRAM'
-alias GOOGLE_CMD='zsh $GOOGLE && bash $GOOGLE'
-alias PATREON_CMD='zsh $PATREON && bash $PATREON'
-alias GITHUB_CMD='zsh $GITHUB && bash $GITHUB'
-alias PARLER_CMD='zsh $PARLER && bash $PARLER'
-alias PORNHUB_CMD='zsh $PORNHUB && bash $PORNHUB'
-alias STEAM_CMD='zsh $STEAM && bash $STEAM'
-alias XBOX_CMD='zsh $XBOX && bash $XBOX'
-alias VK_CMD='zsh $VK && bash $VK'
-alias OFFICE365_CMD='zsh $OFFICE365 && bash $OFFICE365'
-alias ONEDRIVE_CMD='zsh $ONEDRIVE && bash $ONEDRIVE'
-alias UNIVERSAL_CMD='zsh $UNIVERSAL && bash $UNIVERSAL'
-
 alias ERROR_CMD='clear && echo $ERROR_ASCII && sleep 3m;clear && echo "$menu" | _sf_main "$@"'
 alias TOC_CMD='zsh $TOC && bash $TOC'
 
 ### [ Name of the function to be executed ] ####################################
 menu="
-   Twitter
-   YouTube
-   TIKTOK
-   Facebook
-   Clubhouse
-   Linkedin
-   Xing
-   Reddit
-   Onlyfans
-   Twitch
-   Fidonet
-   Usenet
-   Tumblr
-   Flickr
-   Spotify
-   Discord
-   Yandex
-   Instagram
-   Google
-   Patreon
-   Github
-   Parler
-   Pornhub
-   Steam
-   Xbox
-   VK
-   Office365
-   OneDrive
-   Universal
+   Wenku — download documents from Baidu Wenku without registration
+   Slideshare Downloader — A very simple and fast tool for downloading Slideshare presentations in PDF format (recommend to choose High quality at once)
+   Gdown — When downloading files from Google Drive curl/wget fails (because of the security notice). But this problem is easily solved
+   Waybackpack — download the entire #WaybackMachine archive for a given URL. You can only download versions for a certain date range (date format YYYYMMDDhhss)
+   Chat-downloader — download chats messages in JSON from #YouTube, #Twitch, #Reddit and #Facebook.
+   Gallery-dl — Quick and simple tool for downloading image galleries and collections from #flickr, #danbooru, #pixiv, #deviantart, #exhentai
+   Spotify downloader — download spotify playlist in mp3 from YouTube
+   Zspotify — Spotify track downloader. Download mp3 by link or by keywords
+   Snaptik.app — TikTok Video Downloader TikTok Scraper — scrapping video from user, trend or hashtag feed, extracting video's or user's metadata, downloading video or music, processing a list of clips or users from a file
+   YouTube Comment Downloader — easy to install and fast tool for downloading YouTube comments in txt/json. Does NOT require authorization or API keys.
+   Storysaver.net — download Instagram stories
+   Fdown.net — Facebook video downloader
+   Untwitch.com — Twitch video downloader
+   Redditsave.com — Reddit video downloader
+   DownGit — Create GitHub Resource Download Link
+   SaveFrom.net — download video from YouTube, Vimeo, VK, Odnoklassniki and dozen of others services
   ﴚ [ BACK TO TOC ]
 "
 
-# SNS URL PUSH
-_sf_0 ()   { TWITTER_CMD }
-_sf_1 ()   { YOUTUBE_CMD }
-_sf_2 ()   { TIKTOK_CMD }
-_sf_3 ()   { FACEBOOK_CMD }
-_sf_4 ()   { CLUBHOUSE_CMD }
-_sf_5 ()   { LINKEDIN_CMD }
-_sf_6 ()   { XING_CMD }
-_sf_7 ()   { REDDIT_CMD }
-_sf_8 ()   { ONLYFANS_CMD }
-_sf_9 ()   { TWITCH_CMD }
-_sf_10 ()  { FIDONET_CMD }
-_sf_11 ()  { USENET_CMD }
-_sf_12 ()  { TUMBLR_CMD }
-_sf_13 ()  { FLICKR_CMD }
-_sf_14 ()  { SPOTIFY_CMD }
-_sf_15 ()  { DISCORD_CMD }
-_sf_16 ()  { YANDEX_CMD }
-_sf_17 ()  { INSTAGRAM_CMD }
-_sf_18 ()  { GOOGLE_CMD }
-_sf_19 ()  { PATREON_CMD }
-_sf_20 ()  { GITHUB_CMD }
-_sf_21 ()  { PARLER_CMD }
-_sf_22 ()  { PORNHUB_CMD }
-_sf_23 ()  { STEAM_CMD }
-_sf_24 ()  { XBOX_CMD }
-_sf_25 ()  { VK_CMD }
-_sf_26 ()  { OFFICE365_CMD }
-_sf_27 ()  { ONEDRIVE_CMD }
-_sf_28 ()  { UNIVERSAL_CMD }
-_sf_29 ()  { TOC_CMD }
+# CODE URL PUSH
+_sf_0 ()  {  }
+_sf_1 ()  {  }
+_sf_2 ()  {  }
+_sf_3 ()  {  }
+_sf_4 ()  {  }
+_sf_5 ()  {  }
+_sf_6 ()  {  }
+_sf_7 ()  {  }
+_sf_8 ()  {  }
+_sf_9 ()  {  }
+_sf_10 () {  }
+_sf_11 () {  }
+_sf_12 () {  }
+_sf_13 () {  }
+_sf_14 () {  }
+_sf_15 () {  }
+_sf_16 () { TOC_CMD }
 
 # Search for a selected number of lines
 func (){

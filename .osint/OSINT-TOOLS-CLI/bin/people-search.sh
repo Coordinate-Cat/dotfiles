@@ -35,104 +35,46 @@ EXIT_ASCII='\e[32;5;7m
 clear && source $HOME/dotfiles/.zshrc
 
 ### [ Aliases ] ################################################################
-alias TWITTER_CMD='zsh $TWITTER && bash $TWITTER'
-alias YOUTUBE_CMD='zsh $YOUTUBE && bash $YOUTUBE'
-alias TIKTOK_CMD='zsh $TIKTOK && bash $TIKTOK'
-alias FACEBOOK_CMD='zsh $FACEBOOK && bash $FACEBOOK'
-alias CLUBHOUSE_CMD='zsh $CLUBHOUSE && bash $CLUBHOUSE'
-alias LINKEDIN_CMD='zsh $LINKEDIN && bash $LINKEDIN'
-alias XING_CMD='zsh $XING && bash $XING'
-alias REDDIT_CMD='zsh $REDDIT && bash $REDDIT'
-alias ONLYFANS_CMD='zsh $ONLYFANS && bash $ONLYFANS'
-alias TWITCH_CMD='zsh $TWITCH && bash $TWITCH'
-alias FIDONET_CMD='zsh $FIDONET && bash $FIDONET'
-alias USENET_CMD='zsh $USENET && bash $USENET'
-alias TUMBLR_CMD='zsh $TUMBLR && bash $TUMBLR'
-alias FLICKR_CMD='zsh $FLICKR && bash $FLICKR'
-alias SPOTIFY_CMD='zsh $SPOTIFY && bash $SPOTIFY'
-alias DISCORD_CMD='zsh $DISCORD && bash $DISCORD'
-alias YANDEX_CMD='zsh $YANDEX && bash $YANDEX'
-alias INSTAGRAM_CMD='zsh $INSTAGRAM && bash $INSTAGRAM'
-alias GOOGLE_CMD='zsh $GOOGLE && bash $GOOGLE'
-alias PATREON_CMD='zsh $PATREON && bash $PATREON'
-alias GITHUB_CMD='zsh $GITHUB && bash $GITHUB'
-alias PARLER_CMD='zsh $PARLER && bash $PARLER'
-alias PORNHUB_CMD='zsh $PORNHUB && bash $PORNHUB'
-alias STEAM_CMD='zsh $STEAM && bash $STEAM'
-alias XBOX_CMD='zsh $XBOX && bash $XBOX'
-alias VK_CMD='zsh $VK && bash $VK'
-alias OFFICE365_CMD='zsh $OFFICE365 && bash $OFFICE365'
-alias ONEDRIVE_CMD='zsh $ONEDRIVE && bash $ONEDRIVE'
-alias UNIVERSAL_CMD='zsh $UNIVERSAL && bash $UNIVERSAL'
-
 alias ERROR_CMD='clear && echo $ERROR_ASCII && sleep 3m;clear && echo "$menu" | _sf_main "$@"'
 alias TOC_CMD='zsh $TOC && bash $TOC'
 
 ### [ Name of the function to be executed ] ####################################
 menu="
-   Twitter
-   YouTube
-   TIKTOK
-   Facebook
-   Clubhouse
-   Linkedin
-   Xing
-   Reddit
-   Onlyfans
-   Twitch
-   Fidonet
-   Usenet
-   Tumblr
-   Flickr
-   Spotify
-   Discord
-   Yandex
-   Instagram
-   Google
-   Patreon
-   Github
-   Parler
-   Pornhub
-   Steam
-   Xbox
-   VK
-   Office365
-   OneDrive
-   Universal
+   GoFindWho People Search — More than 300 tools for gathering information about people in one. Search by name, username, phone, adress, company name.
+   That's them people search
+   Anywho — Search for people in #USA. Enter first and last name to get age, address, and part of phone number (free)
+   Usersearch.org — search people by nickname, phone or email
+   Ellis Island — online searchable database of 65 million arrivals to #NewYork between (late 19th and early 20th century).
+   recordsearch.naa.gov.au — National archives of #Australia
+   SpyDialer — Free search contact information by phone number, name, address or email
+   Decoding Social Security Numbers in One Step
+   Inmate Database Search
+   Scamdigger.com — search in #scammers database by name, IP-adress, email or phone — Search users profile by nickname
+   Pyosint — Search for usenames form a list of 326 websites. Scrap a website to extract all links form a given website. Automate the search of subdomains of a given domain from diffrent services
+   Cloob.com — Iranian people search
+   SlaveVoyages.org — the Trans-Atlantic and Intra-American slave trade databases are the culmination of several decades of independent and collaborative research by scholars drawing upon data in libraries and archives around the Atlantic world.
+   Alternate Spelling Finder — When searching for information by name, remember that the same name can be recorded in documents and files very differently, as people of different nationalities perceive sounds differently.
+   Translit.net — Sometimes it happens that a person's name is written in Cyrillic, but you can find a lot of info about him in Google if you type his transliteration 'Ivan Ivanov'. This tool will come in handy when working with Russian, Belarusian, Ukrainian, Armenian names
   ﴚ [ BACK TO TOC ]
 "
 
-# SNS URL PUSH
-_sf_0 ()   { TWITTER_CMD }
-_sf_1 ()   { YOUTUBE_CMD }
-_sf_2 ()   { TIKTOK_CMD }
-_sf_3 ()   { FACEBOOK_CMD }
-_sf_4 ()   { CLUBHOUSE_CMD }
-_sf_5 ()   { LINKEDIN_CMD }
-_sf_6 ()   { XING_CMD }
-_sf_7 ()   { REDDIT_CMD }
-_sf_8 ()   { ONLYFANS_CMD }
-_sf_9 ()   { TWITCH_CMD }
-_sf_10 ()  { FIDONET_CMD }
-_sf_11 ()  { USENET_CMD }
-_sf_12 ()  { TUMBLR_CMD }
-_sf_13 ()  { FLICKR_CMD }
-_sf_14 ()  { SPOTIFY_CMD }
-_sf_15 ()  { DISCORD_CMD }
-_sf_16 ()  { YANDEX_CMD }
-_sf_17 ()  { INSTAGRAM_CMD }
-_sf_18 ()  { GOOGLE_CMD }
-_sf_19 ()  { PATREON_CMD }
-_sf_20 ()  { GITHUB_CMD }
-_sf_21 ()  { PARLER_CMD }
-_sf_22 ()  { PORNHUB_CMD }
-_sf_23 ()  { STEAM_CMD }
-_sf_24 ()  { XBOX_CMD }
-_sf_25 ()  { VK_CMD }
-_sf_26 ()  { OFFICE365_CMD }
-_sf_27 ()  { ONEDRIVE_CMD }
-_sf_28 ()  { UNIVERSAL_CMD }
-_sf_29 ()  { TOC_CMD }
+# CODE URL PUSH
+_sf_0 ()  {  }
+_sf_1 ()  {  }
+_sf_2 ()  {  }
+_sf_3 ()  {  }
+_sf_4 ()  {  }
+_sf_5 ()  {  }
+_sf_6 ()  {  }
+_sf_7 ()  {  }
+_sf_8 ()  {  }
+_sf_9 ()  {  }
+_sf_10 () {  }
+_sf_11 () {  }
+_sf_12 () {  }
+_sf_13 () {  }
+_sf_14 () {  }
+_sf_15 () { TOC_CMD }
 
 # Search for a selected number of lines
 func (){

@@ -35,104 +35,44 @@ EXIT_ASCII='\e[32;5;7m
 clear && source $HOME/dotfiles/.zshrc
 
 ### [ Aliases ] ################################################################
-alias TWITTER_CMD='zsh $TWITTER && bash $TWITTER'
-alias YOUTUBE_CMD='zsh $YOUTUBE && bash $YOUTUBE'
-alias TIKTOK_CMD='zsh $TIKTOK && bash $TIKTOK'
-alias FACEBOOK_CMD='zsh $FACEBOOK && bash $FACEBOOK'
-alias CLUBHOUSE_CMD='zsh $CLUBHOUSE && bash $CLUBHOUSE'
-alias LINKEDIN_CMD='zsh $LINKEDIN && bash $LINKEDIN'
-alias XING_CMD='zsh $XING && bash $XING'
-alias REDDIT_CMD='zsh $REDDIT && bash $REDDIT'
-alias ONLYFANS_CMD='zsh $ONLYFANS && bash $ONLYFANS'
-alias TWITCH_CMD='zsh $TWITCH && bash $TWITCH'
-alias FIDONET_CMD='zsh $FIDONET && bash $FIDONET'
-alias USENET_CMD='zsh $USENET && bash $USENET'
-alias TUMBLR_CMD='zsh $TUMBLR && bash $TUMBLR'
-alias FLICKR_CMD='zsh $FLICKR && bash $FLICKR'
-alias SPOTIFY_CMD='zsh $SPOTIFY && bash $SPOTIFY'
-alias DISCORD_CMD='zsh $DISCORD && bash $DISCORD'
-alias YANDEX_CMD='zsh $YANDEX && bash $YANDEX'
-alias INSTAGRAM_CMD='zsh $INSTAGRAM && bash $INSTAGRAM'
-alias GOOGLE_CMD='zsh $GOOGLE && bash $GOOGLE'
-alias PATREON_CMD='zsh $PATREON && bash $PATREON'
-alias GITHUB_CMD='zsh $GITHUB && bash $GITHUB'
-alias PARLER_CMD='zsh $PARLER && bash $PARLER'
-alias PORNHUB_CMD='zsh $PORNHUB && bash $PORNHUB'
-alias STEAM_CMD='zsh $STEAM && bash $STEAM'
-alias XBOX_CMD='zsh $XBOX && bash $XBOX'
-alias VK_CMD='zsh $VK && bash $VK'
-alias OFFICE365_CMD='zsh $OFFICE365 && bash $OFFICE365'
-alias ONEDRIVE_CMD='zsh $ONEDRIVE && bash $ONEDRIVE'
-alias UNIVERSAL_CMD='zsh $UNIVERSAL && bash $UNIVERSAL'
-
 alias ERROR_CMD='clear && echo $ERROR_ASCII && sleep 3m;clear && echo "$menu" | _sf_main "$@"'
 alias TOC_CMD='zsh $TOC && bash $TOC'
 
 ### [ Name of the function to be executed ] ####################################
 menu="
-   Twitter
-   YouTube
-   TIKTOK
-   Facebook
-   Clubhouse
-   Linkedin
-   Xing
-   Reddit
-   Onlyfans
-   Twitch
-   Fidonet
-   Usenet
-   Tumblr
-   Flickr
-   Spotify
-   Discord
-   Yandex
-   Instagram
-   Google
-   Patreon
-   Github
-   Parler
-   Pornhub
-   Steam
-   Xbox
-   VK
-   Office365
-   OneDrive
-   Universal
+   Grep for OSINT — simple toolkit that helps to quickly extract 'important data' (phone numbers, email addresses, URLs) from the text / file directory
+   Diffnow.com — Compares and finds differences in text, URL (html code downloaded by link), office documents (doc, docx, xls, xlsx, ppt, pptx), source code (C, C++, C#, Java, Perl, PHP and other), archives (RAR, 7-zip etc).
+   Dicom Viewer — view MRI or CT photo online (.DCM files)
+   CompressedCrack — Simple tool for brute passwords for ZIP and RAR archives
+   Encrytped ZIP file creator — Create ZIP archive online
+   PDFX — get meta data of PDF files thrue command line
+   @mediainforobot — telegram bot to getting metadata from different types of files
+   Mutagen — get meta data of audiofiles thrue command line
+   compress-or-die.com/analyze — get detail information about images (exif, metatags, ICC_Profile, quantanisation tables)
+   voyant-tools.org — analysis of particular words in .TXT, .DOCX, .XLSX, .CSV and other file types.
+   Analyze file format online
+   ToolSley: analyze file format online
+   MP3 Spectrum Analyzer
+   RecoveryToolBox — recovery tools for corrupted Excel, CorelDraw, Photoshop, PowerPoint, RAR, ZIP, PDF and other files
   ﴚ [ BACK TO TOC ]
 "
 
-# SNS URL PUSH
-_sf_0 ()   { TWITTER_CMD }
-_sf_1 ()   { YOUTUBE_CMD }
-_sf_2 ()   { TIKTOK_CMD }
-_sf_3 ()   { FACEBOOK_CMD }
-_sf_4 ()   { CLUBHOUSE_CMD }
-_sf_5 ()   { LINKEDIN_CMD }
-_sf_6 ()   { XING_CMD }
-_sf_7 ()   { REDDIT_CMD }
-_sf_8 ()   { ONLYFANS_CMD }
-_sf_9 ()   { TWITCH_CMD }
-_sf_10 ()  { FIDONET_CMD }
-_sf_11 ()  { USENET_CMD }
-_sf_12 ()  { TUMBLR_CMD }
-_sf_13 ()  { FLICKR_CMD }
-_sf_14 ()  { SPOTIFY_CMD }
-_sf_15 ()  { DISCORD_CMD }
-_sf_16 ()  { YANDEX_CMD }
-_sf_17 ()  { INSTAGRAM_CMD }
-_sf_18 ()  { GOOGLE_CMD }
-_sf_19 ()  { PATREON_CMD }
-_sf_20 ()  { GITHUB_CMD }
-_sf_21 ()  { PARLER_CMD }
-_sf_22 ()  { PORNHUB_CMD }
-_sf_23 ()  { STEAM_CMD }
-_sf_24 ()  { XBOX_CMD }
-_sf_25 ()  { VK_CMD }
-_sf_26 ()  { OFFICE365_CMD }
-_sf_27 ()  { ONEDRIVE_CMD }
-_sf_28 ()  { UNIVERSAL_CMD }
-_sf_29 ()  { TOC_CMD }
+# CODE URL PUSH
+_sf_0 ()   { ERROR_CMD }
+_sf_1 ()   {  }
+_sf_2 ()   {  }
+_sf_3 ()   {  }
+_sf_4 ()   {  }
+_sf_5 ()   {  }
+_sf_6 ()   {  }
+_sf_7 ()   {  }
+_sf_8 ()   {  }
+_sf_9 ()   {  }
+_sf_10 ()  {  }
+_sf_11 ()  {  }
+_sf_12 ()  {  }
+_sf_13 ()  {  }
+_sf_14 ()  { TOC_CMD }
 
 # Search for a selected number of lines
 func (){

@@ -35,104 +35,92 @@ EXIT_ASCII='\e[32;5;7m
 clear && source $HOME/dotfiles/.zshrc
 
 ### [ Aliases ] ################################################################
-alias TWITTER_CMD='zsh $TWITTER && bash $TWITTER'
-alias YOUTUBE_CMD='zsh $YOUTUBE && bash $YOUTUBE'
-alias TIKTOK_CMD='zsh $TIKTOK && bash $TIKTOK'
-alias FACEBOOK_CMD='zsh $FACEBOOK && bash $FACEBOOK'
-alias CLUBHOUSE_CMD='zsh $CLUBHOUSE && bash $CLUBHOUSE'
-alias LINKEDIN_CMD='zsh $LINKEDIN && bash $LINKEDIN'
-alias XING_CMD='zsh $XING && bash $XING'
-alias REDDIT_CMD='zsh $REDDIT && bash $REDDIT'
-alias ONLYFANS_CMD='zsh $ONLYFANS && bash $ONLYFANS'
-alias TWITCH_CMD='zsh $TWITCH && bash $TWITCH'
-alias FIDONET_CMD='zsh $FIDONET && bash $FIDONET'
-alias USENET_CMD='zsh $USENET && bash $USENET'
-alias TUMBLR_CMD='zsh $TUMBLR && bash $TUMBLR'
-alias FLICKR_CMD='zsh $FLICKR && bash $FLICKR'
-alias SPOTIFY_CMD='zsh $SPOTIFY && bash $SPOTIFY'
-alias DISCORD_CMD='zsh $DISCORD && bash $DISCORD'
-alias YANDEX_CMD='zsh $YANDEX && bash $YANDEX'
-alias INSTAGRAM_CMD='zsh $INSTAGRAM && bash $INSTAGRAM'
-alias GOOGLE_CMD='zsh $GOOGLE && bash $GOOGLE'
-alias PATREON_CMD='zsh $PATREON && bash $PATREON'
-alias GITHUB_CMD='zsh $GITHUB && bash $GITHUB'
-alias PARLER_CMD='zsh $PARLER && bash $PARLER'
-alias PORNHUB_CMD='zsh $PORNHUB && bash $PORNHUB'
-alias STEAM_CMD='zsh $STEAM && bash $STEAM'
-alias XBOX_CMD='zsh $XBOX && bash $XBOX'
-alias VK_CMD='zsh $VK && bash $VK'
-alias OFFICE365_CMD='zsh $OFFICE365 && bash $OFFICE365'
-alias ONEDRIVE_CMD='zsh $ONEDRIVE && bash $ONEDRIVE'
-alias UNIVERSAL_CMD='zsh $UNIVERSAL && bash $UNIVERSAL'
-
 alias ERROR_CMD='clear && echo $ERROR_ASCII && sleep 3m;clear && echo "$menu" | _sf_main "$@"'
 alias TOC_CMD='zsh $TOC && bash $TOC'
 
 ### [ Name of the function to be executed ] ####################################
 menu="
-   Twitter
-   YouTube
-   TIKTOK
-   Facebook
-   Clubhouse
-   Linkedin
-   Xing
-   Reddit
-   Onlyfans
-   Twitch
-   Fidonet
-   Usenet
-   Tumblr
-   Flickr
-   Spotify
-   Discord
-   Yandex
-   Instagram
-   Google
-   Patreon
-   Github
-   Parler
-   Pornhub
-   Steam
-   Xbox
-   VK
-   Office365
-   OneDrive
-   Universal
+   fnd.io — alternative search engine for the AppStore and iTunes
+   GlobalSpec Engineer Search Engine
+   Napalm FTP Indexer
+   S — Search from command line in 106 different sources
+   Onion Search
+   Recruitin.net — easily use Google to search profiles on LinkedIn
+   Cloud File Search Engine — search music, books, video, programs archives in 59 file-sharing sites (#meganz, #dropark, #turbotit etc)
+   URVX — Based by Google Custom Search tool for searching in popular cloud storages service
+   Mac Address Search Tool — search by full Mac adress, part of Mac adress (prefix), vendor name or brand name
+   Hashatit.com — hastag searchengine. Search in twitter, instagram, facebook, youtube, pinterest
+   Goo.ne.jp — beautiful japanese search engine
+   Explain Shell — this site will help you quickly understand terminal commands-lines from articles, manuals, and tutorials
+   Firebounty — Bug bounty search engine
+   TheDevilsEye — Search links in #darknet (.onion domain zone) from command line without using a Tor network.
+   Peteyvid — search engine for 70 video hosting sites
+   Filesearching — old FTP servers search engine with filter by top-level domain name and filetype
+   3DFindit — tool for searching 3D models by 3560 3D CAD (computer aided design) and BIM (Building Information Model) catalogs.
+   Filechef — tool for searching different type of files (videos, application, documents, audio, images)
+   Find Who Events — Google CSE for finding events by location (keywords) in #Facebook, #Eventbrite, #Xing, #Meetup, #Groupon, #Ticketmaster, #Yepl, #VK, #Eventective, #Nextdoor
+   buckets.grayhatwarfare.com — Amazon Public Buckets Search
+   osint.sh/buckets — Azure Public Buckets Search
+   Listennotes — Podcast Search Engine
+   thereisabotforthat.com — search by catalog of 5151 bots for 17 different apps and platforms
+   BooleanStringBank — over 430+ strings and 3553+ keywords
+   Google Unlocked — browser extension uncensor google search results
+   Iconfinder.com — Icons Search Engine
+   Google Datasets Search
+   Onion Search Engine (+maps, mail and pastebin)
+   KILOS Darknet Search Engine
+   Gifcities.org — GIF Search Engine from archive.org
+   Presearch.org — privately decentralized search engine, powered by #blockchain technology
+   milled.com — search engine for searching through the texts of email marketing messages
+   Orion — open-Source Search Engine for social networking websites.
+   soundeffectssearch.com — find a sound library
+   PacketTotal — .pcap files (Packet Capture of network data) search engine and analyze tool. Search by URL, IP, file hash, network indicator, view timeline of dns-queries and http-connections, download files for detailed analyze.
+   SearXNG — Free internet metasearch engine which aggregates results from more than 70 search services. No tracking. Can be used over Tor
+   searchall.net — 75 fields for quick entry of queries to different search services on one page
+   Query-server — A tool that can send queries to popular search engines (list in picture) and return search results in JSON, CSV or XML format.
   ﴚ [ BACK TO TOC ]
 "
 
 # SNS URL PUSH
-_sf_0 ()   { TWITTER_CMD }
-_sf_1 ()   { YOUTUBE_CMD }
-_sf_2 ()   { TIKTOK_CMD }
-_sf_3 ()   { FACEBOOK_CMD }
-_sf_4 ()   { CLUBHOUSE_CMD }
-_sf_5 ()   { LINKEDIN_CMD }
-_sf_6 ()   { XING_CMD }
-_sf_7 ()   { REDDIT_CMD }
-_sf_8 ()   { ONLYFANS_CMD }
-_sf_9 ()   { TWITCH_CMD }
-_sf_10 ()  { FIDONET_CMD }
-_sf_11 ()  { USENET_CMD }
-_sf_12 ()  { TUMBLR_CMD }
-_sf_13 ()  { FLICKR_CMD }
-_sf_14 ()  { SPOTIFY_CMD }
-_sf_15 ()  { DISCORD_CMD }
-_sf_16 ()  { YANDEX_CMD }
-_sf_17 ()  { INSTAGRAM_CMD }
-_sf_18 ()  { GOOGLE_CMD }
-_sf_19 ()  { PATREON_CMD }
-_sf_20 ()  { GITHUB_CMD }
-_sf_21 ()  { PARLER_CMD }
-_sf_22 ()  { PORNHUB_CMD }
-_sf_23 ()  { STEAM_CMD }
-_sf_24 ()  { XBOX_CMD }
-_sf_25 ()  { VK_CMD }
-_sf_26 ()  { OFFICE365_CMD }
-_sf_27 ()  { ONEDRIVE_CMD }
-_sf_28 ()  { UNIVERSAL_CMD }
-_sf_29 ()  { TOC_CMD }
+_sf_0 ()  { ERROR_CMD }
+_sf_1 ()  {  }
+_sf_2 ()  {  }
+_sf_3 ()  {  }
+_sf_4 ()  {  }
+_sf_5 ()  {  }
+_sf_6 ()  {  }
+_sf_7 ()  {  }
+_sf_8 ()  {  }
+_sf_9 ()  {  }
+_sf_10 () {  }
+_sf_11 () {  }
+_sf_12 () {  }
+_sf_13 () {  }
+_sf_14 () {  }
+_sf_15 () {  }
+_sf_16 () {  }
+_sf_17 () {  }
+_sf_18 () {  }
+_sf_19 () {  }
+_sf_20 () {  }
+_sf_21 () {  }
+_sf_22 () {  }
+_sf_23 () {  }
+_sf_24 () {  }
+_sf_25 () {  }
+_sf_26 () {  }
+_sf_27 () {  }
+_sf_28 () {  }
+_sf_29 () {  }
+_sf_30 () {  }
+_sf_31 () {  }
+_sf_32 () {  }
+_sf_33 () {  }
+_sf_34 () {  }
+_sf_35 () {  }
+_sf_36 () {  }
+_sf_37 () { ERROR_CMD }
+_sf_38 () { TOC_CMD }
 
 # Search for a selected number of lines
 func (){

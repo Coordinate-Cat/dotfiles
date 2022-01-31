@@ -15,6 +15,10 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
   PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
+# setopt auto_cd
+# setopt auto_pushd # cd -[tab]で過去のディレクトリにひとっ飛びできるようにする
+setopt HIST_IGNORE_SPACE
+
 ###[ global variable ]##########################################################
 export DOT="$HOME/dotfiles"
 export MY_ALIASES="$DOT/.aliases"
@@ -37,7 +41,7 @@ source $MY_ALIASES/others.zsh
 source $MY_ALIASES/wttr.zsh
 
 ###[ fnm ]######################################################################
-eval "$(fnm env --use-on-cd)"
+# eval "$(fnm env --use-on-cd)"
 
 ###[ nodebrew ]#################################################################
 # export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -134,9 +138,9 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
 zinit ice depth=1
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light zsh-users/zsh-syntax-highlighting
+# zinit light zsh-users/zsh-completions
+# zinit light zsh-users/zsh-autosuggestions
+# zinit light zsh-users/zsh-syntax-highlighting
 # zinit light zdharma-continuum/fast-syntax-highlighting
 
 ###[ cd & lsd ]#################################################################
@@ -144,7 +148,6 @@ zinit light zsh-users/zsh-syntax-highlighting
 function cd() {
     builtin cd "$@" && clear && lsd -la
 }
-
 function cdls() {
     \cd "$@" && clear && lsd -la
 }
