@@ -32,6 +32,7 @@ source $OSINTDIR/devenv.zsh
 source $MY_ALIASES/app.zsh
 source $MY_ALIASES/brew.zsh
 source $MY_ALIASES/cabal.zsh
+source $MY_ALIASES/cue.zsh
 source $MY_ALIASES/git.zsh
 source $MY_ALIASES/ls.zsh
 source $MY_ALIASES/links.zsh
