@@ -63,7 +63,7 @@ export const spaceStyles = /* css */ `
   background-color: var(--yellow);
 }
 .simple-bar--background-color-as-foreground .space--fullscreen .space__inner {
-  color: var(--yellow);
+  color: var(--main-alt) !important;
   background-color: transparent;
 }
 .space--focused .space__inner {
@@ -88,7 +88,7 @@ export const spaceStyles = /* css */ `
 .space__label {
   display: block;
   margin: 0;
-  color: var(--main);
+  color: gray;
   font-family: Inter;
   font-size: var(--font-size);
   line-height: 1;
@@ -107,7 +107,7 @@ export const spaceStyles = /* css */ `
   width: 11px;
   height: 11px;
   margin-left: 6px;
-  fill: var(--main);
+  fill: gray;
   opacity: 0.5;
   transform: translateZ(0);
 }

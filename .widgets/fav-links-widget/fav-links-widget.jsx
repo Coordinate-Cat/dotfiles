@@ -5,17 +5,30 @@ const github = css`
   font-weight: bold;
   font-size: 14px;
   display: flex;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 6px 6px;
   height: 18px;
-  padding: 2px 14px;
-  margin-left: -20px;
+  padding: 2px 8px;
+  margin-left: -14px;
   position: relative;
   top: 250px;
-  left: -16px;
-  color: #000;
-  background-color: #f00;
+  left: -17px;
+  background-color: #383838;
   transform: rotate(270deg);
+  border: 1px solid #383838;
   cursor: pointer;
+  > a > svg {
+    fill: rgba(255, 255, 255, 0.65);
+  }
+  :hover {
+    > a {
+      color: black;
+    }
+    > a > svg {
+      fill: black;
+    }
+    border: 1px solid white;
+    background-color: white;
+  }
 `
 
 const flex = css`
@@ -23,7 +36,7 @@ const flex = css`
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  color: #000;
+  color: rgba(255, 255, 255, 0.65);
 `
 const text = css`
   margin: 0;
@@ -48,9 +61,3 @@ export const render = ({output, error}) => {
     </div>
   );
 }
-
-export const className = `
-  top: 0;
-  left: 0;
-  color: #fff;
-`
