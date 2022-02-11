@@ -1,13 +1,10 @@
 # DOTFILES
 
-<!-- ![screenshot001](.assets/dotfiles1.png)
-![screenshot002](.assets/dotfiles2.png)
-![screenshot003](.assets/dotfiles3.png)
-![screenshot004](.assets/dotfiles4.png) -->
 
-![dotfiles](.assets/dotfiles.png)
-![htop](.assets/htop.png)
 ![iterm2](.assets/iterm2.png)
+![dotfiles](.assets/dotfiles.png)
+<!-- ![htop](.assets/htop.png) -->
+![dotfiles2](.assets/dotfiles2.png)
 
 ## INSTALL
 
