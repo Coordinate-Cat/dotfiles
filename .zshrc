@@ -15,8 +15,6 @@ if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
   PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi
 
-# setopt auto_cd
-# setopt auto_pushd # cd -[tab]で過去のディレクトリにひとっ飛びできるようにする
 setopt HIST_IGNORE_SPACE
 
 ###[ global variable ]##########################################################
@@ -102,11 +100,6 @@ app() {
 # export PYENV_ROOT="$HOME/.pyenv"
 # export PATH="$PYENV_ROOT/bin:$PATH"
 # eval "$(pyenv init --path)"
-
-###[ others ]###################################################################
-# source $ZSH/oh-my-zsh.sh
-# source ~ZSH_CUSTOM/plugins/fzf-tab
-# source ~/.nvm/nvm.sh
 
 plugins=(git)
 ZSH_DISABLE_COMPFIX="true"

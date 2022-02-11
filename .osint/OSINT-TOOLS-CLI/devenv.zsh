@@ -96,4 +96,23 @@ export CLOUDFARE="$OSINTDIR/bin/DOMAIN_IP_LINKS/cloudfare.sh"
 export DATABASES_OF_DOMAINS="$OSINTDIR/bin/DOMAIN_IP_LINKS/databases-of-domains.sh"
 export WEBSITE_TRAFFIC_LOOK_UP="$OSINTDIR/bin/DOMAIN_IP_LINKS/website-traffic-look-up.sh"
 export WEBSITE_TECHNOLOGY_LOOK_UP="$OSINTDIR/bin/DOMAIN_IP_LINKS/website-technology-look-up.sh"
-export SOURCE_CODE_ANALYZES_URL_UNSHORTENERS="$OSINTDIR/bin/DOMAIN_IP_LINKS/source-code-analyzes-url-unshortenerssh"
+export SOURCE_CODE_ANALYZES="$OSINTDIR/bin/DOMAIN_IP_LINKS/source-code-analyzes.sh"
+export URL_UNSHORTENERS="$OSINTDIR/bin/DOMAIN_IP_LINKS/url-unshorteners.sh"
+
+# BIN/IMAGE_SEARCH_AND_IDENTIFICATION
+export REVERSE_IMAGE_SEARCH_ENGINES="$OSINTDIR/bin/IMAGE_SEARCH_AND_IDENTIFICATION/reverse-image-search-engines.sh"
+export OTHER_IMAGE_SEARCH_ENGINES="$OSINTDIR/bin/IMAGE_SEARCH_AND_IDENTIFICATION/other-image-search-engines.sh"
+export IMAGE_ANALYZE="$OSINTDIR/bin/IMAGE_SEARCH_AND_IDENTIFICATION/image-analyze.sh"
+export EXIF_ANALYZE_AND_EDITING="$OSINTDIR/bin/IMAGE_SEARCH_AND_IDENTIFICATION/exif-analyze-and-editing.sh"
+export FACE_RECOGNITION_AND_SEARCH="$OSINTDIR/bin/IMAGE_SEARCH_AND_IDENTIFICATION/face-recognition-and-search.sh"
+export FONT_INDENFICATION="$OSINTDIR/bin/IMAGE_SEARCH_AND_IDENTIFICATION/font-indenfication.sh"
+
+# BIN/MESSENGERS
+export TELEGRAM="$OSINTDIR/bin/MESSENGERS/telegram.sh"
+export WHATSAPP="$OSINTDIR/bin/MESSENGERS/whatsapp.sh"
+export KIK="$OSINTDIR/bin/MESSENGERS/kik.sh"
+export SLACK="$OSINTDIR/bin/MESSENGERS/slack.sh"
+export SKYPE="$OSINTDIR/bin/MESSENGERS/skype.sh"
+
+# BIN/AMAZON
+export AMAZON="$OSINTDIR/bin/AMAZON/amazon.sh"

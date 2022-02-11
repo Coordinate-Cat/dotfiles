@@ -36,26 +36,25 @@
 |  sentaku  | font-hack-nerd-font |       font-inter        |
 | rectangle |      ubersicht      |          Xcode          |
 
-<hr>
+- [Coordinate-Cat/OSINT-TOOLS-CLI](https://github.com/Coordinate-Cat/OSINT-TOOLS-CLI)
+- [Coordinate-Cat/fav-links-widget](https://github.com/Coordinate-Cat/fav-links-widget)
 
-## TODO
+<!-- ## TODO
 - [ ] install navi
-- [ ] move to wiki
+- [ ] move to wiki -->
 
-<hr>
 
 ## LICENSE
 
-[LICENSE-WTFPL](https://github.com/Coordinate-Cat/dotfiles/blob/master/LICENSE-WTFPL)
-
-<hr>
+[WTFPL](https://github.com/Coordinate-Cat/dotfiles/blob/master/LICENSE-WTFPL)
 
 ## CODE OF CONDUCT
 
 [Contributor Covenant Code of Conduct](https://github.com/Coordinate-Cat/dotfiles/blob/master/CODE_OF_CONDUCT.md)
 
-<hr>
 
+## REDDIT
+[Jan, 30, 2022][[Aqua] macOS DarkArmy Theme](https://www.reddit.com/r/unixporn/comments/sg1598/aqua_macos_darkarmy_theme/)
 ## CONTRIBUTORS
 
 <a href="https://github.com/Coordinate-Cat/dotfiles/graphs/contributors">

@@ -35,19 +35,15 @@ EXIT_ASCII='\e[32;5;7m
 clear && source $HOME/dotfiles/.zshrc
 
 ### [ Aliases ] ################################################################
+alias AMAZON_CMD='zsh $AMAZON && bash $AMAZON'
+
 alias ERROR_CMD='clear && echo $ERROR_ASCII && sleep 3m;clear && echo "$menu" | _sf_main "$@"'
 alias TOC_CMD='zsh $TOC && bash $TOC'
 
 ### [ Name of the function to be executed ] ####################################
 menu="
-   Amazon Scraper — scraped detail information about list of items
-   iPhone IMEI Checker — Get information about #iPhone by International Mobile Equipment Identity
-   LEI search — can help find 'who owned by' or 'who owns'
-   Amazon ASIN Finder
-   Sellerapp.com. Amazon Reverse ASIN search
-   Barcode lookup
-   Panjiva.com — search data on millions of shipments worldwide
-   en.52wmb.com — Search information about worldwide buyers and suppliers by product name, company name or HS code.
+   openownership.org — Wordwide beneficial ownership data.
+   opensanctions.org — Open source data on sanctioned people and companies in various countries from 35 (!) different sources.
    Lei.bloomberg.com — search information about company by Legal Identify Number
    FDIC search — Search banks by FDIC (Federal Deposit Insurance Corporation) certificate number and get detailed information about it
    990 finder — Enter the company name and select the state to get a link to download its 900 form.
@@ -64,35 +60,31 @@ menu="
    TMDN Design View — Search 17 684 046 products designs across the European Union and beyond
    TESS — Search engine for #USA trademarks
    TendersInfo — Search tenders around the world by keywords.
+   [ Amazon ]
   ﴚ [ BACK TO TOC ]
 "
 
 # CODE URL PUSH
-_sf_0 ()  {  }
-_sf_1 ()  {  }
-_sf_2 ()  {  }
-_sf_3 ()  {  }
-_sf_4 ()  {  }
-_sf_5 ()  {  }
-_sf_6 ()  {  }
-_sf_7 ()  {  }
-_sf_8 ()  {  }
-_sf_9 ()  {  }
-_sf_10 () {  }
-_sf_11 () {  }
-_sf_12 () {  }
-_sf_13 () {  }
-_sf_14 () {  }
-_sf_15 () {  }
-_sf_16 () {  }
-_sf_17 () {  }
-_sf_18 () {  }
-_sf_19 () {  }
-_sf_20 () {  }
-_sf_21 () {  }
-_sf_22 () {  }
-_sf_23 () {  }
-_sf_24 () { TOC_CMD }
+_sf_0 ()  { open "http://openownership.org" }
+_sf_1 ()  { open "https://opensanctions.org" }
+_sf_2 ()  { open "https://lei.bloomberg.com/search?.=1&.=-lastUpdateDate&.=&.=&.=%5B%5D&ts=2447821118" }
+_sf_3 ()  { open "https://banks.data.fdic.gov/bankfind-suite/bankfind" }
+_sf_4 ()  { open "https://candid.org/research-and-verify-nonprofits/990-finder" }
+_sf_5 ()  { open "https://www.iban.com/iban-checker" }
+_sf_6 ()  { open "http://relateoak2hkvdty6ldp7x67hys7pzaeax3hwhidbqkjzva3223jpxqd.onion.pet/" }
+_sf_7 ()  { open "https://github.com/rlyonheart/occli" }
+_sf_8 ()  { open "https://emm.newsbrief.eu/NewsBrief/clusteredition/ru/latest.html" }
+_sf_9 ()  { open "https://www.investing.com/" }
+_sf_10 () { open "https://fccid.io" }
+_sf_11 () { open "https://api.freebinchecker.com/bin/658205" }
+_sf_12 () { open "https://tradint.io/tradint-researcher/" }
+_sf_13 () { open "https://cipher387.github.io/corporative_registry_worldwide_catalog/" }
+_sf_14 () { open "https://www3.wipo.int/branddb/en/" }
+_sf_15 () { open "https://www.tmdn.org/tmdsview-web/" }
+_sf_16 () { open "https://tmsearch.uspto.gov/bin/gate.exe?f=login&p_lang=english&p_d=trmk" }
+_sf_17 () { open "https://www.tendersinfo.com" }
+_sf_18 () { AMAZON_CMD }
+_sf_19 () { TOC_CMD }
 
 # Search for a selected number of lines
 func (){

@@ -48,7 +48,8 @@ alias CLOUDFARE_CMD='zsh $CLOUDFARE && $DORKS_PENTEST_VCLOUDFAREULNERABILITIES'
 alias DATABASES_OF_DOMAINS_CMD='zsh $DATABASES_OF_DOMAINS && $DATABASES_OF_DOMAINS'
 alias WEBSITE_TRAFFIC_LOOK_UP_CMD='zsh $WEBSITE_TRAFFIC_LOOK_UP && $WEBSITE_TRAFFIC_LOOK_UP'
 alias WEBSITE_TECHNOLOGY_LOOK_UP_CMD='zsh $WEBSITE_TECHNOLOGY_LOOK_UP && $WEBSITE_TECHNOLOGY_LOOK_UP'
-alias SOURCE_CODE_ANALYZES_URL_UNSHORTENERS_CMD='zsh $SOURCE_CODE_ANALYZES_URL_UNSHORTENERS && $SOURCE_CODE_ANALYZES_URL_UNSHORTENERS'
+alias SOURCE_CODE_ANALYZES_CMD='zsh $SOURCE_CODE_ANALYZES && $SOURCE_CODE_ANALYZES'
+alias URL_UNSHORTENERS_CMD='zsh $URL_UNSHORTENERS && $URL_UNSHORTENERS'
 
 alias ERROR_CMD='clear && echo $ERROR_ASCII && sleep 3m;clear && echo "$menu" | _sf_main "$@"'
 alias TOC_CMD='zsh $TOC && bash $TOC'
@@ -68,7 +69,8 @@ menu="
    Databases of domains
    Website traffic look up
    Website technology look up
-   Source Code Analyzes URL unshorteners
+   Source Code Analyzes
+   URL unshorteners
   ﴚ [ BACK TO TOC ]
 "
 
@@ -86,8 +88,9 @@ _sf_9 ()   { CLOUDFARE_CMD }
 _sf_10 ()  { DATABASES_OF_DOMAINS_CMD }
 _sf_11 ()  { WEBSITE_TRAFFIC_LOOK_UP_CMD }
 _sf_12 ()  { WEBSITE_TECHNOLOGY_LOOK_UP_CMD }
-_sf_13 ()  { SOURCE_CODE_ANALYZES_URL_UNSHORTENERS_CMD }
-_sf_14 ()  { TOC_CMD }
+_sf_13 ()  { SOURCE_CODE_ANALYZES_CMD }
+_sf_14 ()  { URL_UNSHORTENERS_CMD }
+_sf_15 ()  { TOC_CMD }
 
 # Search for a selected number of lines
 func (){
