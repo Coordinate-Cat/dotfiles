@@ -35,6 +35,8 @@
 |   yabai   |         Zsh         | zsh-syntax-highlighting |
 |  sentaku  | font-hack-nerd-font |       font-inter        |
 | rectangle |      ubersicht      |          Xcode          |
+|   navi    |      hyperfine      |           fig           |
+|    lsd    |         fnm         |                         |
 
 - [Coordinate-Cat/OSINT-TOOLS-CLI](https://github.com/Coordinate-Cat/OSINT-TOOLS-CLI)
 - [Coordinate-Cat/fav-links-widget](https://github.com/Coordinate-Cat/fav-links-widget)
