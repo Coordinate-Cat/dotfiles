@@ -6,8 +6,8 @@
 ![screenshot004](.assets/dotfiles4.png) -->
 
 ![dotfiles](.assets/dotfiles.png)
-
-![iterm](.assets/iterm.png)
+![htop](.assets/htop.png)
+![iterm2](.assets/iterm2.png)
 
 ## INSTALL
 

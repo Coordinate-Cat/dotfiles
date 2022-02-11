@@ -1,7 +1,8 @@
 #!/usr/bin/zsh
 
 ### neofetch
-alias neo1="neofetch --iterm2 /Users/ocat/dotfiles/.config/neofetch/neofetch_iterm2.png"
-alias neo2="neofetch --jp2a /Users/ocat/dotfiles/.config/neofetch/neofetch_jp2a.jpeg"
-alias neo3="neofetch --caca /Users/ocat/dotfiles/.config/neofetch/neofetch_iterm2.png"
-alias neo4="neofetch --jp2a /Users/ocat/dotfiles/.assets/satan.jpg"
+alias neo1="neofetch --iterm2 /Users/ocat/dotfiles/.config/neofetch/darkarmy.jpg"
+alias neo2="neofetch --jp2a /Users/ocat/dotfiles/.config/neofetch/darkarmy.jpg"
+alias neo3="neofetch --caca /Users/ocat/dotfiles/.config/neofetch/darkarmy.jpg"
+alias neo4="neofetch --jp2a /Users/ocat/dotfiles/.assets/darkarmy.jpg"
+alias neo5="neofetch --source /Users/ocat/dotfiles/.config/neofetch/pepe.txt"
