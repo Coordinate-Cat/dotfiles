@@ -1,3 +1,3 @@
 #!/usr/bin/zsh
 
-alias vc="vscode ."
+alias vc="vscode"

@@ -133,7 +133,7 @@ autoload -Uz _zinit
 
 zinit ice depth=1
 # zinit light zsh-users/zsh-completions
-# zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-autosuggestions
 # zinit light zsh-users/zsh-syntax-highlighting
 # zinit light zdharma-continuum/fast-syntax-highlighting
 
