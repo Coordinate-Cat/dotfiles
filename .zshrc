@@ -11,9 +11,10 @@ setopt HIST_IGNORE_SPACE
 
 ###[ global variable ]##########################################################
 export DOT="$HOME/dotfiles"
+export XDG_CONFIG_HOME=$HOME/dotfiles
 export MY_ALIASES="$DOT/.aliases"
 export BAT_CONFIG_PATH="$DOT/.config/bat/bat.conf"
-export OSINTDIR="$DOT/.osint/OSINT-TOOLS-CLI"
+export OSINTDIR="$DOT/.widgets/OSINT-TOOLS-CLI"
 
 ###[ alias source ]#############################################################
 source $OSINTDIR/devenv.zsh
@@ -25,11 +26,12 @@ source $MY_ALIASES/cabal.zsh
 source $MY_ALIASES/cue.zsh
 source $MY_ALIASES/git.zsh
 source $MY_ALIASES/ls.zsh
+source $MY_ALIASES/hyperfine.zsh
 source $MY_ALIASES/links.zsh
 source $MY_ALIASES/neo.zsh
 source $MY_ALIASES/osint.zsh
 source $MY_ALIASES/others.zsh
-source $MY_ALIASES/vscode.zsh
+source $MY_ALIASES/tokei.zsh
 source $MY_ALIASES/wttr.zsh
 
 ###[ fnm ]######################################################################

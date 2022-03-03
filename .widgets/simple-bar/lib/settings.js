@@ -289,7 +289,7 @@ export const defaultSettings = {
     spacesBackgroundColorAsForeground: false,
     widgetsBackgroundColorAsForeground: false,
     font: 'Inter',
-    fontSize: '11px',
+    fontSize: '8px',
     yabaiPath: '/usr/local/bin/yabai',
     shell: 'sh',
     slidingAnimationPace: 4,
