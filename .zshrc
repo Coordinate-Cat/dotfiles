@@ -16,6 +16,7 @@ export DOT="$HOME/dotfiles"
 export MY_ALIASES="$DOT/.aliases"
 export BAT_CONFIG_PATH="$DOT/.config/bat/bat.conf"
 export OSINTDIR="$DOT/.osint/OSINT-TOOLS-CLI"
+export PATH="/Users/nttcom/.deno/bin:$PATH"
 
 ###[ alias source ]#############################################################
 source $OSINTDIR/devenv.zsh
