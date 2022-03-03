@@ -6,6 +6,4 @@ https://github.com/felixhageloh/uebersicht
 ## STACK
 jsx
 
-![screenshot](./assets/screenshot.png)
-
-## TODO
+![screenshot](./assets/widget.png)
