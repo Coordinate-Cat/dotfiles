@@ -7,8 +7,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# setopt auto_cd
-# setopt auto_pushd # cd -[tab]で過去のディレクトリにひとっ飛びできるようにする
 setopt HIST_IGNORE_SPACE
 
 ###[ global variable ]##########################################################
