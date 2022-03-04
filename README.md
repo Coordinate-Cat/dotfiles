@@ -1,10 +1,12 @@
 # DOTFILES
 
 
-![iterm2](.assets/iterm2.png)
+<!-- ![iterm2](.assets/iterm2.png)
 ![dotfiles](.assets/dotfiles.png)
-<!-- ![htop](.assets/htop.png) -->
-![dotfiles2](.assets/dotfiles2.png)
+![htop](.assets/htop.png)
+![dotfiles2](.assets/dotfiles2.png) -->
+![gb](.assets/gb.png)
+![gb2](.assets/gb2.png)
 
 ## INSTALL
 
