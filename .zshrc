@@ -11,10 +11,10 @@ setopt HIST_IGNORE_SPACE
 
 ###[ global variable ]##########################################################
 export DOT="$HOME/dotfiles"
-export XDG_CONFIG_HOME=$HOME/dotfiles
 export MY_ALIASES="$DOT/.aliases"
 export BAT_CONFIG_PATH="$DOT/.config/bat/bat.conf"
-export OSINTDIR="$DOT/.widgets/OSINT-TOOLS-CLI"
+export OSINTDIR="$DOT/.osint/OSINT-TOOLS-CLI"
+export PATH="/Users/nttcom/.deno/bin:$PATH"
 
 ###[ alias source ]#############################################################
 source $OSINTDIR/devenv.zsh
@@ -26,12 +26,11 @@ source $MY_ALIASES/cabal.zsh
 source $MY_ALIASES/cue.zsh
 source $MY_ALIASES/git.zsh
 source $MY_ALIASES/ls.zsh
-source $MY_ALIASES/hyperfine.zsh
 source $MY_ALIASES/links.zsh
 source $MY_ALIASES/neo.zsh
 source $MY_ALIASES/osint.zsh
 source $MY_ALIASES/others.zsh
-source $MY_ALIASES/tokei.zsh
+source $MY_ALIASES/vscode.zsh
 source $MY_ALIASES/wttr.zsh
 
 ###[ fnm ]######################################################################
@@ -96,6 +95,11 @@ app() {
 # export PATH="$PYENV_ROOT/bin:$PATH"
 # eval "$(pyenv init --path)"
 
+###[ others ]###################################################################
+# source $ZSH/oh-my-zsh.sh
+# source ~ZSH_CUSTOM/plugins/fzf-tab
+# source ~/.nvm/nvm.sh
+
 plugins=(git)
 ZSH_DISABLE_COMPFIX="true"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
@@ -128,7 +132,7 @@ autoload -Uz _zinit
 
 zinit ice depth=1
 # zinit light zsh-users/zsh-completions
-# zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-autosuggestions
 # zinit light zsh-users/zsh-syntax-highlighting
 # zinit light zdharma-continuum/fast-syntax-highlighting
 

@@ -8,24 +8,42 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'Shougo/ddc.vim'
-Plug 'vim-denops/denops.vim'
+Plug 'Shougo/pum.vim'
+Plug 'morhetz/gruvbox'
 Plug 'Shougo/ddc-around'
-Plug 'sainnhe/gruvbox-material'
-" Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdtree'
+Plug 'LumaKernel/ddc-file'
+Plug 'Shougo/ddc-sorter_rank'
+Plug 'ryanoasis/vim-devicons'
+Plug 'Shougo/ddc-matcher_head'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Shougo/ddc-converter_remove_overlap'
 call plug#end()
 
-" 使いたいsourceを指定する
-call ddc#custom#patch_global('sources', ['around'])
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
-" ddc.vimの機能を有効にする
-call ddc#enable()
+set background=dark
+set t_Co=256
+
+colorscheme gruvbox
+
+augroup TransparentBG
+  autocmd!
+	autocmd Colorscheme * highlight Normal ctermbg=none
+	autocmd Colorscheme * highlight NonText ctermbg=none
+	autocmd Colorscheme * highlight LineNr ctermbg=none
+	autocmd Colorscheme * highlight Folded ctermbg=none
+	autocmd Colorscheme * highlight EndOfBuffer ctermbg=none 
+augroup END
 
 ""###[ config ]#################################################################
 set nowritebackup                        "" ファイルを上書きする前にバックアップを作ることを無効化
 set nobackup                             "" ファイルを上書きする前にバックアップを作ることを無効化
 set virtualedit=block                    "" vim の矩形選択で文字が無くても右へ進める
 set backspace=indent,eol,start           "" 挿入モードでバックスペースで削除できるようにする
-set ambiwidth=double                     "" 全角文字専用の設定
+set ambiwidth=single                     "" 全角文字専用の設定
 set wildmenu                             "" wildmenuオプションを有効(vimバーからファイルを選択できる)
 
 ""###[ config(search) ]#########################################################
@@ -68,6 +86,8 @@ syntax on                                "" シンタックスハイライト
 set nrformats=                           "" すべての数を10進数として扱う
 set whichwrap=b,s,h,l,<,>,[,],~          "" 行をまたいで移動
 set mouse=a                              "" バッファスクロール
+set cursorline
+set cursorcolumn
 
 ""###[ auto reload .vimrc ]#####################################################
 augroup source-vimrc
