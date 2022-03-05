@@ -1,7 +1,4 @@
-#!/usr/bin/zsh
-
 ### https://github.com/cabal-club/cabal-cli
-
 ### simply running
 alias cb='cabal'
 ### cabal <key>
