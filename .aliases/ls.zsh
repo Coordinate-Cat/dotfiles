@@ -1,5 +1,3 @@
-#!/usr/bin/zsh
-
 ### list segments
 alias ls='clear && lsd'
 
