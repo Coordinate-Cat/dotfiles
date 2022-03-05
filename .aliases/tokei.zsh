@@ -1,1 +1,1 @@
-alias tk="tokei --hidden . --output yaml >> ./.analysis/tokei.yaml"
+alias tk='tokei --hidden . --output yaml >> ./.analysis/tokei.yaml'
