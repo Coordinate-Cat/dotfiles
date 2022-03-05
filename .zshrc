@@ -11,7 +11,6 @@ fi
 export DOT="$HOME/dotfiles"
 export ZSH_DIR="$DOT/.zsh"
 export ALIASES_DIR="$DOT/.aliases"
-export PATH="/Users/nttcom/.deno/bin:$PATH"
 export OSINTDIR="$DOT/.widgets/OSINT-TOOLS-CLI"
 export BAT_CONFIG_PATH="$DOT/.config/bat/bat.conf"
 

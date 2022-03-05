@@ -12,3 +12,5 @@
 *.pem
 *.env
 *tags
+
+.zsh/secret.zsh
