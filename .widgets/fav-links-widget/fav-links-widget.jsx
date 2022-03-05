@@ -15,9 +15,9 @@ const github = css`
   position: relative;
   top: 250px;
   left: -17px;
-  background-color: #1d2021;
+  background-color: #32302f;
   transform: rotate(270deg);
-  border: 1px solid #1d2021;
+  border: 1px solid #32302f;
   cursor: pointer;
   > a > svg {
     margin-top: -1px;
@@ -26,10 +26,10 @@ const github = css`
   }
   :hover {
     > a {
-      color: #1d2021;
+      color: #32302f;
     }
     > a > svg {
-      fill: #1d2021;
+      fill: #32302f;
     }
     border: 1px solid #ecdbb2;
     background-color: #ecdbb2;
@@ -44,9 +44,9 @@ const twitter = css`
   position: relative;
   top: 304px;
   left: -53px;
-  background-color: #1d2021;
+  background-color: #32302f;
   transform: rotate(270deg);
-  border: 1px solid #1d2021;
+  border: 1px solid #32302f;
   cursor: pointer;
   > a > svg {
     margin-top: 5px;
@@ -55,10 +55,10 @@ const twitter = css`
   }
   :hover {
     > a {
-      color: #1d2021;
+      color: #32302f;
     }
     > a > svg {
-      fill: #1d2021;
+      fill: #32302f;
     }
     border: 1px solid #ecdbb2;
     background-color: #ecdbb2;

@@ -34,7 +34,6 @@ setopt HIST_IGNORE_SPACE
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 ###[ p10k ]#####################################################################
-# ZSH_THEME="powerlevel10k/powerlevel10k"
 [[ ! -f .p10k.zsh ]] || source ~/.p10k.zsh
 
 ###[ FIG ENV VARIABLES ]########################################################

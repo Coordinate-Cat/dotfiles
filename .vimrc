@@ -7,7 +7,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-
 Plug 'Shougo/ddc.vim'
 Plug 'Shougo/pum.vim'
 Plug 'Shougo/ddc-around'
@@ -20,14 +19,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'sainnhe/gruvbox-material'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Shougo/ddc-converter_remove_overlap'
-
 call plug#end()
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-
-set background=dark
-set t_Co=256
+let NERDTreeShowHidden=1
+" let g:airline_theme='gruvbox'
 
 augroup TransparentBG
   autocmd!
@@ -37,11 +34,20 @@ augroup TransparentBG
 	autocmd Colorscheme * highlight LineNr ctermbg=none
 	autocmd Colorscheme * highlight Folded ctermbg=none
 	autocmd Colorscheme * highlight EndOfBuffer ctermbg=none
-  "" comment no bgcolor
-  autocmd colorscheme * highlight Statement ctermfg=196
-  autocmd colorscheme * highlight Comment ctermbg=7
+  "" Statement
+  autocmd colorscheme * highlight clear Statement
+  autocmd colorscheme * highlight Statement ctermfg=202
+  "" Comment
+  autocmd colorscheme * highlight Comment ctermbg=15
   autocmd colorscheme * highlight clear Comment
+  "" Keyword
+  autocmd colorscheme * highlight clear Keyword
+  autocmd colorscheme * highlight Keyword ctermfg=202
+  "" Conditional
+  autocmd colorscheme * highlight clear Conditional
+  autocmd colorscheme * highlight Conditional ctermfg=202
 augroup END
+
 
 ""###[ config ]#################################################################
 set nowritebackup                        "" ファイルを上書きする前にバックアップを作ることを無効化
@@ -59,6 +65,8 @@ set incsearch                            "" インクリメンタル検索 (検�
 set hlsearch                             "" 検索結果をハイライト表示
 
 ""###[ config(editor) ]#########################################################
+set t_Co=256                             "" 256色対応
+set background=dark                      "" バックグラウンドを暗くする
 set noerrorbells                         "" エラーメッセージの表示時にビープを鳴らさない
 set shellslash                           "" Windowsでパスの区切り文字をスラッシュで扱う
 set showmatch matchtime=1                "" 対応する括弧やブレースを表示
@@ -85,7 +93,7 @@ set noswapfile                           "" スワップファイルを作成し
 set nofoldenable                         "" 検索にマッチした行以外を折りたたむ(フォールドする)機能
 set title                                "" タイトルを表示
 set number                               "" 行番号の表示
-set clipboard=unnamed,autoselect         "" ヤンクでクリップボードにコピー
+" set clipboard=unnamed,autoselect         "" ヤンクでクリップボードにコピー
 nnoremap <Esc><Esc> :nohlsearch<CR><ESC> "" Escの2回押しでハイライト消去
 syntax on                                "" シンタックスハイライト
 set nrformats=                           "" すべての数を10進数として扱う
