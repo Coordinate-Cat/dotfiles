@@ -24,16 +24,15 @@ call plug#end()
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let NERDTreeShowHidden=1
-" let g:airline_theme='gruvbox'
 
 augroup TransparentBG
   autocmd!
   "" airline transparent
-	autocmd Colorscheme * highlight Normal ctermbg=none
-	autocmd Colorscheme * highlight NonText ctermbg=none
-	autocmd Colorscheme * highlight LineNr ctermbg=none
-	autocmd Colorscheme * highlight Folded ctermbg=none
-	autocmd Colorscheme * highlight EndOfBuffer ctermbg=none
+  autocmd Colorscheme * highlight Normal ctermbg=none
+  autocmd Colorscheme * highlight NonText ctermbg=none
+  autocmd Colorscheme * highlight LineNr ctermbg=none
+  autocmd Colorscheme * highlight Folded ctermbg=none
+  autocmd Colorscheme * highlight EndOfBuffer ctermbg=none
   "" Statement
   autocmd colorscheme * highlight clear Statement
   autocmd colorscheme * highlight Statement ctermfg=202
@@ -46,6 +45,10 @@ augroup TransparentBG
   "" Conditional
   autocmd colorscheme * highlight clear Conditional
   autocmd colorscheme * highlight Conditional ctermfg=202
+  "" CursorLine
+  autocmd colorscheme * highlight clear CursorLine
+  autocmd colorscheme * highlight CursorLine ctermfg=196
+  autocmd colorscheme * highlight CursorLine ctermbg=208
 augroup END
 
 
@@ -100,7 +103,7 @@ set nrformats=                           "" すべての数を10進数として�
 set whichwrap=b,s,h,l,<,>,[,],~          "" 行をまたいで移動
 set mouse=a                              "" バッファスクロール
 set ttimeoutlen=50                       "" airlineモード切り替え軽量化
-" set cursorline
+set cursorline
 " set cursorcolumn
 
 ""###[ auto reload .vimrc ]#####################################################

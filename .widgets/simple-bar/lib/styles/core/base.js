@@ -6,7 +6,7 @@ const baseStyles = /* css */ `
   display: flex;
   align-items: stretch;
   padding: var(--bar-inner-margin);
-  padding: 3px 29px;
+  padding: 3px 25px;
   box-sizing: border-box;
   color: var(--foreground);
   font-size: var(--font-size);

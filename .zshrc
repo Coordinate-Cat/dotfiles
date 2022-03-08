@@ -7,13 +7,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-###[ global variable ]##########################################################
-export DOT="$HOME/dotfiles"
-export ZSH_DIR="$DOT/.zsh"
-export ALIASES_DIR="$DOT/.aliases"
-export OSINTDIR="$DOT/.widgets/OSINT-TOOLS-CLI"
-export BAT_CONFIG_PATH="$DOT/.config/bat/bat.conf"
-
 ###[ ZSH source ]###############################################################
 if [ -d $ZSH_DIR ] && [ -r $ZSH_DIR ] && [ -x $ZSH_DIR ]; then
     for file in ${ZSH_DIR}/**/*.zsh; do
@@ -27,11 +20,6 @@ if [ -d $ALIASES_DIR ] && [ -r $ALIASES_DIR ] && [ -x $ALIASES_DIR ]; then
         [ -r $alias ] && source $alias
     done
 fi
-
-###[ config ]###################################################################
-plugins=(git)
-setopt HIST_IGNORE_SPACE
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 ###[ p10k ]#####################################################################
 [[ ! -f .p10k.zsh ]] || source ~/.p10k.zsh

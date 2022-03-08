@@ -6,18 +6,6 @@ has() {
     type "$1" > /dev/null 2>&1
 }
 
-HELLO_ASCII='\e[32;5;7m
-                                                         
-  ██╗  ██╗ ██╗      ██████╗   ██████╗  █████╗  ████████╗ 
-  ██║  ██║ ██║     ██╔═══██╗ ██╔════╝ ██╔══██╗ ╚══██╔══╝ 
-  ███████║ ██║     ██║   ██║ ██║      ███████║    ██║    
-  ██╔══██║ ██║     ██║   ██║ ██║      ██╔══██║    ██║    
-  ██║  ██║ ██║ ▄█╗ ╚██████╔╝ ╚██████╗ ██║  ██║    ██║    
-  ╚═╝  ╚═╝ ╚═╝ ╚═╝  ╚═════╝   ╚═════╝ ╚═╝  ╚═╝    ╚═╝    
-                                                          
-\e[31m
-'
-
 if [ ! -d ${DOT_DIR} ]; then
     if has "git"; then
         git clone https://github.com/Coordinate-Cat/dotfiles.git ${DOT_DIR}
@@ -26,6 +14,7 @@ if [ ! -d ${DOT_DIR} ]; then
         TARBALL="https://github.com/Coordinate-Cat/dotfiles/archive/master.tar.gz"
         if has "curl"; then
             curl -L ${TARBALL} -o master.tar.gz
+            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         else
             wget ${TARBALL}
         fi
@@ -50,6 +39,5 @@ if [ ! -d ${DOT_DIR} ]; then
         echo "Installed .$f"
     done
 else
-    clear && echo "$HELLO_ASCII"
     exit 1
 fi
