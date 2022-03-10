@@ -26,11 +26,8 @@ jobs:
     - name: Install gnu-time
       run: brew install gnu-time
 
-    - name: ls
-      run: ls -la
-
     - name: Run benchmark
-      run: ./.github/benchmark.sh > result.json
+      run: ./scripts/benchmark.sh > result.json
 
     - name: Dump result.json
       run: cat result.json
