@@ -1,1 +1,1 @@
-alias hf='hyperfine 'cd .' --export-csv .analysis/hyperfine.csv'
+alias hf='hyperfine 'ls' --export-csv .analysis/ls/hyperfine_00.csv'

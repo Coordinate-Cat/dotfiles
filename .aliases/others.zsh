@@ -1,2 +1,2 @@
-alias md='mkdir'
-alias merry='cat .links/ascii/tree_ascii.txt'
+alias mk='mkdir'
+alias sz='source .zshrc'

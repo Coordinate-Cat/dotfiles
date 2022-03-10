@@ -24,12 +24,12 @@ brew "webp"
 brew "wget"
 brew "nvim"
 brew "rust"
-brew "gtime"
 brew "boxes"
 brew "zplug"
 brew "neovim"
 brew "catimg"
 brew "ripgrep"
+brew "gnu-time"
 brew "neofetch"
 brew "git", link: false
 brew "node", link: false
