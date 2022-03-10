@@ -24,7 +24,10 @@ jobs:
       run: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
     - name: Install gnu-time
-      run: brew install gnu-time
+      run: brew install gnu-time tree
+
+    - name: Tree
+      run: tree
 
     - name: Run benchmark
       run: ./scripts/benchmark.sh > ./.analysis/result-benchmark.json
@@ -33,7 +36,7 @@ jobs:
       uses: benchmark-action/github-action-benchmark@v1
       with:
         tool: customSmallerIsBetter
-        output-file-path: /.analysis/result-benchmark.json
+        output-file-path: ./.analysis/result-benchmark.json
         github-token: ${{ secrets.GITHUB_TOKEN }}
         auto-push: true
         comment-on-alert: true
