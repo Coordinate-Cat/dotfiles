@@ -1,14 +1,17 @@
 ###[ Benchmark ]################################################################
 # https://zenn.dev/odan/articles/17a86574b724c9
-set -eu
-GH=$GITHUB_DIR
+set -eux
 
-gtime --format="%e" zsh -i -c exit 2> ${GH}/benchmark-results/zsh-install-time.txt
+rm -f benchmark-results/*
 
-{ for i in $(seq 1 10); do gtime --format="%e" zsh -i -c exit; done } 2> ${GH}/benchmark-results/zsh-load-time.txt
+gtime --format="%e" --output=benchmark-results/zsh-install-time.txt zsh -i -c exit
 
-ZSH_LOAD_TIME=$(cat ${GH}/benchmark-results/zsh-load-time.txt | awk '{ total += $1 } END { print total/NR }')
-ZSH_INSTALL_TIME=$(cat ${GH}/benchmark-results/zsh-install-time.txt)
+for i in $(seq 1 10); do
+    gtime --format="%e" --output=benchmark-results/zsh-load-time-${i}.txt zsh -i -c exit;
+done
+
+ZSH_LOAD_TIME=$(cat benchmark-results/zsh-load-time.txt | awk '{ total += $1 } END { print total/NR }')
+ZSH_INSTALL_TIME=$(cat benchmark-results/zsh-install-time.txt)
 
 cat<<EOJ
 [
