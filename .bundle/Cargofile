@@ -1,5 +1,6 @@
-dust
-fnm
-hyperfine
 rg
+exa
+fnm
+dust
 tokei
+hyperfine

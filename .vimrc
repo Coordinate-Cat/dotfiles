@@ -51,6 +51,7 @@ augroup TransparentBG
   autocmd colorscheme * highlight CursorLine ctermbg=208
 augroup END
 
+:command Tr NERDTree
 
 ""###[ config ]#################################################################
 set nowritebackup                        "" ファイルを上書きする前にバックアップを作ることを無効化

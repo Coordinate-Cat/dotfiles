@@ -1,23 +1,27 @@
 #! /bin/bash
 
-B=".bundle"
+BUNDLE=".bundle"
 
 ###[ Homebrew ]#################################################################
 brew upgrade
-brew bundle --file ${B}/Brewfile
+brew bundle --file ${BUNDLE}/Brewfile
+brew services start yabai
 
 ###[ Zsh ]######################################################################
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
-source "${HOME}"/.zshrc
+source ${HOME}/.zshrc
 
 ###[ Rust ]#####################################################################
 curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
-rustup update
+source $HOME/.cargo/env
+rustup --version
+rustc --version
 
 ###[ Cargo ]####################################################################
-cargo install $(cat ${B}/Cargofile)
+cargo --version
+cargo install $(cat ${BUNDLE}/Cargofile)
 
 ###[ Vscode ]###################################################################
-for ce in $(cat ${B}/Vscodefile); do
-    code --install-extension $ce
+for vsc in $(cat ${BUNDLE}/Vscfile); do
+    code --install-extension $vsc
 done
