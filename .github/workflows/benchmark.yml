@@ -27,16 +27,13 @@ jobs:
       run: brew install gnu-time
 
     - name: Run benchmark
-      run: ./scripts/benchmark.sh > result.json
-
-    - name: Dump result.json
-      run: cat result.json
+      run: ./scripts/benchmark.sh > ./scripts/tmp/result-benchmark.json
 
     - name: Upload benchmark
       uses: benchmark-action/github-action-benchmark@v1
       with:
         tool: customSmallerIsBetter
-        output-file-path: result.json
+        output-file-path: /tmp/result-benchmark.json
         github-token: ${{ secrets.GITHUB_TOKEN }}
         auto-push: true
         comment-on-alert: true
