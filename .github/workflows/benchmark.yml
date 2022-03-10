@@ -30,13 +30,13 @@ jobs:
       run: tree
 
     - name: Run benchmark
-      run: ./scripts/benchmark.sh > ./.analysis/result-benchmark.json
+      run: ./scripts/benchmark.sh > .analysis/result-benchmark.json
 
     - name: Upload benchmark
       uses: benchmark-action/github-action-benchmark@v1
       with:
         tool: customSmallerIsBetter
-        output-file-path: ./.analysis/result-benchmark.json
+        output-file-path: .analysis/result-benchmark.json
         github-token: ${{ secrets.GITHUB_TOKEN }}
         auto-push: true
         comment-on-alert: true

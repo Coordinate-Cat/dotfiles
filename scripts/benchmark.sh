@@ -15,7 +15,7 @@ case $os in
     ;;
 esac
 
-$TIME_COMMAND --format="%e" zsh -i -c exit 2> .analysis/benchmark-results/zsh-install-time.txt
+$TIME_COMMAND --format="%e" --output=.analysis/benchmark-results/zsh-install-time.txt zsh -i -c exit
 
 for i in $(seq 1 10); do 
     $TIME_COMMAND --format="%e" --output=.analysis/benchmark-results/zsh-load-time-${i}.txt zsh -i -c exit;
