@@ -2,7 +2,7 @@
 
 set -eux
 
-rm -f benchmark-results/*
+rm -f .analysis/benchmark-results/*
 
 os=$(uname -s | tr '[A-Z]' '[a-z]')
 
@@ -15,14 +15,14 @@ case $os in
     ;;
 esac
 
-$TIME_COMMAND --format="%e" --output=benchmark-results/zsh-install-time.txt zsh -i -c exit
+$TIME_COMMAND --format="%e" --output=.analysis/benchmark-results/zsh-install-time.txt zsh -i -c exit
 
 for i in $(seq 1 10); do 
-    $TIME_COMMAND --format="%e" --output=benchmark-results/zsh-load-time-${i}.txt zsh -i -c exit;
+    $TIME_COMMAND --format="%e" --output=.analysis/benchmark-results/zsh-load-time-${i}.txt zsh -i -c exit;
 done
 
-ZSH_LOAD_TIME=$(cat benchmark-results/zsh-load-time-*.txt | awk '{ total += $1 } END { print total/NR }')
-ZSH_INSTALL_TIME=$(cat benchmark-results/zsh-install-time.txt)
+ZSH_LOAD_TIME=$(cat .analysis/benchmark-results/zsh-load-time-*.txt | awk '{ total += $1 } END { print total/NR }')
+ZSH_INSTALL_TIME=$(cat .analysis/benchmark-results/zsh-install-time.txt)
 
 cat<<EOJ
 [
