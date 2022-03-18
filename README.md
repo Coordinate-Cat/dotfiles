@@ -24,7 +24,7 @@ git clonegit@github.com:Coordinate-Cat/dotfiles.git
 ## BUNDLE
 [dotfiles/.bundle](https://github.com/Coordinate-Cat/dotfiles/tree/master/.bundle)
 ## LICENSE
-[WTFPL](https://github.com/Coordinate-Cat/dotfiles/blob/master/LICENSE-WTFPL)
+[WTFPL](https://github.com/Coordinate-Cat/dotfiles/blob/master/LICENSE)
 
 ## CODE OF CONDUCT
 [Contributor Covenant Code of Conduct](https://github.com/Coordinate-Cat/dotfiles/blob/master/CODE_OF_CONDUCT.md)
