@@ -1,10 +1,8 @@
 #! /bin/bash
 
-BUNDLE=".bundle"
-
 ###[ Homebrew ]#################################################################
 brew upgrade
-brew bundle --file ${BUNDLE}/Brewfile
+brew bundle --file ${BUNDLE_DIR}/Brewfile
 brew services start yabai
 
 ###[ Zsh ]######################################################################
