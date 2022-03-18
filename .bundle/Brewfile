@@ -47,3 +47,4 @@ cask "visual-studio-code"
 cask "font-hack-nerd-font"
 
 mas "Xcode", id: 497799835
+mas "RunCat", id: 1429033973"

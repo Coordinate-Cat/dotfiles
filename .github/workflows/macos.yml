@@ -1,0 +1,18 @@
+name: Install Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macOS-latest]
+    steps:
+    - uses: actions/checkout@v1
+    # - name: Check versions of pre-installed software/system
+    #   run: ./.cisupport/pre.sh
+    - name: Execute full install
+      run:  ./install.sh
+    # - name: Check installed versions
+    #   run: ./.cisupport/post.sh

@@ -1,5 +1,9 @@
 # DOTFILES
 
+![matrix workflow](https://github.com/Coordinate-Cat/dotfiles/actions/workflows/.github/workflows/matrix.yml/badge.svg)
+![markdown workflow](https://github.com/Coordinate-Cat/dotfiles/actions/workflows/.github/workflows/markdown.yml/badge.svg)
+
+
 ![gb](.assets/gb.png)
 ![gb2](.assets/gb2.png)
 

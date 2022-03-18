@@ -1,4 +1,4 @@
-name: Check Markdown links
+name: Markdown Workflow
 
 on: push
 
