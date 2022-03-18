@@ -13,6 +13,6 @@ jobs:
     # - name: Check versions of pre-installed software/system
     #   run: ./.cisupport/pre.sh
     - name: Execute full install
-      run:  ./install.sh
+      run: bash install.sh
     # - name: Check installed versions
     #   run: ./.cisupport/post.sh
