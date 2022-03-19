@@ -93,11 +93,11 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "github.copilot.enable": {
     "*": true,
-    "rust": true,
     "yaml": false,
-    "markdown": false,
     "plaintext": false,
-    "javascript": true,
+    "markdown": false,
+    "rust": true,
+    "javascript": true
   },
   "todo-tree.general.tags": [
     "[ ]",
