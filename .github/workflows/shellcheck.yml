@@ -1,45 +1,18 @@
 name: reviewdog
 on: [pull_request]
 jobs:
-  shellcheck:
-    name: runner / shellcheck
+  reviewdog:
+    name: reviewdog
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: shellcheck-github-pr-check
-        uses: ./
+      # ...
+      - uses: reviewdog/action-setup@v1
         with:
-          github_token: ${{ secrets.OCAT_TOKEN }}
-      - name: shellcheck-github-check
-        uses: ./
-        with:
-          github_token: ${{ secrets.OCAT_TOKEN }}
-          reporter: github-check
-          level: warning
-          filter_mode: file
-          pattern: '*.sh'
-          path: '.'
-          exclude: './testdata/*'
-          shellcheck_flags: '--external-sources --severity=style'
-      - name: shellcheck-github-pr-review
-        uses: ./
-        with:
-          github_token: ${{ secrets.OCAT_TOKEN }}
-          reporter: github-pr-review
-          pattern: '*.sh'
-          path: '.'
-          exclude: './testdata/*'
-      - name: shellcheck-shebang-check
-        uses: ./
-        with:
-          github_token: ${{ secrets.OCAT_TOKEN }}
-          filter_mode: nofilter
-          pattern: |
-            *.sh
-          path: |
-            .
-            ./testdata
-          exclude: |
-            ./testdata/test.sh
-            */.git/*
-          check_all_files_with_shebangs: true
+          reviewdog_version: latest # Optional. [latest,nightly,v.X.Y.Z]
+      - name: Run reviewdog
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.OCAT_TOKEN }}
+        run: |
+          reviewdog -reporter=github-pr-check -runners=golint,govet
+          # or
+          reviewdog -reporter=github-pr-review -runners=golint,govet
