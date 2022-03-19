@@ -1,6 +1,10 @@
 ###[ fzf ]######################################################################
+
+###[ keybind ]##################################################################
 export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore -l ""'
 export FZF_DEFAULT_OPTS='--reverse --preview "bat --color=always --style=header,grid --line-range :100 {}"'
+
+###[ app command ]##############################################################
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 app() {
