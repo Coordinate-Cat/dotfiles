@@ -10,9 +10,7 @@ jobs:
         os: [macOS-latest]
     steps:
     - uses: actions/checkout@v1
-    # - name: Check versions of pre-installed software/system
-    #   run: ./.cisupport/pre.sh
-    - name: Execute full install
-      run: bash install.sh
-    # - name: Check installed versions
-    #   run: ./.cisupport/post.sh
+    - name: Run curl Setup
+      run: curl https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/master/install.sh
+    - name: Run dotfiles setup
+      run: /bin/bash install.sh
