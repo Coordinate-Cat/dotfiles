@@ -1,4 +1,4 @@
-name: Install Workflow
+name: Setup Workflow
 
 on: [push]
 

@@ -1,5 +1,6 @@
 # DOTFILES
 
+![setup workflow](https://github.com/Coordinate-Cat/dotfiles/actions/workflows/.github/workflows/setup.yml/badge.svg)
 ![matrix workflow](https://github.com/Coordinate-Cat/dotfiles/actions/workflows/.github/workflows/matrix.yml/badge.svg)
 ![markdown workflow](https://github.com/Coordinate-Cat/dotfiles/actions/workflows/.github/workflows/markdown.yml/badge.svg)
 
