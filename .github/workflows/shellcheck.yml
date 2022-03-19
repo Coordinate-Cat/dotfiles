@@ -3,7 +3,7 @@ on: [pull_request]
 jobs:
   shellcheck:
     name: runner / shellcheck
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: shellcheck
