@@ -5,6 +5,9 @@ jobs:
     name: runner / shellcheck
     runs-on: macos-latest
     steps:
+      - uses: reviewdog/action-setup@v1
+        with:
+          reviewdog_version: latest # Optional. [latest,nightly,v.X.Y.Z]
       - uses: actions/checkout@v1
       - name: shellcheck
         uses: reviewdog/action-shellcheck@v1
