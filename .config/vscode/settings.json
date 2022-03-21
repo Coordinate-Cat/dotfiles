@@ -5,7 +5,7 @@
   "workbench.tree.indent": 10,
   "workbench.editor.tabSizing": "fit",
   "workbench.colorCustomizations": {},
-  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.colorTheme": "Gruvbox Material Dark",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.renderIndentGuides": "always",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
@@ -123,5 +123,7 @@
   ],
   "redhat.telemetry.enabled": true,
   "window.zoomLevel": -1,
+  "breadcrumbs.enabled": false,
+  "gitlens.defaultGravatarsStyle": "retro",
   // ###[ END setting.json ]####################################################
 }

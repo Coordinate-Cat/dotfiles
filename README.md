@@ -36,6 +36,17 @@ git clonegit@github.com:Coordinate-Cat/dotfiles.git
 
 ## REDDIT
 [Jan, 30, 2022][[Aqua] macOS DarkArmy Theme](https://www.reddit.com/r/unixporn/comments/sg1598/aqua_macos_darkarmy_theme/)
+
+## PROGRESS
+| Old | New  | DO or NOT |
+|:----|:-----|:---------:|
+| Zsh | Fish |    NOT    |
+| Zsh | Fish |    NOT    |
+| Zsh | Fish |    NOT    |
+| Zsh | Fish |    NOT    |
+| Zsh | Fish |    NOT    |
+| Zsh | Fish |    NOT    |
+| Zsh | Fish |    NOT    |
 ## CONTRIBUTORS
 <a href="https://github.com/Coordinate-Cat/dotfiles/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=Coordinate-Cat/dotfiles" />
