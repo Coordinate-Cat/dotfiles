@@ -1,7 +1,6 @@
 # DOTFILES
 
 ![setup workflow](https://github.com/Coordinate-Cat/dotfiles/actions/workflows/.github/workflows/setup.yml/badge.svg)
-![matrix workflow](https://github.com/Coordinate-Cat/dotfiles/actions/workflows/.github/workflows/matrix.yml/badge.svg)
 ![markdown workflow](https://github.com/Coordinate-Cat/dotfiles/actions/workflows/.github/workflows/markdown.yml/badge.svg)
 
 
@@ -38,15 +37,19 @@ git clonegit@github.com:Coordinate-Cat/dotfiles.git
 [Jan, 30, 2022][[Aqua] macOS DarkArmy Theme](https://www.reddit.com/r/unixporn/comments/sg1598/aqua_macos_darkarmy_theme/)
 
 ## PROGRESS
-| Old | New  | DO or NOT |
-|:----|:-----|:---------:|
-| Zsh | Fish |    NOT    |
-| Zsh | Fish |    NOT    |
-| Zsh | Fish |    NOT    |
-| Zsh | Fish |    NOT    |
-| Zsh | Fish |    NOT    |
-| Zsh | Fish |    NOT    |
-| Zsh | Fish |    NOT    |
+### UPDATE
+[Mar, 22, 2022]
+
+| Old        | New                     | DO or NOT | Details                                             | Level  |
+|:-----------|:------------------------|:---------:|:----------------------------------------------------|:------:|
+| Zsh        | Fish                    |    NOT    |                                                     |   -    |
+| .widget    | .rip                    |    DO     |                                                     |  High  |
+| iterm2     | wezterm                 |    DO     |                                                     |  High  |
+| Nerd Font  | Cica or Fira            |    DO     |                                                     |  High  |
+| p10k       | Simple prompt           |    DO     |                                                     | Middel |
+| install.sh | bootstrap.sh            |    DO     | https://hkob.hatenablog.com/entry/2020/11/27/090000 | Middle |
+|            | macos defaults cmd      |    DO     | "                                                   |  High  |
+|            | .analysis graph gh-page |    DO     | Chart.js?                                           |  Low   |
 ## CONTRIBUTORS
 <a href="https://github.com/Coordinate-Cat/dotfiles/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=Coordinate-Cat/dotfiles" />
