@@ -1,0 +1,66 @@
+# カスタムフォーマットを利用します
+format = """
+[┌───────────────────>](bold green)$directory$rust$package
+[│](bold green)$directory$rust$package
+[└─>](bold green) """
+
+[character]
+error_symbol = "[❯❯❯](bold red)"
+success_symbol = "[❯❯❯](bold green)"
+
+# プロンプトの先頭の空行を無効にします
+add_newline = false
+
+[aws]
+symbol = "  "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+read_only = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[rust]
+symbol = " "

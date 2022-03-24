@@ -1,11 +1,11 @@
-###[ FIG ENV VARIABLES ]########################################################
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-###[ END FIG ENV VARIABLES ]####################################################
+# Fig pre block. Keep at the top of this file.
+export PATH="${PATH}:${HOME}/.local/bin"
+eval "$(fig init zsh pre)"
 
 ###[ ~/.zshrc ]#################################################################
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 ###[ ZSH source ]###############################################################
 if [ -d $ZSH_DIR ] && [ -r $ZSH_DIR ] && [ -x $ZSH_DIR ]; then
@@ -22,8 +22,11 @@ if [ -d $ALIASES_DIR ] && [ -r $ALIASES_DIR ] && [ -x $ALIASES_DIR ]; then
 fi
 
 ###[ p10k ]#####################################################################
-[[ ! -f .p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f .p10k.zsh ]] || source ~/.p10k.zsh
 
-###[ FIG ENV VARIABLES ]########################################################
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-###[ END FIG ENV VARIABLES ]####################################################
+###[ Starship ]#################################################################
+eval "$(starship init zsh)"
+
+###[ Fig ]######################################################################
+eval "$(fig init zsh post)"
+

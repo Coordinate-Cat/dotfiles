@@ -37,17 +37,28 @@ git clonegit@github.com:Coordinate-Cat/dotfiles.git
 [Jan, 30, 2022][[Aqua] macOS DarkArmy Theme](https://www.reddit.com/r/unixporn/comments/sg1598/aqua_macos_darkarmy_theme/)
 
 ## PROGRESS
-### UPDATE
+
+### Cargoism
+[Mar, 25, 2022]
+
+| Old  | New      |
+|:-----|:---------|
+| p10k | starship |
+| ls   | exa      |
+| top  | btop     |
+
+### Update
+[Mar, 25, 2022]
 [Mar, 22, 2022]
 
-| Old        | New                     | DO or NOT | Details                                             | Level  |
+| Old        | New                     | DO or NOT | Details                                             | Status |
 |:-----------|:------------------------|:---------:|:----------------------------------------------------|:------:|
 | Zsh        | Fish                    |    NOT    |                                                     |   -    |
 | .widget    | .rip                    |    DO     |                                                     |  High  |
 | iterm2     | wezterm                 |    DO     |                                                     |  High  |
 | Nerd Font  | Cica or Fira            |    DO     |                                                     |  High  |
-| p10k       | Simple prompt           |    DO     |                                                     | Middel |
-| install.sh | bootstrap.sh            |    DO     | https://hkob.hatenablog.com/entry/2020/11/27/090000 | Middle |
+| p10k       | Starship                |    DO     | cargo install                                       |  Done  |
+| install.sh | world.sh                |    DO     | https://hkob.hatenablog.com/entry/2020/11/27/090000 | Middle |
 |            | macos defaults cmd      |    DO     | "                                                   |  High  |
 |            | .analysis graph gh-page |    DO     | Chart.js?                                           |  Low   |
 ## CONTRIBUTORS
