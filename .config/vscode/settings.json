@@ -1,0 +1,129 @@
+{
+  // ###[ START setting.json ]##################################################
+
+  // ###[ workbench ]###########################################################
+  "workbench.tree.indent": 10,
+  "workbench.editor.tabSizing": "fit",
+  "workbench.colorCustomizations": {},
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.iconTheme": "gruvbox-material-icon-theme",
+
+  // ###[ editor ]##############################################################
+  "editor.tabSize": 2,
+  "editor.rulers": [ 80 ],
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.suggestSelection": "first",
+  "editor.accessibilitySupport": "off",
+  "editor.inlineSuggest.enabled": true,
+  "editor.foldingStrategy": "indentation",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+
+  // ###[ terminal ]############################################################
+  "terminal.explorerKind": "external",
+  "terminal.integrated.letterSpacing": 1,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.rendererType": "dom",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.defaultLocation": "editor",
+  "terminal.integrated.tabs.title": "${sequence}",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.automationShell.linux": "",
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+
+  // ###[ eslint ]##############################################################
+  "eslint.alwaysShowStatus": true,
+  "eslint.probe": [
+    "vue",
+    "html",
+    "svelte",
+    "markdown",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+  ],
+
+  // ###[ bracketPairColorizer ]################################################
+  "bracketPairColorizer.depreciation-notice": false,
+
+  // ###[ gitlens ]#############################################################
+  "gitlens.blame.format": "${message|15?} ${agoOrDate|14-}",
+  "window.titleBarStyle": "native",
+
+  // ###[ customizeUI ]#########################################################
+  "customizeUI.titleBar": "inline",
+  "customizeUI.activityBar": "regular",
+  "customizeUI.stylesheet": {
+    ".monaco-action-bar .actions-container": "height:36px; !important",
+    ".monaco-workbench .part.editor>.content .editor-group-container>.title>.tabs-and-actions-container": "height: 36px; cursor: pointer;",
+    ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab>.tab-actions": "margin: 0; height: 36px; cursor: pointer !important;",
+    "body.inline-title-bar .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab .monaco-icon-label:before": "height: 36px !important; cursor: pointer !important;",
+    ".monaco-workbench .part.editor>.content .editor-group-container>.title.breadcrumbs .monaco-icon-label:after, .monaco-workbench .part.editor>.content .editor-group-container>.title.tabs .monaco-icon-label:after": "margin-right: 0; height: 36px !important; cursor: pointer !important;",
+    ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.sizing-fit .monaco-icon-label, .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab.sizing-fit .monaco-icon-label>.monaco-icon-label-container": "height: 0px;margin: 0; cursor: pointer !important;",
+    ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container, body.inline-title-bar .monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab, body.inline-title-bar .monaco-workbench .part.editor>.content .editor-group-container>.title .editor-actionsr": "cursor: pointer !important;",
+  },
+
+  // ###[ others ]##############################################################
+  "vscode_vibrancy.opacity": 0,
+  "git.enableSmartCommit": true,
+  "explorer.confirmDelete": false,
+  "C_Cpp.updateChannel": "Insiders",
+  "html.format.wrapLineLength": 200,
+  "vim.statusBarColorControl": false,
+  "diffEditor.renderSideBySide": true,
+  "html.format.unformatted": "<link>",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "vscodeGoogleTranslate.preferredLanguage": "Japanese",
+  "svelte.language-server.runtime": "/usr/local/bin/node",
+  "csscomb.preset": "~/dotfiles/.config/vscode/mycsscomb.json",
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false,
+    "rust": true,
+    "javascript": true
+  },
+  "todo-tree.general.tags": [
+    "[ ]",
+    "[x]",
+    "BUG",
+    "XXX",
+    "HACK",
+    "TODO",
+    "FIXME",
+  ],
+  "[markdown]": {
+    "editor.defaultFormatter": "darkriszty.markdown-table-prettify"
+  },
+  "githubIssues.queries": [
+    {
+      "label": "My Issues",
+      "query": "default"
+    },
+    {
+      "label": "Created Issues",
+      "query": "author:${user} state:open repo:${owner}/${repository} sort:updated-desc"
+    }
+  ],
+  "redhat.telemetry.enabled": true,
+  "window.zoomLevel": -1,
+  "breadcrumbs.enabled": false,
+  "gitlens.defaultGravatarsStyle": "retro",
+  // ###[ END setting.json ]####################################################
+}

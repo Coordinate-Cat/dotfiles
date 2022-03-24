@@ -25,12 +25,12 @@ brew "webp"
 brew "wget"
 brew "nvim"
 brew "rust"
-brew "gtime"
 brew "boxes"
 brew "zplug"
 brew "neovim"
 brew "catimg"
 brew "ripgrep"
+brew "gnu-time"
 brew "neofetch"
 brew "git", link: false
 brew "node", link: false
@@ -48,3 +48,4 @@ cask "visual-studio-code"
 cask "font-hack-nerd-font"
 
 mas "Xcode", id: 497799835
+mas "RunCat", id: 1429033973"

@@ -1,0 +1,16 @@
+name: Setup Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macOS-latest]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run curl Setup
+      run: curl https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/master/install.sh
+    - name: Run dotfiles setup
+      run: /bin/bash install.sh

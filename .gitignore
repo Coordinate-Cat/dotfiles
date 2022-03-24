@@ -14,3 +14,4 @@
 *tags
 
 .zsh/secret.zsh
+.analysis/tokei.yaml
