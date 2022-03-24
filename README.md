@@ -53,7 +53,7 @@ git clonegit@github.com:Coordinate-Cat/dotfiles.git
 
 | Old        | New                     | DO or NOT | Details                                             | Status |
 |:-----------|:------------------------|:---------:|:----------------------------------------------------|:------:|
-| Zsh        | Fish                    |    NOT    |                                                     |   -    |
+| Zsh        | Nushell                 |    DO     |                                                     |  High  |
 | .widget    | .rip                    |    DO     |                                                     |  High  |
 | iterm2     | wezterm                 |    DO     |                                                     |  High  |
 | Nerd Font  | Cica or Fira            |    DO     |                                                     |  High  |
