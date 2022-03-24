@@ -1,6 +1,6 @@
-###[ FIG ENV VARIABLES ]########################################################
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-###[ END FIG ENV VARIABLES ]####################################################
+# Fig pre block. Keep at the top of this file.
+export PATH="${PATH}:${HOME}/.local/bin"
+eval "$(fig init zsh pre)"
 
 ###[ ~/.zshrc ]#################################################################
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -24,6 +24,6 @@ fi
 ###[ p10k ]#####################################################################
 [[ ! -f .p10k.zsh ]] || source ~/.p10k.zsh
 
-###[ FIG ENV VARIABLES ]########################################################
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
-###[ END FIG ENV VARIABLES ]####################################################
+# Fig post block. Keep at the bottom of this file.
+eval "$(fig init zsh post)"
+

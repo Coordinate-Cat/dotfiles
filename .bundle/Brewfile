@@ -1,6 +1,7 @@
 tap "github/gh"
 tap "khanhas/tap"
 tap "heroku/brew"
+tap "wez/wezterm"
 tap "rigellute/tap"
 tap "homebrew/cask"
 tap "homebrew/core"

@@ -1,6 +1,6 @@
 #! /bin/bash
 
-BUNDLE=".bundle"
+BUNDLE="$HOME/.bundle"
 
 ###[ Homebrew ]#################################################################
 brew upgrade

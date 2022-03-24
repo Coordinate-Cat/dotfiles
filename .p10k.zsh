@@ -163,7 +163,7 @@
   # Separator between different-color segments on the left.
   typeset -g POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
   # Separator between different-color segments on the right.
-  typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=' '
+  typeset -g POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=''
   # The right end of left prompt.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_LAST_SEGMENT_END_SYMBOL='\uE0B0'
   # The left end of right prompt.
