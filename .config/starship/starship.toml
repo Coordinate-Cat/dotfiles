@@ -1,5 +1,6 @@
+add_newline = false
 scan_timeout = 10
-
+right_format = """$all"""
 [character]
 error_symbol = "[❯](bold red)"
 success_symbol = "[❯](bold green)"
@@ -34,3 +35,4 @@ style_root = "black bold"
 format = "[oka 🌱]($style) "
 disabled = false
 show_always = true
+
