@@ -1,6 +1,8 @@
-###[ Fig pre ]##################################################################
+# Fig pre block. Keep at the top of this file.
 export PATH="${PATH}:${HOME}/.local/bin"
 eval "$(fig init zsh pre)"
+
+###[ Fig pre ]################################################################### nu
 
 ###[ ~/.zshrc ]#################################################################
 # if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -28,4 +30,7 @@ fi
 eval "$(starship init zsh)"
 
 ###[ Fig post ]#################################################################
+
+# Fig post block. Keep at the bottom of this file.
 eval "$(fig init zsh post)"
+
