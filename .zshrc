@@ -1,10 +1,8 @@
-# Fig pre block. Keep at the top of this file.
+###[ Fig pre ]##################################################################
 export PATH="${PATH}:${HOME}/.local/bin"
 eval "$(fig init zsh pre)"
 
-###[ Fig pre ]################################################################### nu
-
-###[ ~/.zshrc ]#################################################################
+###[ ~/.p10k ]#################################################################
 # if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
 #     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 # fi

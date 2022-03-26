@@ -1,38 +1,56 @@
 add_newline = false
 scan_timeout = 10
-right_format = """$all"""
+
+format = """
+[┌](fg:#fff1cf)$username$directory$git_branch$git_status$duration$fill$time$shell$character
+[└>](fg:#fff1cf) """
+
+[line_break]
+disabled = false
+
+[fill]
+symbol = ""
+style = "fg:#252525 bg:#6f6565"
+
 [character]
-error_symbol = "[❯](bold red)"
-success_symbol = "[❯](bold green)"
+success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
 
-[directory]
-truncation_length = 100
-truncate_to_repo = false
-truncation_symbol = "…/"
+[time]
+format = '[  \[$time\] ](fg:#fff1cf bg:#6f6565)'
+utc_time_offset = "local"
+time_format = "%T"
+disabled = false
+time_range = "-"
 
-[aws]
-format = 'on [$symbol($profile )(\($region\) )]($style)'
-style = "bold blue"
-
-[aws.region_aliases]
-ap-northeast-1 = "jp"
-
-[custom.arch]
-command = "uname -m"
-when = """ test $(uname -m) = "x86_64" """
-style = "bold yellow"
-format = "[$output]($style)"
-
-[docker_context]
-format = "via [🐋 $context](blue bold)"
+[cmd_duration]
+format = "took [$duration]($style) "
 
 [git_branch]
-symbol = " "
+format = "[$symbol$branch](bg:#252525)[ ](fg:#252525 bg:#6f6565 bold)"
+symbol = " "
+
+[shell]
+bash_indicator = "[](fg:#c4c431 bg:#6f6565) BASH-MODE [](fg:#6f6565)"
+zsh_indicator = "[ ](fg:#94b3a8 bg:#6f6565) ZSH-MODE [](fg:#6f6565)"
+nu_indicator = "[](fg:#fe6142 bg:#6f6565) NUSH-MODE [](fg:#6f6565)"
+unknown_indicator = "[](fg:#fff1cf bg:#6f6565) ???-MODE [](fg:#6f6565)"
+style = "fg:#fff1cf bg:#6f6565"
+powershell_indicator = "_"
+disabled = false
+
+[directory]
+format = "[$path]($style)[$read_only](fg:#fff bg:#6f6565)[ ](fg:#6f6565 bg:#252525 bold)"
+style = "fg:#fff1cf bg:#6f6565"
+truncation_symbol = "…/"
+truncate_to_repo = false
+truncation_length = 100
+home_symbol = " ~"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]](fg:#fff1cf bg:#6f6565)[ ](fg:#fff1cf bg:#6f6565))'
 
 [username]
-style_user = "white bold"
-style_root = "black bold"
-format = "[oka 🌱]($style) "
-disabled = false
+format = "[](fg:#252525 bold)[ ﯠ ](fg:#fff1cf bg:#252525 bold)[ ](fg:#6f6565 bg:#252525 bold)"
 show_always = true
-
+disabled = false
