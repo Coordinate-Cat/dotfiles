@@ -125,5 +125,6 @@
   "window.zoomLevel": -1,
   "breadcrumbs.enabled": false,
   "gitlens.defaultGravatarsStyle": "retro",
+  "workbench.activityBar.visible": false,
   // ###[ END setting.json ]####################################################
 }

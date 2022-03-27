@@ -1,10 +1,11 @@
-# Fig pre block. Keep at the top of this file.
+###[ Fig pre ]##################################################################
 export PATH="${PATH}:${HOME}/.local/bin"
 eval "$(fig init bash pre)"
+
+###[ Starship ]#################################################################
 eval "$(starship init bash)"
 
 . "$HOME/.cargo/env"
 
-# Fig post block. Keep at the bottom of this file.
+###[ Fig post ]#################################################################
 eval "$(fig init bash post)"
-

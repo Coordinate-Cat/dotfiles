@@ -1,12 +1,14 @@
 ###[ nushell ]##################################################################
 
-###[ env ]######################################################################
+###[ Starship ]#################################################################
 let-env STARSHIP_SHELL = "nu"
-def create_left_prompt [] {
-    starship prompt --cmd-duration $env.CMD_DURATION_MS --status $env.LAST_EXIT_CODE
-}
 
-let-env PROMPT_COMMAND = { create_left_prompt }
+###[ env ]######################################################################
+let-env PROMPT_COMMAND = {
+  # jobs are not supported
+  let width = (term size -c | get columns | into string)
+  starship prompt --cmd-duration $env.CMD_DURATION_MS --status $env.LAST_EXIT_CODE --terminal-width $width
+}
 let-env PROMPT_COMMAND_RIGHT = ""
 
 let-env PROMPT_INDICATOR = ""
@@ -25,30 +27,18 @@ let-env ENV_CONVERSIONS = {
   }
 }
 
-# Directories to search for scripts when calling source or usecayt
-#
-# By default, <nushell-config-dir>/scripts is added
 let-env NU_LIB_DIRS = [
     ($nu.config-path | path dirname | path join 'scripts')
 ]
-
-# Directories to search for plugin binaries when calling register
-#
-# By default, <nushell-config-dir>/plugins is added
 let-env NU_PLUGIN_DIRS = [
     ($nu.config-path | path dirname | path join 'plugins')
 ]
 
-###[ split files ]##############################################################
+###[ alias ]####################################################################
 source ~/dotfiles/.nushell/aliases/alias.nu
 
-
+###[ completions ]##############################################################
 module completions {
-  # Custom completions for external commands (those outside of Nushell)
-  # Each completions has two parts: the form of the external command, including its flags and parameters
-  # and a helper command that knows how to complete values for those flags and parameters
-  #
-  # This is a simplified version of completions for git branches and git remotes
   def "nu-complete git branches" [] {
     ^git branch | lines | each { |line| $line | str find-replace '\* ' '' | str trim }
   }
@@ -116,7 +106,7 @@ module completions {
 # Get just the extern definitions without the custom completion commands
 use completions *
 
-# for more information on themes see
+###[ Theme ]####################################################################
 # https://github.com/nushell/nushell/blob/main/docs/How_To_Coloring_and_Theming.md
 let default_theme = {
     # color for nushell primitives
