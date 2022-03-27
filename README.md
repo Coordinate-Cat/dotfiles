@@ -3,20 +3,23 @@
 ![setup workflow](https://github.com/Coordinate-Cat/dotfiles/actions/workflows/.github/workflows/setup.yml/badge.svg)
 ![markdown workflow](https://github.com/Coordinate-Cat/dotfiles/actions/workflows/.github/workflows/markdown.yml/badge.svg)
 
-![gb](.assets/gb.png) ![gb2](.assets/gb2.png)
+## APPEARANCE
+![dot1](.assets/dot1.png)
+![dot2](.assets/dot2.png)
+![dot3](.assets/dot3.png)
+### STARSHIP
+![sa](.assets/starship-airline.png)
 
 ## INSTALL
 
-```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/master/install.sh)"
-or
-git clonegit@github.com:Coordinate-Cat/dotfiles.git
-```
+`bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/master/install.sh)"`\
+or\
+`git clonegit@github.com:Coordinate-Cat/dotfiles.git`
 
 ## SYSTEM
 
 | System   | Details                | link                                                      |
-| :------- | :--------------------- | :-------------------------------------------------------- |
+|:---------|:-----------------------|:----------------------------------------------------------|
 | OS       | macOS                  |                                                           |
 | DE       | Aqua                   |                                                           |
 | WM       | Rectangle(yabai)       | [URL](https://github.com/rxhanson/Rectangle)              |
@@ -47,14 +50,15 @@ git clonegit@github.com:Coordinate-Cat/dotfiles.git
 
 ### Cargoism
 
+[Mar, 27, 2022]\
 [Mar, 25, 2022]
 
 | Old    | New      |
-| :----- | :------- |
+|:-------|:---------|
 | zsh    | nushell  |
 | p10k   | starship |
 | ls     | exa      |
-| top    | btop     |
+| htop   | btop     |
 | iterm2 | wezterm  |
 
 ### Update
@@ -63,8 +67,8 @@ git clonegit@github.com:Coordinate-Cat/dotfiles.git
 [Mar, 22, 2022]
 
 | Old        | New                     | DO or NOT | Details   | Status |
-| :--------- | :---------------------- | :-------: | :-------- | :----: |
-| zsh        | zushell                 |    DO     |           |  High  |
+|:-----------|:------------------------|:---------:|:----------|:------:|
+| zsh        | zsh + nushell           |  ~~DO~~   | testing   |  Done  |
 | .widget    | .rip                    |    DO     |           |  High  |
 | iterm2     | wezterm                 |    DO     |           |  High  |
 | Nerd Font  | Cica or Fira            |    DO     |           |  High  |
