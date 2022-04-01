@@ -31,9 +31,9 @@ format = "[$symbol$branch](bg:#252525)[ ](fg:#252525 bg:#6f6565 bold)"
 symbol = " "
 
 [shell]
-bash_indicator = "[](fg:#c4c431 bg:#6f6565) BASH-MODE [](fg:#6f6565)"
-zsh_indicator = "[ ](fg:#94b3a8 bg:#6f6565) ZSH-MODE [](fg:#6f6565)"
-nu_indicator = "[](fg:#fe6142 bg:#6f6565) NUSH-MODE [](fg:#6f6565)"
+bash_indicator = "[](fg:#c4c431 bg:#6f6565) [BASH-MODE](fg:#6f6565) [](fg:#6f6565)"
+zsh_indicator = "[ ](fg:#94b3a8 bg:#6f6565)[ ](fg:#94b3a8 bg:#6f6565)[ZSH-MODE](fg:#fff1cf bg:#94b3a8)[](fg:#94b3a8 bg:#6f6565)[](fg:#6f6565)"
+nu_indicator = "[ ](fg:#fe6142 bg:#6f6565)[](fg:#fe6142 bg:#6f6565)[NUSH-MODE](fg:#fff1cf bg:#fe6142)[](fg:#fe6142 bg:#6f6565)[](fg:#6f6565)"
 unknown_indicator = "[](fg:#fff1cf bg:#6f6565) ???-MODE [](fg:#6f6565)"
 style = "fg:#fff1cf bg:#6f6565"
 powershell_indicator = "_"
@@ -51,6 +51,6 @@ home_symbol = " ~"
 format = '([\[$all_status$ahead_behind\]](fg:#fff1cf bg:#6f6565)[ ](fg:#fff1cf bg:#6f6565))'
 
 [username]
-format = "[](fg:#252525 bold)[ ﯠ ](fg:#fff1cf bg:#252525 bold)[ ](fg:#6f6565 bg:#252525 bold)"
+format = "[](fg:#fff1cf bold)[ ](fg:#252525 bg:#fff1cf bold)[ ](fg:#fff1cf bg:#6f6565 bold)"
 show_always = true
 disabled = false
