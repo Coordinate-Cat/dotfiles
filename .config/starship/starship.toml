@@ -13,7 +13,7 @@ symbol = ""
 style = "fg:#252525 bg:#6f6565"
 
 [character]
-success_symbol = "[](bold green)"
+success_symbol = "[](bold cyan)"
 error_symbol = "[](bold red)"
 
 [time]
