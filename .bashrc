@@ -7,5 +7,18 @@ eval "$(starship init bash)"
 
 . "$HOME/.cargo/env"
 
+######[ shopt ]#################################################################
+shopt -s checkwinsize
+
+######[ alias ]#################################################################
+alias sb='source .bashrc'
+
+alias :b='bash'
+alias :z='zsh'
+alias :n='nu'
+
+######[ others ]################################################################
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 ###[ Fig post ]#################################################################
 eval "$(fig init bash post)"
