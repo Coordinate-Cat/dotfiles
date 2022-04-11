@@ -4,16 +4,19 @@
 ![markdown workflow](https://github.com/Coordinate-Cat/dotfiles/actions/workflows/.github/workflows/markdown.yml/badge.svg)
 
 ## APPEARANCE
-![dot1](.assets/dot1.png)
-![dot2](.assets/dot2.png)
-![dot3](.assets/dot3.png)
+
+![dot1](.assets/dot1.png) ![dot2](.assets/dot2.png) ![dot3](.assets/dot3.png)
+
 ### STARSHIP
-![sa](.assets/starship-airline.png)
+
+![sa](.assets/starship.gif)
 
 ## INSTALL
+
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/master/install.sh)"
 ```
+
 ```
 git clone git@github.com:Coordinate-Cat/dotfiles.git
 ```
@@ -21,7 +24,7 @@ git clone git@github.com:Coordinate-Cat/dotfiles.git
 ## SYSTEM
 
 | System    | Details                                                                       |
-|:----------|:------------------------------------------------------------------------------|
+| :-------- | :---------------------------------------------------------------------------- |
 | OS        | macOS                                                                         |
 | DE        | Aqua                                                                          |
 | WM        | Rectangle(yabai)                                                              |
@@ -58,12 +61,13 @@ Trend #1 & Upvote 1k\
 [Mar, 27, 2022]\
 [Mar, 25, 2022]
 
-| Old    | New      |
-|:-------|:---------|
-| zsh    | nushell  |
-| p10k   | starship |
-| ls     | exa      |
-| iterm2 | wezterm  |
+| Package name |
+| :----------- |
+| nushell      |
+| starship     |
+| exa          |
+| wezterm      |
+| gitui        |
 
 ### Update
 
@@ -72,7 +76,7 @@ Trend #1 & Upvote 1k\
 [Mar, 22, 2022]
 
 | Old        | New                     | DO or NOT | Details                            | Status |
-|:-----------|:------------------------|:---------:|:-----------------------------------|:------:|
+| :--------- | :---------------------- | :-------: | :--------------------------------- | :----: |
 | zsh        | zsh + nushell           |  ~~DO~~   | testing                            |  Done  |
 |            | add .shell              |    DO     | .shell>.bash, .zsh, .nush, .elvish |  Done  |
 | .widget    | .rip                    |    DO     | config file only                   |  High  |

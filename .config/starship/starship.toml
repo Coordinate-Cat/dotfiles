@@ -2,8 +2,8 @@ add_newline = false
 scan_timeout = 10
 
 format = """
-[┌](fg:#fff1cf)$username$directory$git_branch$git_status$duration$fill$time$shell$character
-[└>](fg:#fff1cf) """
+[┌](fg:#fff1cf)$username$directory$git_branch$fill$git_status$time$shell$character
+[└─>](fg:#fff1cf) """
 
 [line_break]
 disabled = false
@@ -16,24 +16,28 @@ style = "fg:#252525 bg:#6f6565"
 success_symbol = "[](bold cyan)"
 error_symbol = "[](bold red)"
 
+[battery]
+full_symbol = ""
+format = "[ $symbol$percentage ](fg:#fff1cf)"
+
+[[battery.display]]
+threshold = 100
+
 [time]
-format = '[  \[$time\] ](fg:#fff1cf bg:#6f6565)'
+format = '[\[$time\] ](fg:#fff1cf bg:#6f6565)'
 utc_time_offset = "local"
 time_format = "%T"
 disabled = false
 time_range = "-"
-
-[cmd_duration]
-format = "took [$duration]($style) "
 
 [git_branch]
 format = "[$symbol$branch](bg:#252525)[ ](fg:#252525 bg:#6f6565 bold)"
 symbol = " "
 
 [shell]
-bash_indicator = "[](fg:#c4c431 bg:#6f6565)[BASH-MODE](fg:#fff1cf bg:#c4c431)[](fg:#c4c431 bg:#6f6565)[ ](fg:#c4c431 bg:#6f6565)[](fg:#6f6565)"
-zsh_indicator = "[ ](fg:#94b3a8 bg:#6f6565)[ZSH-MODE](fg:#fff1cf bg:#94b3a8)[](fg:#94b3a8 bg:#6f6565)[ ](fg:#94b3a8 bg:#6f6565)[](fg:#6f6565)"
-nu_indicator = "[](fg:#fe6142 bg:#6f6565)[NUSH-MODE](fg:#fff1cf bg:#fe6142)[](fg:#fe6142 bg:#6f6565)[ ](fg:#fe6142 bg:#6f6565)[](fg:#6f6565)"
+bash_indicator = "[](fg:#c4c431 bg:#6f6565)[B-MODE](fg:#fff1cf bg:#c4c431)[](fg:#c4c431 bg:#6f6565)[  ](fg:#c4c431 bg:#6f6565)[](fg:#6f6565)"
+zsh_indicator = "[](fg:#94b3a8 bg:#6f6565)[Z-MODE](fg:#fff1cf bg:#94b3a8)[](fg:#94b3a8 bg:#6f6565)[  ](fg:#94b3a8 bg:#6f6565)[](fg:#6f6565)"
+nu_indicator = "[](fg:#fe6142 bg:#6f6565)[N-MODE](fg:#fff1cf bg:#fe6142)[](fg:#fe6142 bg:#6f6565)[  ](fg:#fe6142 bg:#6f6565)[](fg:#6f6565)"
 unknown_indicator = "[](fg:#fff1cf bg:#6f6565) ???-MODE [](fg:#6f6565)"
 style = "fg:#fff1cf bg:#6f6565"
 powershell_indicator = "_"
