@@ -58,12 +58,11 @@ Trend #1 & Upvote 1k\
 [Mar, 27, 2022]\
 [Mar, 25, 2022]
 
-| Old    | New      |
-|:-------|:---------|
-| zsh    | nushell  |
-| p10k   | starship |
-| ls     | exa      |
-| iterm2 | wezterm  |
+- nushell
+- starship
+- exa
+- wezterm
+- gitui
 
 ### Update
 
@@ -71,17 +70,18 @@ Trend #1 & Upvote 1k\
 [Mar, 25, 2022]\
 [Mar, 22, 2022]
 
-| Old        | New                     | DO or NOT | Details                            | Status |
-|:-----------|:------------------------|:---------:|:-----------------------------------|:------:|
-| zsh        | zsh + nushell           |  ~~DO~~   | testing                            |  Done  |
-|            | add .shell              |    DO     | .shell>.bash, .zsh, .nush, .elvish |  Done  |
-| .widget    | .rip                    |    DO     | config file only                   |  High  |
-| iterm2     | wezterm                 |    DO     |                                    |  High  |
-| Nerd Font  | Cica or Fira            |    DO     |                                    |  High  |
-| ~~p10k~~   | ~~Starship~~            |  ~~DO~~   |                                    |  Done  |
-| install.sh | world.sh                |    DO     |                                    | Middle |
-|            | macos defaults cmd      |    DO     |                                    |  High  |
-|            | .analysis graph gh-page |    DO     | Chart.js?                          |  Low   |
+| TODO                    | DO or NOT | Details                            | Status |
+|:------------------------|:---------:|:-----------------------------------|:------:|
+| zsh + nushell           |  ~~DO~~   | testing                            |  Done  |
+| add .shell              |    DO     | .shell>.bash, .zsh, .nush, .elvish |  Done  |
+| .rip                    |    DO     | config file only                   |  High  |
+| wezterm                 |    DO     |                                    |  High  |
+| Cica or Fira            |    DO     |                                    |  High  |
+| ~~Starship~~            |  ~~DO~~   |                                    |  Done  |
+| world.sh                |    DO     |                                    | Middle |
+| macos defaults cmd      |    DO     |                                    |  High  |
+| .analysis graph gh-page |    DO     | Chart.js?                          |  Low   |
+| gitui bad credentials   |    DO     |                                    |  Low   |
 
 ## CONTRIBUTORS
 
