@@ -11,6 +11,16 @@ eval "$(starship init bash)"
 ######[ shopt ]#################################################################
 shopt -s checkwinsize
 
+######[ alias ]#################################################################
+alias sb='source .bashrc'
+
+alias :b='bash'
+alias :z='zsh'
+alias :n='nu'
+
+######[ others ]################################################################
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 ###[ Fig post ]#################################################################
 # Fig post block. Keep at the bottom of this file.
 eval "$(fig init bash post)"
