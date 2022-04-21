@@ -1,5 +1,5 @@
 export DOT="$HOME/dotfiles"
-export ZSH_DIR="$DOT/.zsh"
+export ZSH_DIR="$DOT/.shell/.zsh"
 export BUNDLE_DIR="$DOT/.bundle"
 export GITHUB_DIR="$DOT/.github"
 export ALIASES_ZSH_DIR="$DOT/.aliases/zsh"
