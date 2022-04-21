@@ -60,12 +60,12 @@
 
   // ###[ gitlens ]#############################################################
   "gitlens.blame.format": "${message|15?} ${agoOrDate|14-}",
-  "window.titleBarStyle": "native",
 
   // ###[ customizeUI ]#########################################################
   "customizeUI.titleBar": "inline",
   "customizeUI.activityBar": "regular",
   "customizeUI.stylesheet": {
+    ".container > .title": "display: none !important",
     ".monaco-action-bar .actions-container": "height:36px; !important",
     ".monaco-workbench .part.editor>.content .editor-group-container>.title>.tabs-and-actions-container": "height: 36px; cursor: pointer;",
     ".monaco-workbench .part.editor>.content .editor-group-container>.title .tabs-container>.tab>.tab-actions": "margin: 0; height: 36px; cursor: pointer !important;",
@@ -125,5 +125,6 @@
   "window.zoomLevel": -1,
   "breadcrumbs.enabled": false,
   "gitlens.defaultGravatarsStyle": "retro",
+  "window.titleBarStyle": "native",
   // ###[ END setting.json ]####################################################
 }

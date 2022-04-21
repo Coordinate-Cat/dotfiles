@@ -1,6 +1,7 @@
+###[ Fig pre ]##################################################################
 # Fig pre block. Keep at the top of this file.
 . "$HOME/.fig/shell/zshrc.pre.zsh"
-###[ Fig pre ]##################################################################
+
 ###[ ZSH source ]###############################################################
 if [ -d $ZSH_DIR ] && [ -r $ZSH_DIR ] && [ -x $ZSH_DIR ]; then
     for file in ${ZSH_DIR}/**/*.zsh; do
@@ -20,6 +21,5 @@ fi
 eval "$(starship init zsh)"
 
 ###[ Fig post ]#################################################################
-
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"

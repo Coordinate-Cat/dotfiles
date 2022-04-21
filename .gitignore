@@ -13,6 +13,6 @@
 *.env
 *tags
 
-.zsh/secret.zsh
+.shell/.zsh/secret.zsh
 .analysis/tokei.yaml
 # .aliases
