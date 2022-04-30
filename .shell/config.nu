@@ -35,7 +35,7 @@ let-env NU_PLUGIN_DIRS = [
 ]
 
 ###[ alias ]####################################################################
-source ~/dotfiles/.nushell/aliases/alias.nu
+source ~/dotfiles/.aliases/nushell/alias.nu
 
 ###[ completions ]##############################################################
 module completions {

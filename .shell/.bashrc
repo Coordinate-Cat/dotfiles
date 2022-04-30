@@ -15,6 +15,10 @@ alias sb='source .bashrc'
 alias :b='bash'
 alias :z='zsh'
 alias :n='nu'
+alias :f='fish'
+alias :e='elvish'
+alias :t='tcsh'
+alias :x='xonsh'
 
 ######[ others ]################################################################
 export BASH_SILENCE_DEPRECATION_WARNING=1

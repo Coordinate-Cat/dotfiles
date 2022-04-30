@@ -35,12 +35,14 @@ format = "[$symbol$branch](bg:#252525)[ ](fg:#252525 bg:#6f6565 bold)"
 symbol = " "
 
 [shell]
-bash_indicator = "[](fg:#c4c431 bg:#6f6565)[B-MODE](fg:#fff1cf bg:#c4c431)[](fg:#c4c431 bg:#6f6565)[  ](fg:#c4c431 bg:#6f6565)[](fg:#6f6565)"
-zsh_indicator = "[](fg:#94b3a8 bg:#6f6565)[Z-MODE](fg:#fff1cf bg:#94b3a8)[](fg:#94b3a8 bg:#6f6565)[  ](fg:#94b3a8 bg:#6f6565)[](fg:#6f6565)"
-nu_indicator = "[](fg:#fe6142 bg:#6f6565)[N-MODE](fg:#fff1cf bg:#fe6142)[](fg:#fe6142 bg:#6f6565)[  ](fg:#fe6142 bg:#6f6565)[](fg:#6f6565)"
-unknown_indicator = "[](fg:#fff1cf bg:#6f6565) ???-MODE [](fg:#6f6565)"
+bash_indicator = "[](fg:#c4c431 bg:#6f6565)[BSH-MODE](fg:#fff1cf bg:#c4c431)[](fg:#c4c431 bg:#6f6565)[  ](fg:#c4c431 bg:#6f6565)[](fg:#6f6565)"
+zsh_indicator = "[](fg:#94b3a8 bg:#6f6565)[ZSH-MODE](fg:#fff1cf bg:#94b3a8)[](fg:#94b3a8 bg:#6f6565)[  ](fg:#94b3a8 bg:#6f6565)[](fg:#6f6565)"
+nu_indicator = "[](fg:#fe6142 bg:#6f6565)[NSH-MODE](fg:#fff1cf bg:#fe6142)[](fg:#fe6142 bg:#6f6565)[  ](fg:#fe6142 bg:#6f6565)[](fg:#6f6565)"
+fish_indicator = "[](fg:#5442f5 bg:#6f6565)[FSH-MODE](fg:#fff1cf bg:#5442f5)[](fg:#5442f5 bg:#6f6565)[  ](fg:#5442f5 bg:#6f6565)[](fg:#6f6565)"
+elvish_indicator = "[](fg:#a742f5 bg:#6f6565)[ESH-MODE](fg:#fff1cf bg:#a742f5)[](fg:#a742f5 bg:#6f6565)[  ](fg:#a742f5 bg:#6f6565)[](fg:#6f6565)"
+xonsh_indicator = "[](fg:#70ff24 bg:#6f6565)[XSH-MODE](fg:#fff1cf bg:#70ff24)[](fg:#70ff24 bg:#6f6565)[  ](fg:#70ff24 bg:#6f6565)[](fg:#6f6565)"
+unknown_indicator = "[](fg:#fff1cf bg:#6f6565)[???-MODE][](fg:#6f6565)"
 style = "fg:#fff1cf bg:#6f6565"
-powershell_indicator = "_"
 disabled = false
 
 [directory]

@@ -5,7 +5,7 @@
   "workbench.tree.indent": 10,
   "workbench.editor.tabSizing": "fit",
   "workbench.colorCustomizations": {},
-  "workbench.colorTheme": "Gruvbox Material Dark",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.tree.renderIndentGuides": "always",
   "workbench.iconTheme": "gruvbox-material-icon-theme",
@@ -97,7 +97,8 @@
     "plaintext": false,
     "markdown": false,
     "rust": true,
-    "javascript": true
+    "javascript": true,
+    "xonsh": false
   },
   "todo-tree.general.tags": [
     "[ ]",
