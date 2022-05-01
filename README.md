@@ -11,6 +11,8 @@
 
 ![sa](.assets/starship.gif)
 
+[multiple-shell-mode-system](https://github.com/Coordinate-Cat/multiple-shell-mode-system)
+
 ## INSTALL
 
 ```
