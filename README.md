@@ -5,18 +5,29 @@
 
 ## APPEARANCE
 
-![dot1](.assets/dot1.png) ![dot2](.assets/dot2.png) ![dot3](.assets/dot3.png)
+|Appearance1|
+|:-:|
+|![dot1](.assets/dot1.png)|
 
-### STARSHIP
+|Appearance2|
+|:-:|
+|![dot2](.assets/dot2.png)|
 
-![sa](.assets/starship.gif)
+|Appearance3|
+|:-:|
+|![dot3](.assets/dot3.png)|
+
+#### STARSHIP
+
+|Appearance4|
+|:-:|
+|![sa](.assets/starship.gif)|
 
 ## INSTALL
 
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/master/install.sh)"
 ```
-
 ```
 git clone git@github.com:Coordinate-Cat/dotfiles.git
 ```
@@ -29,11 +40,11 @@ git clone git@github.com:Coordinate-Cat/dotfiles.git
 | DE        | Aqua                                                                          |
 | WM        | Rectangle(yabai)                                                              |
 | Font      | Hack Nerd Font                                                                |
-| Shell     | Zsh + Nushell                                                                 |
+| Shell     | Bash, Zsh, Fish, Nushell, Elvish, Xonsh                                       |
 | Theme     | Gruvbox                                                                       |
 | Prompt    | Starship                                                                      |
 | MenuBar   | Übersicht(simeple-bar)                                                        |
-| Terminal  | iTerm2 or wezterm                                                             |
+| Terminal  | iTerm2                                                                        |
 | Wallpaper | [URL](https://github.com/FrenzyExists/wallpapers/blob/main/Gruv/platform.jpg) |
 
 ## BUNDLE
@@ -53,38 +64,6 @@ git clone git@github.com:Coordinate-Cat/dotfiles.git
 Trend #1 & Upvote 1k\
 [[Aqua] macOS Customize Gruvbox](https://www.reddit.com/r/unixporn/comments/tpg3rs/aqua_macos_customize_gruvbox)
 ![reddit](.assets/reddit.jpg)
-
-## PROGRESS
-
-### Rustism
-
-[Mar, 27, 2022]\
-[Mar, 25, 2022]
-
-- nushell
-- starship
-- exa
-- wezterm
-- gitui
-
-### Update
-
-[Mar, 27, 2022]\
-[Mar, 25, 2022]\
-[Mar, 22, 2022]
-
-| TODO                    | DO or NOT | Details                            | Status |
-|:------------------------|:---------:|:-----------------------------------|:------:|
-| zsh + nushell           |  ~~DO~~   | testing                            |  Done  |
-| add .shell              |    DO     | .shell>.bash, .zsh, .nush, .elvish |  Done  |
-| .rip                    |    DO     | config file only                   |  High  |
-| wezterm                 |    DO     |                                    |  High  |
-| Cica or Fira            |    DO     |                                    |  High  |
-| ~~Starship~~            |  ~~DO~~   |                                    |  Done  |
-| world.sh                |    DO     |                                    | Middle |
-| macos defaults cmd      |    DO     |                                    |  High  |
-| .analysis graph gh-page |    DO     | Chart.js?                          |  Low   |
-| gitui bad credentials   |    DO     |                                    |  Low   |
 
 ## CONTRIBUTORS
 

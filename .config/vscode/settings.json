@@ -98,7 +98,8 @@
     "markdown": false,
     "rust": true,
     "javascript": true,
-    "xonsh": false
+    "xonsh": false,
+    "astro": false
   },
   "todo-tree.general.tags": [
     "[ ]",
@@ -123,9 +124,11 @@
     }
   ],
   "redhat.telemetry.enabled": true,
-  "window.zoomLevel": -1,
+  "window.zoomLevel": -2,
   "breadcrumbs.enabled": false,
   "gitlens.defaultGravatarsStyle": "retro",
   "window.titleBarStyle": "native",
+  "markdownTablePrettify.columnPadding": 2,
+  "markdown.extension.tableFormatter.enabled": false,
   // ###[ END setting.json ]####################################################
 }

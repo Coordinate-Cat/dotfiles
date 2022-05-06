@@ -1,0 +1,1 @@
+alias ls = ls -la

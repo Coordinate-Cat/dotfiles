@@ -2,8 +2,7 @@ add_newline = false
 scan_timeout = 10
 
 format = """
-[┌](fg:#fff1cf)$username$directory$git_branch$fill$git_status$time$shell$character
-[└─>](fg:#fff1cf) """
+(fg:#fff1cf)$username$directory$git_branch$git_status$time$shell$character"""
 
 [line_break]
 disabled = false

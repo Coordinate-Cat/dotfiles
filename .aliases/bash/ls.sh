@@ -1,4 +1,4 @@
-# alias ls='exa -la'
+alias ls='clear && exa -la'
 alias ls1='clear && exa -1'
 alias lsa='clear && exa -a'
 alias lsh='clear && exa -h'

@@ -9,16 +9,10 @@ eval "$(starship init bash)"
 ######[ shopt ]#################################################################
 shopt -s checkwinsize
 
-######[ alias ]#################################################################
-alias sb='source .bashrc'
-
-alias :b='bash'
-alias :z='zsh'
-alias :n='nu'
-alias :f='fish'
-alias :e='elvish'
-alias :t='tcsh'
-alias :x='xonsh'
+######[ source ]#################################################################
+source ~/dotfiles/.aliases/bash/ls.sh
+source ~/dotfiles/.aliases/bash/shell.sh
+source ~/dotfiles/.aliases/bash/source.sh
 
 ######[ others ]################################################################
 export BASH_SILENCE_DEPRECATION_WARNING=1
