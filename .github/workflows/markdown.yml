@@ -12,5 +12,5 @@ jobs:
         use-quiet-mode: 'yes'
         use-verbose-mode: 'yes'
         # config-file: 'mlc_config.json'
-        file-path: './README.md, ./REFERENCES.md, ./CODE_OF_CONDUCT.md'
+        file-path: './README.md, ./CODE_OF_CONDUCT.md'
         max-depth: 2

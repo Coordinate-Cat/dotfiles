@@ -5,25 +5,33 @@
 
 ## APPEARANCE
 
-|Appearance1|
+|[Appearance1](https://github.com/Coordinate-Cat/dotfiles/blob/master/.assets/dot1.png)|
 |:-:|
 |![dot1](.assets/dot1.png)|
 
-|Appearance2|
+|[Appearance2](https://github.com/Coordinate-Cat/dotfiles/blob/master/.assets/dot2.png)|
 |:-:|
 |![dot2](.assets/dot2.png)|
 
-|Appearance3|
+|[Appearance3](https://github.com/Coordinate-Cat/dotfiles/blob/master/.assets/dot3.png)|
 |:-:|
 |![dot3](.assets/dot3.png)|
 
-#### STARSHIP
+### STARSHIP
 
-|Appearance4|
+|[multiple-shell-mode-system](https://github.com/Coordinate-Cat/multiple-shell-mode-system)|
 |:-:|
 |![sa](.assets/starship.gif)|
 
-[multiple-shell-mode-system](https://github.com/Coordinate-Cat/multiple-shell-mode-system)
+### DESKTOP
+
+<div align="center">
+  
+|[macOS-customize-sideLinks](https://github.com/Coordinate-Cat/macOS-customize-sideLinks)|[macOS-customize-Dock](https://github.com/Coordinate-Cat/macOS-customize-Dock)|[macOS-customize-Search](https://github.com/Coordinate-Cat/macOS-customize-Search)|
+|:-:|:-:|:-:|
+|<img width="220" alt="🦑" src="https://user-images.githubusercontent.com/42393004/167230715-85f5c8ba-d880-44f3-bfce-a937aa407682.png">|<img width="220" alt="🦑" src="https://user-images.githubusercontent.com/42393004/167231095-291c3d60-7b95-4508-9185-c15b9e22b408.jpg">|<img width="220" alt="🦑" src="https://user-images.githubusercontent.com/42393004/167231095-291c3d60-7b95-4508-9185-c15b9e22b408.jpg">|
+  
+</div>
 
 ## INSTALL
 
