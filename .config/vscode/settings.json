@@ -99,7 +99,8 @@
     "rust": true,
     "javascript": true,
     "xonsh": false,
-    "astro": false
+    "astro": false,
+    "javascriptreact": false
   },
   "todo-tree.general.tags": [
     "[ ]",
@@ -124,7 +125,7 @@
     }
   ],
   "redhat.telemetry.enabled": true,
-  "window.zoomLevel": -2,
+  "window.zoomLevel": -1,
   "breadcrumbs.enabled": false,
   "gitlens.defaultGravatarsStyle": "retro",
   "window.titleBarStyle": "native",
