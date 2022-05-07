@@ -49,6 +49,11 @@ git clone git@github.com:Coordinate-Cat/dotfiles.git
 | Terminal  | iTerm2                                                                        |
 | Wallpaper | [URL](https://github.com/FrenzyExists/wallpapers/blob/main/Gruv/platform.jpg) |
 
+## DESKTOP
+[macOS-customize-sideLinks](https://github.com/Coordinate-Cat/macOS-customize-sideLinks)
+[macOS-customize-Dock](https://github.com/Coordinate-Cat/macOS-customize-Dock)
+[macOS-customize-Search](https://github.com/Coordinate-Cat/macOS-customize-Search)
+
 ## BUNDLE
 
 [dotfiles/.bundle](https://github.com/Coordinate-Cat/dotfiles/tree/master/.bundle)
