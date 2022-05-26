@@ -61,6 +61,10 @@ git clone git@github.com:Coordinate-Cat/dotfiles.git
 
 [dotfiles/.bundle](https://github.com/Coordinate-Cat/dotfiles/tree/master/.bundle)
 
+## RAYCAST
+
+[raycast/Coordinate-Cat](https://www.raycast.com/Coordinate-Cat)
+
 ## LICENSE
 
 [WTFPL](https://github.com/Coordinate-Cat/dotfiles/blob/master/LICENSE)
