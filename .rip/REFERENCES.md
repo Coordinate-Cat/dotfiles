@@ -1,7 +1,6 @@
 # References
 ## Articles
 - [ようこそdotfilesの世界へ - Qiita](https://qiita.com/yutkat/items/c6c7584d9795799ee164)
-- [最強のdotfiles駆動開発とGitHubで管理する運用方法](https://qiita.com/b4b4r07/items/b70178e021bef12cd4a2)
 - [【初心者版】必要最小限のdotfilesを運用する - Qiita](https://qiita.com/ganyariya/items/d9adffc6535dfca6784b)
 - [dotfilesの管理を楽にする話](https://zenn.dev/tkomatsu/articles/d7d089acd29cfa4d57b4)
 - [Custom Neofetch ASCII Art -- λ ryan. himmelwright. net](https://ryan.himmelwright.net/post/custom-neofetch-ascii-art/)
