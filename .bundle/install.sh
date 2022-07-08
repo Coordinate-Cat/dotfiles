@@ -17,9 +17,9 @@ rustc --version
 
 ###[ Cargo ]####################################################################
 cargo --version
-cargo install $(cat ${BUNDLE}/Cargofile)
+cargo install $(cat ${BUNDLE_DIR}/Cargofile)
 
 ###[ Vscode ]###################################################################
-for vsc in $(cat ${BUNDLE}/Vscfile); do
+for vsc in $(cat ${BUNDLE_DIR}/Vscfile); do
     code --install-extension $vsc
 done
