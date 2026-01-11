@@ -1,0 +1,77 @@
+{
+  "name": "@ocat/dotfiles",
+  "version": "1.0.0",
+  "description": "macOS dotfiles with multiple shell mode system",
+  "author": "ocat",
+  "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Coordinate-Cat/dotfiles.git"
+  },
+  "keywords": [
+    "dotfiles",
+    "macos",
+    "shell",
+    "zsh",
+    "bash",
+    "starship",
+    "homebrew"
+  ],
+  "scripts": {
+    "doctor": "./doctor.sh",
+    "doctor:fix": "./doctor.sh --fix",
+    "doctor:dry-run": "./doctor.sh --dry-run",
+    "validate": "./.shell/validate.sh",
+    "install": "./install.sh",
+    "bootstrap": "./bootstrap.sh",
+    "install:bundle": "./.bundle/install.sh",
+    "install:cargo": "./.bundle/cargo-install.sh",
+    "setup": "npm run install && npm run install:bundle",
+    "bootstrap-full": "chmod +x ./bootstrap.sh && ./bootstrap.sh",
+    "test:bootstrap": "chmod +x ./test-bootstrap.sh && ./test-bootstrap.sh",
+    "test:dry-run": "chmod +x ./test-bootstrap.sh && ./test-bootstrap.sh --dry-run",
+    "setup:minimal": "npm run install && npm run install:cargo",
+    "health": "npm run doctor && npm run validate",
+    "update": "git pull && npm run install:bundle",
+    "update:cargo": "npm run install:cargo",
+    "backup": "tar -czf ~/dotfiles-backup-$(date +%Y%m%d-%H%M%S).tar.gz -C ~ .zshrc .zshenv .vimrc .gitconfig 2>/dev/null || echo 'Backup completed with some warnings'",
+    "clean": "brew cleanup && cargo cache -a && find . -name '*.log' -type f -delete && find . -name '*.tmp' -type f -delete && find . -name '.DS_Store' -type f -delete",
+    "test": "act -j setup",
+    "test:markdown": "act -j markdown",
+    "lint": "shellcheck ./**/*.sh || echo 'Install shellcheck for better linting'",
+    "status": "git status && echo '---' && npm run health",
+    "info": "echo 'Dotfiles Info:' && git log --oneline -5 && echo '---' && brew --version && cargo --version 2>/dev/null || echo 'cargo not available'",
+    "shell:zsh": "exec zsh",
+    "shell:bash": "exec bash",
+    "aliases:zsh": "find ./.aliases/zsh -name '*.zsh' -exec basename {} .zsh \\; | sort",
+    "modules:zsh": "find ./.shell/.zsh -name '*.zsh' -exec basename {} .zsh \\; | sort",
+    "cargo:list": "cargo install --list | grep '^[a-z]' | sort",
+    "brew:list": "brew list --formula | head -20",
+    "symlinks": "find ~ -maxdepth 1 -type l -ls | grep dotfiles || echo 'No dotfiles symlinks found'",
+    "watch": "fswatch -o . | xargs -n1 -I{} npm run validate",
+    "serve:docs": "python3 -m http.server 8000 -d . || echo 'Start a simple HTTP server to serve documentation'",
+    "docs": "open usage.md || cat usage.md",
+    "benchmark": "hyperfine 'zsh -i -c exit' 'bash -i -c exit' 2>/dev/null || echo 'Install hyperfine for shell benchmarking'"
+  },
+  "config": {
+    "shell_paths": {
+      "zsh": "/bin/zsh",
+      "bash": "/bin/bash"
+    },
+    "dotfiles_dir": "~/dotfiles",
+    "backup_dir": "~/"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "os": ["darwin"],
+  "devDependencies": {
+    "act": "For GitHub Actions local testing",
+    "shellcheck": "For shell script linting",
+    "hyperfine": "For performance benchmarking"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Coordinate-Cat"
+  }
+}

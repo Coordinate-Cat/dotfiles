@@ -1,88 +1,176 @@
-# DOTFILES
+# dotfiles
 
-![setup workflow](https://github.com/Coordinate-Cat/dotfiles/actions/workflows/.github/workflows/setup.yml/badge.svg)
-![markdown workflow](https://github.com/Coordinate-Cat/dotfiles/actions/workflows/.github/workflows/markdown.yml/badge.svg)
+macOS dotfiles with complete environment automation and multi-shell support
 
-## APPEARANCE
+## Quick Start
 
-|[Appearance1](https://github.com/Coordinate-Cat/dotfiles/blob/master/.assets/dot1.png)|
-|:-:|
-|![dot1](.assets/dot1.png)|
+### One-Command Complete Setup
 
-|[Appearance2](https://github.com/Coordinate-Cat/dotfiles/blob/master/.assets/dot2.png)|
-|:-:|
-|![dot2](.assets/dot2.png)|
+For complete automation on a new Mac:
 
-|[Appearance3](https://github.com/Coordinate-Cat/dotfiles/blob/master/.assets/dot3.png)|
-|:-:|
-|![dot3](.assets/dot3.png)|
-
-### STARSHIP
-
-|[multiple-shell-mode-system](https://github.com/Coordinate-Cat/multiple-shell-mode-system)|
-|:-:|
-|![sa](.assets/starship.gif)|
-
-### DESKTOP
-
-<div align="center">
-  
-|[macOS-customize-sideLinks](https://github.com/Coordinate-Cat/macOS-customize-sideLinks)|[macOS-customize-Dock](https://github.com/Coordinate-Cat/macOS-customize-Dock)|[macOS-customize-Search](https://github.com/Coordinate-Cat/macOS-customize-Search)|
-|:-:|:-:|:-:|
-|<img width="220" alt="🦑" src="https://user-images.githubusercontent.com/42393004/167230715-85f5c8ba-d880-44f3-bfce-a937aa407682.png">|<img width="220" alt="🦑" src="https://user-images.githubusercontent.com/42393004/167231095-291c3d60-7b95-4508-9185-c15b9e22b408.jpg">|<img width="220" alt="🦑" src="https://user-images.githubusercontent.com/42393004/167231095-291c3d60-7b95-4508-9185-c15b9e22b408.jpg">|
-  
-</div>
-
-## INSTALL
-
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/master/bootstrap.sh)"
 ```
+
+This single command installs and configures:
+- Xcode Command Line Tools
+- Homebrew with 30+ packages
+- Rust toolchain with 8 CLI tools
+- VS Code with 117 extensions
+- SSH keys and Git configuration
+- macOS system preferences
+- App Store applications
+- Multi-shell environment (6 shells)
+
+### Safe Testing
+
+Preview installation without changes:
+
+```bash
+# Clone first to test safely
+git clone https://github.com/Coordinate-Cat/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+
+# Dry run (shows what would be installed)
+npm run test:dry-run
+
+# Test with backup/rollback capability
+./test-bootstrap.sh --test
+```
+
+### Alternative Installation
+
+Minimal dotfiles-only setup:
+
+```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/master/install.sh)"
-```
-```
-git clone git@github.com:Coordinate-Cat/dotfiles.git
+cd ~/dotfiles && npm run setup
 ```
 
-## SYSTEM
+## Key Features
 
-| System    | Details                                                                       |
-| :-------- | :---------------------------------------------------------------------------- |
-| OS        | macOS                                                                         |
-| DE        | Aqua                                                                          |
-| WM        | Rectangle(yabai)                                                              |
-| Font      | Hack Nerd Font                                                                |
-| Shell     | Bash, Zsh, Fish, Nushell, Elvish, Xonsh                                       |
-| Theme     | Gruvbox                                                                       |
-| Prompt    | Starship                                                                      |
-| MenuBar   | Übersicht(simeple-bar)                                                        |
-| Terminal  | iTerm2                                                                        |
-| Wallpaper | [URL](https://github.com/FrenzyExists/wallpapers/blob/main/Gruv/platform.jpg) |
+### Complete Automation
+- Zero-configuration setup for new macOS systems
+- Automatic package management across multiple systems
+- SSH key generation and GitHub integration
+- macOS system preference configuration
+- Backup and rollback capabilities for safe testing
 
-## BUNDLE
+### Multi-Shell Environment
+Support for 6 shells with unified configuration:
+- **Zsh** (primary) - ZSH-MODE with Zinit plugin manager
+- **Bash** - BSH-MODE with custom configurations
+- **Nushell** - NSH-MODE modern shell
+- **Fish** - FSH-MODE friendly shell
+- **Elvish** - ESH-MODE with advanced features
+- **Xonsh** - XSH-MODE Python-based shell
 
-[dotfiles/.bundle](https://github.com/Coordinate-Cat/dotfiles/tree/master/.bundle)
+Each shell displays unique color-coded indicators in Starship prompt.
 
-## RAYCAST
+### Package Ecosystem
+- **Homebrew**: 30+ formulas and casks (development tools, applications)
+- **Cargo**: 8 Rust CLI tools (nu, ripgrep, exa, starship, etc.)
+- **npm**: Node.js development packages
+- **VS Code**: 117 extensions (themes, linters, formatters, productivity)
+- **App Store**: Essential applications (Xcode, utilities)
 
-[raycast/Coordinate-Cat](https://www.raycast.com/Coordinate-Cat)
+### Unified Theme System
+- **Visual Theme**: Gruvbox dark across all applications
+- **Terminal**: iTerm2 with Starship prompt
+- **Editors**: Vim, VS Code with consistent theming
+- **Window Management**: yabai tiling manager + Rectangle
+- **Typography**: Hack Nerd Font with icon support
 
-## LICENSE
+## Common Commands
 
-[WTFPL](https://github.com/Coordinate-Cat/dotfiles/blob/master/LICENSE)
+### Installation and Setup
+```bash
+npm run bootstrap-full    # Complete automated installation
+npm run setup            # Install packages only
+npm run install:bundle   # Install from package manifests
+```
 
-## CODE OF CONDUCT
+### Testing and Safety
+```bash
+npm run test:dry-run      # Preview installation safely
+npm run test:bootstrap    # Test with backup capability
+npm run doctor           # Comprehensive health check
+npm run doctor:fix       # Auto-fix detected issues
+```
 
-[Contributor Covenant Code of Conduct](https://github.com/Coordinate-Cat/dotfiles/blob/master/CODE_OF_CONDUCT.md)
+### Maintenance
+```bash
+npm run update           # Update all packages
+npm run clean            # Clean temporary files and caches
+npm run backup           # Create configuration backup
+npm run health           # Check system health
+```
 
-## REDDIT
+### Information
+```bash
+npm run status           # Git status and health overview
+npm run symlinks         # Show dotfiles symlinks
+npm run docs             # View documentation
+```
 
-Trend #1 & Upvote 1k\
-[[Aqua] macOS Customize Gruvbox](https://www.reddit.com/r/unixporn/comments/tpg3rs/aqua_macos_customize_gruvbox)
-![reddit](.assets/reddit.jpg)
+## Repository Structure
 
-## CONTRIBUTORS
+```
+~/dotfiles/
+├── .shell/              # Multi-shell configurations
+│   ├── .zsh/           # Modular Zsh configs (6 files)
+│   ├── .bashrc         # Bash configuration
+│   ├── config.nu       # Nushell configuration
+│   ├── config.fish     # Fish shell configuration
+│   └── rc.elv          # Elvish configuration
+├── .config/            # Application configurations
+│   ├── starship/       # Shell prompt with mode indicators
+│   ├── iterm2/         # Terminal settings
+│   ├── vscode/         # Editor configuration
+│   └── superfile/      # File manager (ayu-dark theme)
+├── .aliases/           # Shell-specific aliases (organized by category)
+│   ├── zsh/            # 19 Zsh alias files
+│   ├── bash/           # Bash aliases
+│   └── nushell/        # Modern shell aliases
+├── .bundle/            # Package management manifests
+│   ├── Brewfile        # Homebrew packages and casks
+│   ├── Cargofile       # Rust CLI tools
+│   ├── Vscfile         # VS Code extensions (117)
+│   └── install.sh      # Bundle installation script
+├── bootstrap.sh        # Complete automation script
+├── test-bootstrap.sh   # Safe testing with backup/rollback
+├── doctor.sh          # Health check and diagnostics
+├── install.sh         # Basic dotfiles installation
+├── package.json       # npm scripts (25+ commands)
+└── usage.md           # Comprehensive documentation
+```
 
-<a href="https://github.com/Coordinate-Cat/dotfiles/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=Coordinate-Cat/dotfiles" />
-</a>
+## Documentation
 
-Made with [contributors-img](https://contributors-img.web.app).
+- **README.md** - Quick start and overview (this file)
+- **usage.md** - Complete usage guide and reference
+- **CLAUDE.md** - Claude Code integration settings
+
+Access documentation:
+```bash
+npm run docs           # Open usage.md
+```
+
+## Requirements
+
+- **macOS**: 10.15 (Catalina) or later
+- **Network**: Internet connection for downloads
+- **Account**: GitHub account (for SSH key setup)
+- **Privileges**: Administrator access (for system preferences)
+
+## Safety and Testing
+
+This repository includes comprehensive testing capabilities:
+- **Dry run mode**: Preview all changes before execution
+- **Automatic backup**: System state preservation during testing
+- **Complete rollback**: Restore to pre-installation state
+- **Health monitoring**: Continuous system validation
+
+## License
+
+WTFPL (DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE) - see LICENSE file for details

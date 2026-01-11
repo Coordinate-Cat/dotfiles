@@ -13,6 +13,29 @@
 *.env
 *tags
 
+# Editor temporary files
+*.swp
+*.swo
+*~
+.vscode/settings.json
+
+# Vim temporary files
+*.tmp
+Session.vim
+
+# macOS
+.Spotlight-V100
+.Trashes
+
+# Node.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Rust
+target/
+Cargo.lock
+
 .shell/.zsh/secret.zsh
 .analysis/tokei.yaml
 # .aliases

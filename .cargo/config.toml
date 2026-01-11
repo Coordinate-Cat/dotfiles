@@ -1,0 +1,16 @@
+[build]
+# Use all available CPU cores for compilation
+jobs = 0
+
+[term]
+# Enable colored output
+color = "always"
+
+[net]
+# Retry configuration
+retry = 2
+git-fetch-with-cli = true
+
+[target.x86_64-apple-darwin]
+# macOS specific optimizations
+rustflags = ["-C", "link-arg=-Wl,-undefined,dynamic_lookup"]
