@@ -1,1 +1,0 @@
-alias bench='zsh $DOT/.github/benchmark.sh'

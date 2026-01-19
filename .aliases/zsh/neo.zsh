@@ -1,5 +1,0 @@
-alias neo1='clear && neofetch --iterm2 /Users/ocat/dotfiles/.config/neofetch/darkarmy.jpg'
-alias neo2='clear && neofetch --jp2a /Users/ocat/dotfiles/.config/neofetch/darkarmy.jpg'
-alias neo3='clear && neofetch --caca /Users/ocat/dotfiles/.config/neofetch/darkarmy.jpg'
-alias neo4='clear && neofetch --jp2a /Users/ocat/dotfiles/.assets/darkarmy.jpg'
-alias neo5='clear && neofetch --source /Users/ocat/dotfiles/.config/neofetch/pepe.txt'

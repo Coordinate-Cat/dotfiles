@@ -5,7 +5,7 @@
 
 set -euo pipefail
 
-DOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 ISSUES=()
 FIXES_APPLIED=()
 DRY_RUN=false

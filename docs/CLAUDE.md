@@ -12,7 +12,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is a macOS-focused dotfiles repository featuring a **dual shell system** with Bash and Zsh configurations, managed with visual indicators in the Starship prompt. The repository manages comprehensive system configuration including shell configs, application settings, and automated package installation.
+This is a macOS-focused dotfiles repository featuring a **Zsh-centered configuration system** with modular shell setup, managed with visual indicators in the Starship prompt. The repository manages comprehensive system configuration including shell configs, application settings, automated package installation, and unified alias management.
 
 ## Common Commands
 
@@ -27,7 +27,7 @@ cd $HOME/dotfiles/.bundle
 ./install.sh
 ```
 
-The bundle installation script (`/.bundle/install.sh`) performs:
+The bundle installation script (`.bundle/install.sh`) performs:
 
 - Homebrew package upgrades and installation from `Brewfile`
 - Zinit (Zsh plugin manager) setup
@@ -62,33 +62,41 @@ Each shell displays a unique colored indicator badge in the Starship prompt.
 ### Directory Structure
 
 ```
-/Users/oka/dotfiles/
-├── .shell/              # Multi-shell configuration system
-│   ├── .zsh/           # Modular Zsh configs (zinit, fzf, pyenv, conda, etc.)
-│   ├── .bashrc         # Bash configuration
-│   ├── config.nu       # Nushell configuration (241 lines)
-│   ├── config.fish     # Fish shell configuration
-│   ├── rc.elv          # Elvish configuration
-│   └── .xonshrc        # Xonsh configuration
+/Users/ocat/dotfiles/
+├── .shell/              # Shell configuration system
+│   ├── .zsh/           # Modular Zsh configs (zinit, fzf, config, others)
+│   ├── validate.sh     # Shell validation script
+│   └── .gitignore      # Git ignore for shell secrets
 ├── .config/            # Application-specific configurations
 │   ├── starship/       # Prompt config with shell mode indicators
 │   ├── iterm2/         # Terminal emulator settings
 │   ├── vscode/         # VS Code settings
+│   ├── ghostty/        # GPU-accelerated terminal
 │   └── [others]        # bat, neofetch, wezterm, Rectangle, etc.
 ├── .aliases/           # Shell-specific aliases organized by tool
-│   ├── bash/           # Bash aliases
-│   ├── zsh/            # 19 Zsh alias files (app, brew, cd, ls, tokei, etc.)
-│   ├── nushell/        # Nushell aliases
-│   └── xonsh/          # Xonsh aliases
+│   └── zsh/            # Zsh alias files organized by category
 ├── .bundle/            # Package management manifests
 │   ├── Brewfile        # Homebrew packages
 │   ├── Cargofile       # Rust tools (nu, rg, exa, starship, etc.)
 │   ├── Npmfile         # Node packages
 │   ├── Vscfile         # VS Code extensions
 │   └── install.sh      # Installation script
-├── .rip/               # Custom tools and references
+├── scripts/            # Scripts and automation
+│   ├── bootstrap.sh    # Complete automation script
+│   ├── doctor.sh       # Health check and diagnostics
+│   ├── install.sh      # Basic dotfiles installation
+│   └── test-bootstrap.sh # Safe testing with backup/rollback
+├── docs/               # Documentation
+│   ├── CLAUDE.md       # Claude Code instructions (this file)
+│   ├── usage.md        # Comprehensive documentation
+│   ├── CODE_OF_CONDUCT.md
+│   └── LICENSE
 ├── .github/            # CI/CD workflows and templates
-└── Root files          # .zshrc, .bashrc, .vimrc, .zshenv, etc.
+├── .zshrc              # Main Zsh configuration
+├── alias.zsh           # Unified alias definitions
+├── .vimrc              # Vim configuration
+├── .zshenv             # Environment variables
+└── package.json        # npm scripts and project metadata
 ```
 
 ### Key Environment Variables
@@ -100,30 +108,31 @@ DOT="$HOME/dotfiles"                    # Main dotfiles directory
 SHELL_DIR="$DOT/.shell/"                # Shell configurations
 BUNDLE_DIR="$DOT/.bundle"               # Package manifests
 ALIASES_ZSH_DIR="$DOT/.aliases/zsh"     # Zsh aliases location
+ZSH_DIR="$SHELL_DIR/.zsh"               # Zsh modular configs
 STARSHIP_CONFIG="$DOT/.config/starship/starship.toml"
-NU_CONFIG_PATH="$DOT/.shell/config.nu"
 BAT_CONFIG_PATH="$DOT/.config/bat/bat.conf"
 ```
 
-### Multiple Shell Mode System
+### Shell Configuration System
 
-The standout architectural feature is the **shell-as-mode** paradigm:
+The primary shell system centers around **Zsh** with comprehensive configuration:
 
-1. **Visual Shell Indicators**: Each shell has a unique color-coded badge in Starship prompt
+1. **Visual Shell Indicators**: Starship prompt displays current shell mode
 
-   - Bash: `#c4c431` (gold) - "BSH-MODE"
    - Zsh: `#94b3a8` (sage green) - "ZSH-MODE"
-   - Nushell: `#fe6142` (orange-red) - "NSH-MODE"
-   - Fish: `#5442f5` (purple-blue) - "FSH-MODE"
-   - Elvish: `#a742f5` (magenta) - "ESH-MODE"
-   - Xonsh: `#70ff24` (lime green) - "XSH-MODE"
+   - Extensible architecture for additional shells with unique color codes
 
-2. **Per-Shell Configuration**: Located in `.shell/` with modular organization
+2. **Modular Zsh Configuration**: Located in `.shell/.zsh/` with organized modules
 
-   - Zsh uses 6 modular files: `zinit.zsh`, `fzf.zsh`, `pyenv.zsh`, `conda.zsh`, `config.zsh`, `others.zsh`
-   - Each shell has dedicated config files in their subdirectories
+   - `zinit.zsh`: Plugin manager with fast-syntax-highlighting
+   - `fzf.zsh`: Fuzzy finder integration and app launcher function
+   - `config.zsh`: Core Zsh settings and options
+   - `others.zsh`: FNM (Fast Node Manager) integration
 
-3. **Unified Alias System**: Shell-specific aliases in `.aliases/` maintain consistency across shells
+3. **Unified Alias System**: Centralized alias management
+   - Main aliases in root `alias.zsh` file for easy access
+   - Category-specific aliases in `.aliases/zsh/` by tool/purpose
+   - Consistent experience across shell sessions
 
 ### Starship Configuration
 
@@ -144,15 +153,15 @@ The `.bundle/` directory centralizes all dependency declarations:
 - **Npmfile**: Node.js packages
 - **Vscfile**: 110+ VS Code extensions (themes, linters, formatters, cloud tools, ML extensions)
 
-Install all bundles via `/.bundle/install.sh`.
+Install all bundles via `.bundle/install.sh`.
 
 ### Symlink System
 
-The `install.sh` script creates symlinks from `$HOME/dotfiles/*` to `$HOME/.*`, excluding:
+The `scripts/install.sh` script creates symlinks from `$HOME/dotfiles/*` to `$HOME/.*`, excluding:
 
-- `.zshrc` (handled separately)
 - `.git`, `.gitignore`, `.DS_Store`
-- `README.md`, `install.sh`
+- `README.md`, scripts directory, docs directory
+- `package.json`
 
 This allows version-controlled dotfiles to be used directly by applications.
 
@@ -186,10 +195,10 @@ Both workflows test the installation process and ensure repository health.
 
 When editing shell configurations:
 
-1. **Zsh changes**: Edit files in `.shell/.zsh/` (not root `.zshrc` which sources them)
-2. **Aliases**: Add to appropriate file in `.aliases/zsh/` or `.aliases/bash/`
+1. **Zsh changes**: Edit files in `.shell/.zsh/` (modular configs) or root `.zshrc` (main config)
+2. **Aliases**: Add to root `alias.zsh` for main aliases or specific files in `.aliases/zsh/` by category
 3. **New packages**: Add to respective file in `.bundle/` (Brewfile, Cargofile, Vscfile, Npmfile)
 4. **Starship prompt**: Edit `.config/starship/starship.toml` for prompt customization
-5. **Environment variables**: Add to `.zshenv` to make available across all shells
+5. **Environment variables**: Add to `.zshenv` to make available across shell sessions
 
-After changes, reload shell or run: `source ~/.zshrc` (for Zsh) or equivalent for other shells.
+After changes, reload shell: `source ~/.zshrc` or restart terminal session.

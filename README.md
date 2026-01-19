@@ -35,7 +35,7 @@ cd ~/dotfiles
 npm run test:dry-run
 
 # Test with backup/rollback capability
-./test-bootstrap.sh --test
+./scripts/test-bootstrap.sh --test
 ```
 
 ### Alternative Installation
@@ -57,15 +57,12 @@ cd ~/dotfiles && npm run setup
 - Backup and rollback capabilities for safe testing
 
 ### Multi-Shell Environment
-Support for 6 shells with unified configuration:
-- **Zsh** (primary) - ZSH-MODE with Zinit plugin manager
-- **Bash** - BSH-MODE with custom configurations
-- **Nushell** - NSH-MODE modern shell
-- **Fish** - FSH-MODE friendly shell
-- **Elvish** - ESH-MODE with advanced features
-- **Xonsh** - XSH-MODE Python-based shell
+Primary shell with comprehensive configuration:
+- **Zsh** (primary) - ZSH-MODE with Zinit plugin manager, modular configuration, and unified alias system
+- Unified alias definitions in `alias.zsh` for consistent experience
+- Starship prompt with shell mode indicators and Gruvbox theming
 
-Each shell displays unique color-coded indicators in Starship prompt.
+Expandable architecture supports additional shells with color-coded indicators.
 
 ### Package Ecosystem
 - **Homebrew**: 30+ formulas and casks (development tools, applications)
@@ -117,43 +114,49 @@ npm run docs             # View documentation
 
 ```
 ~/dotfiles/
-├── .shell/              # Multi-shell configurations
+├── .shell/              # Shell configurations
 │   ├── .zsh/           # Modular Zsh configs (6 files)
-│   ├── .bashrc         # Bash configuration
-│   ├── config.nu       # Nushell configuration
-│   ├── config.fish     # Fish shell configuration
-│   └── rc.elv          # Elvish configuration
+│   └── validate.sh     # Shell validation script
 ├── .config/            # Application configurations
 │   ├── starship/       # Shell prompt with mode indicators
 │   ├── iterm2/         # Terminal settings
 │   ├── vscode/         # Editor configuration
 │   └── superfile/      # File manager (ayu-dark theme)
 ├── .aliases/           # Shell-specific aliases (organized by category)
-│   ├── zsh/            # 19 Zsh alias files
-│   ├── bash/           # Bash aliases
-│   └── nushell/        # Modern shell aliases
+│   └── zsh/            # Zsh alias files (by category)
 ├── .bundle/            # Package management manifests
 │   ├── Brewfile        # Homebrew packages and casks
 │   ├── Cargofile       # Rust CLI tools
 │   ├── Vscfile         # VS Code extensions (117)
 │   └── install.sh      # Bundle installation script
-├── bootstrap.sh        # Complete automation script
-├── test-bootstrap.sh   # Safe testing with backup/rollback
-├── doctor.sh          # Health check and diagnostics
-├── install.sh         # Basic dotfiles installation
-├── package.json       # npm scripts (25+ commands)
-└── usage.md           # Comprehensive documentation
+├── scripts/           # Scripts and automation
+│   ├── bootstrap.sh   # Complete automation script
+│   ├── test-bootstrap.sh # Safe testing with backup/rollback
+│   ├── doctor.sh      # Health check and diagnostics
+│   └── install.sh     # Basic dotfiles installation
+├── docs/              # Documentation
+│   ├── CLAUDE.md      # Claude Code instructions
+│   ├── usage.md       # Comprehensive documentation
+│   ├── CODE_OF_CONDUCT.md
+│   └── LICENSE
+├── .zshrc              # Main Zsh configuration
+├── alias.zsh           # Unified alias definitions
+├── .vimrc              # Vim configuration
+├── .zshenv             # Environment variables
+└── package.json        # npm scripts (25+ commands)
 ```
 
 ## Documentation
 
 - **README.md** - Quick start and overview (this file)
-- **usage.md** - Complete usage guide and reference
-- **CLAUDE.md** - Claude Code integration settings
+- **docs/usage.md** - Complete usage guide and reference
+- **docs/CLAUDE.md** - Claude Code integration settings
+- **docs/CODE_OF_CONDUCT.md** - Community guidelines
+- **docs/LICENSE** - WTFPL license
 
 Access documentation:
 ```bash
-npm run docs           # Open usage.md
+npm run docs           # Open docs/usage.md
 ```
 
 ## Requirements

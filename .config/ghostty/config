@@ -1,0 +1,14 @@
+theme = Ayu
+
+font-feature = "-calt"
+font-feature = "-dlig"
+font-feature = "-liga"
+
+unfocused-split-opacity = 1
+split-divider-color = green
+window-padding-balance = true
+window-padding-x = 0
+window-padding-y = 0
+
+title = " "
+macos-titlebar-style = hidden

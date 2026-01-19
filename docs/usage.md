@@ -17,6 +17,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Coordinate-Cat/dotfiles/
 ```
 
 This method performs:
+
 - Xcode Command Line Tools installation
 - Homebrew installation and package setup
 - Dotfiles repository cloning and symlink creation
@@ -149,25 +150,18 @@ To add new packages:
 
 ### Multi-Shell Support
 
-The system supports 6 shells with visual mode indicators:
+The system supports 2 shells with visual mode indicators:
 
 - Zsh (primary) - ZSH-MODE indicator
 - Bash - BSH-MODE indicator
-- Nushell - NSH-MODE indicator
-- Fish - FSH-MODE indicator
-- Elvish - ESH-MODE indicator
-- Xonsh - XSH-MODE indicator
 
 ### Shell Configuration
 
 Shell configurations are located in `.shell/` directory:
 
-- `.shell/.zsh/` - Modular Zsh configurations
+- `.shell/.zsh/` - Modular Zsh configurations (6 files)
 - `.shell/.bashrc` - Bash configuration
-- `.shell/config.nu` - Nushell configuration
-- `.shell/config.fish` - Fish configuration
-- `.shell/rc.elv` - Elvish configuration
-- `.shell/.xonshrc` - Xonsh configuration
+- `.shell/.zshrc` - Main Zsh configuration
 
 ### Aliases
 
@@ -175,8 +169,6 @@ Shell-specific aliases are organized in `.aliases/` directory:
 
 - `.aliases/zsh/` - Zsh aliases (19 files by category)
 - `.aliases/bash/` - Bash aliases
-- `.aliases/nushell/` - Nushell aliases
-- `.aliases/xonsh/` - Xonsh aliases
 
 ## Configuration Files
 
